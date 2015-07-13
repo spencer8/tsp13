@@ -34,7 +34,7 @@ function tsp13_scripts_styles() {
 	wp_enqueue_script('jquery-iosslider', get_template_directory_uri() . '/js/jquery.iosslider.js', array('jquery'));
 	
 	// Loads JavaScript file with functionality specific to Team Eight.
-	wp_enqueue_script( 'tsp13-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2013-07-18', true );
+	//wp_enqueue_script( 'tsp13-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2013-07-18', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'tsp13_scripts_styles' );
@@ -49,6 +49,34 @@ function is_portrait( $image_url ){
 		return false;
 	}
 }
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Area 1',
+		'id'            => 'footer_1',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Area 2',
+		'id'            => 'footer_2',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
 
 function change_post_menu_label() {
 	global $menu;

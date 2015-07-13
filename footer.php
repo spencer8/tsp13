@@ -13,21 +13,43 @@
 	</div><!-- #main .wrapper -->
 		<div id="footwrap">
 			<div id="footer">
-				<div id="foot1" class="footcol">
+				<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
+					<div id="foot1" class="footcol">
+						<?php dynamic_sidebar( 'footer_1' ); ?>
+					</div><!-- #primary-sidebar -->
+				<?php else : ?>
+					<div id="foot1" class="footcol">
 					<h2>Get in touch</h2>
-					<p><a href="mailto:info@triplestamppress.com">info@triplestamppress.com</a><br />
-					804.233.1502<br />
-					200 Everett St.<br />
-					Richmond, VA 23224</p>
-				</div>
-				<div id="foot2" class="footcol">
-					<h2>Like us</h2>
-					<a class="facebook" href="http://facebook.com/triplestamppress">Visit us on Facebook</a>
-				</div>
+					<p>
+					Triple Stamp Press<br />
+					200 Everett St<br />
+					Richmond, VA 23224<br />
+					<a href="mailto:info@triplestamppress.com">info@triplestamppress.com</a><br />
+					(804) 233-1502</p>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( is_active_sidebar( 'footer_2' ) ) : ?>
+					<div id="foot2" class="footcol">
+						<?php dynamic_sidebar( 'footer_2' ); ?>
+					</div><!-- #primary-sidebar -->
+				<?php else : ?>
+					<div id="foot2" class="footcol">
+					<h2>Follow Us</h2>
+					<ul class="nav-social clear">
+						<li><a href="https://instagram.com/triplestamppress/" class="instagram"><span class="genericon genericon-instagram"></span></a></li>
+						<li><a href="http://triplestamppress.tumblr.com/" class="tumblr"><span class="genericon genericon-tumblr"></span></a></li>
+						<li><a href="https://www.linkedin.com/company/triple-stamp-press" class="linkedin"><span class="genericon genericon-linkedin-alt"></span></a></li>
+						<li><a href="https://www.facebook.com/triplestamp" class="facebook"><span class="genericon genericon-facebook"></span></a></li>
+						<li><a href="https://twitter.com/triplestamp" class="twitter"><span class="genericon genericon-twitter"></span></a></li>
+					</ul>
+					</div>
+				<?php endif; ?>
+
 				<div id="foot3" class="footcol">
 					<a class="pricebadge" href="<?php bloginfo('url'); ?>/pricing">Instant Price Calculator</a>
 				</div>
-				<p>&copy; TRIPLE STAMP PRESS 2013<br>site by <a href="http://team-eight.com" title="Get to Work!" >Team Eight</a></p>
+				<p>&copy; TRIPLE STAMP PRESS <?php echo date("Y"); ?><br>site by <a href="http://team-eight.com" title="Get to Work!" >Team Eight</a></p>
 			</div><!-- #footer -->
 		</div><!-- #footwrap -->
 </div><!-- #page -->

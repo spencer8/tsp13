@@ -437,13 +437,17 @@ and (max-width : 767px) {
 		padding: 0;
 	}
 	.footcol {
-		border-right: none;
+		
 		height: auto;
 		width: 100%;
 	}
 	#foot1 {
 		border-left: none;
 		border-bottom: 1px solid #DEDED8;
+	}
+	#foot2 {
+		border-left: none;
+		border-right: none;
 	}
 	#foot3 {
 		display: none;

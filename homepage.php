@@ -9,8 +9,10 @@ get_header(); ?>
 	</div>
 </div>
 	<div class="zone1">
+		<?php if ( function_exists( 'soliloquy' ) && $_GET['admin']=='sh' ) { soliloquy( '1138' ); } ?>
 		<div class="content cf">
 			<?php the_post(); ?>
+
 			<?php
 				$slides = array();
 				while (has_sub_field('slider')):
