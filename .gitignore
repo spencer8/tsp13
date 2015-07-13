@@ -1,0 +1,7 @@
+# Ignore sass-cache files.
+*.sass-cache*
+
+# Ignore idea files.
+*.idea*
+
+images/

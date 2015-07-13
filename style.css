@@ -1,0 +1,1534 @@
+/*
+Theme Name: TSP 2013
+Author: Team Eight
+Author URI: http://team-eight.com
+Description: The 2013 theme for Triple Stamp Press
+Version: 1.0
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+@font-face {
+    font-family: 'politicalight';
+    src: url('fonts/politicalight-webfont.eot');
+    src: url('fonts/politicalight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/politicalight-webfont.woff') format('woff'),
+         url('fonts/politicalight-webfont.ttf') format('truetype'),
+         url('fonts/politicalight-webfont.svg#politicalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	font-family: "adobe-caslon-pro", Georgia, serif;
+}
+}
+html {
+	width: 100%;
+}
+body {
+	line-height: 1;
+	width: 100%;
+	margin: 0 auto;
+	background: url('images/TSPlight.jpg');
+	.max-width: 964px;
+}
+ol,
+ul {
+	margin: 0 0 10px 20px;	
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: normal;
+}
+h1, h2, h3 {
+	font-family: politicalight, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	line-height: 1.15;
+}
+h2 {
+	font-size: 44px;
+	letter-spacing: .08em;
+	line-height: 1.15;
+}
+html {
+	overflow-y: scroll;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+a:focus {
+	outline: thin dotted;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+#footer,
+#header,
+hgroup,
+#nav,
+section {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+}
+del {
+	color: #333;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin: 24px;
+	margin-bottom: 1.714285714rem;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+small {
+	font-size: smaller;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+a {
+	text-decoration: none;
+	color:#C7604C;
+}
+a:hover {
+	color:#4E917A;
+}
+a, img, a:focus { outline:0; border:none; }
+p { line-height:1.3; }
+strong { color:#C7604C }
+/* Clearing floats */
+.clear:after,
+.wrapper:after,
+.format-status .entry-header:after {
+	clear: both;
+}
+.clear:before,
+.clear:after,
+.wrapper:before,
+.wrapper:after,
+.format-status .entry-header:before,
+.format-status .entry-header:after {
+	display: table;
+	content: "";
+}
+
+
+/* Being Theme Styles */
+/* HEader */
+#header.trans {
+    top:-30px;
+}
+#main.trans {
+	margin-top:226px;
+}
+#readout {
+	position:fixed;
+    top:100px;
+    left:10px;
+    z-index: 100;
+}
+
+#header {
+	width: 100%;
+	display: block;
+	background: url('images/TSPlight.jpg');
+	position:fixed;
+	z-index: 201;
+	top: 0;
+	left: 0;
+}
+#nav {
+	width: 964px;
+	padding-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	position: relative;
+	height: 43px;
+	z-index: 100;
+}
+.sticky #nav {
+/*	padding-top: 0; */
+}
+#nav .logo {
+	position: absolute;
+	z-index: 10;
+}
+#nav .minilogo {
+	position: absolute;
+	z-index: 1;
+	top: 38px;
+	left: 8px;
+	display: none;
+}
+.sticky #nav .minilogo {
+	display: block;
+}
+#nav > ul {
+	list-style-type: none;
+	display: inline-block;
+	position: absolute;
+	right: 120px;
+	padding-right:10px;
+}
+#nav .pricing {
+	position: absolute;
+	right: -22px;
+	top: 4px;
+	z-index: 500;
+}
+.minipricing {
+	display: none;
+}
+#nav > ul li {
+	display: inline-block;
+}
+
+#nav ul li a {
+	text-transform: uppercase;
+	padding: 10px 18px;
+	display: block;
+	color: #58595B;
+	font-family: politicalight, sans-serif;
+	font-size: 22px;
+	letter-spacing: .08em;
+}
+#nav ul li > a:active, 
+#nav ul li > a:hover,
+#nav ul li.current-menu-item > a,
+#nav ul li.current-menu-ancestor > a {
+	color: #CF6139;
+}
+#nav ul li a.active {
+	color: #4E917A;
+}
+.sticky2 #subhead {
+	background: none;
+	border: none;
+	height: 0;
+}
+
+.sticky #subhead p.headcontact {
+	display: none;
+}
+
+/* Displays the link as blocks. */
+.sub-menu a {
+display:block;
+float: none;
+margin: 0 auto;
+padding-top: 0;
+}
+/* sub menus!!  */
+ 
+.sub-menu {
+list-style: none;
+margin:0; /* Appear just below the hovering list */
+padding:0;
+width:140px; /* specify the width. */
+position:absolute; /* needed */
+z-index:500; /* specify the order */
+background: url('images/TSPlight.jpg');
+text-align:left;
+}
+.sub-menu {
+top:39px; /* Positioning:Calc with top level horz list height */
+box-shadow:2px 6px 4px rgba(0,0,0,0.3); /* CSS 3 */
+}
+ 
+ 
+.sub-menu li {
+float:none; /* umm.. Appear below the previous one. mmkay? */
+}
+ 
+/* Drop Down! */
+ 
+/* Hide all the dropdowns (submenus) */
+#nav .sub-menu
+{ display: none; }
+ 
+/* Display the submenus only when li are hovered */
+#nav li:hover .sub-menu,
+#nav .sub-menu:hover
+{ display: block;}
+
+#nav ul.open
+{ display: block;}
+ 
+ul#menu-main-menu li * a:hover {
+/* Change color of links when hovered */
+color: #14ada8;
+}
+.mininav {
+	display: none;
+	width: 240px;
+	height: 34px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.mininav select {
+	background: url(images/new-arrow.png) no-repeat right transparent;
+	width: 95px;
+	padding: 5px;
+	font-size: 22px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+	font-family: politicalight, sans-serif;
+	display: block;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+}
+.mininav select option {
+}
+#subhead {
+	display: block;
+	width: 100%;
+	height: 151px;
+	background: rgba(118, 174, 153, .15);
+	border-bottom: 2px solid #4E917A;
+	padding-top:73px;
+}
+#subheadwrap {
+	bottom: -35px;
+	right: 150px;
+	position: absolute;
+}
+.borderholder {
+	width: 700px;
+    padding: 8px 0 0;
+	background: url('images/main-sprite.png') repeat-x 2px -6px;
+	position: absolute;
+	top: 74px;
+	right: 115px;
+	z-index: 10;
+	border-top: 1px solid #58595B;
+}
+#subheadwrap p.headcontact {
+	width: 667px;
+    font-size: 13px;
+    text-align: right;
+    margin: 0 auto;
+    padding: 18px 0 0;
+	color: #5F6062;
+}
+.sticky #subhead p.headcontact {
+	display: none;
+}
+.backtotop {
+	position: absolute;
+	right: 55px;
+	top: 2000px;
+	z-index: 10;
+	width:48px;
+	height:64px;
+	text-indent:-999em;
+	background: url('images/main-sprite.png') no-repeat 0 -565px;
+	display: none;
+}
+.backtotop:hover {
+	background-position:0 -629px;
+}
+/* HOME */
+.content {
+	width: 964px;
+	margin: 0 auto;
+	position: relative;
+}
+.content.apparel {
+	height:321px;	
+}
+.zone1 {
+	background: rgba(255, 255, 255, .29);
+	padding-bottom: 60px;
+}
+.galinfo {
+	width: 285px;
+	background: white;
+	float: right;
+	margin-top: -30px;
+	right: 0;
+	padding: 30px 0 20px;
+	min-height: 460px;
+}
+.about .galinfo {
+	
+}
+.galinfo h2{
+	color: #5F6062;
+	padding: 0 30px 30px;
+	background: url('images/border-dots.png') repeat-x bottom;
+	margin-bottom: 30px;
+}
+.galinfo p {
+	padding: 0 30px;
+margin-bottom: 10px;
+}
+.right, .left {
+	float: left;
+}
+.orangebox.right {
+	float: right;
+}
+.orangebox.left .slide-pager {
+	right: 0;
+}
+.orangebox.gallery {
+	margin-top: 90px;
+}
+.orangebox.gallery{
+	margin-top: 90px;
+}
+}
+.left {
+	float: left;
+}
+.floatwrap {
+}
+.zone1 {
+	float: left;
+	width: 100%;
+	padding-bottom: 60px;
+}
+.page-template-portfolio-php .zone1 {
+	padding-top: 60px;
+}
+.page-template-portfolio-php .orangebox {
+	margin-top: 90px;
+}
+
+.vidwrap {
+	padding-top: 90px;
+}
+
+.splitzone {
+	padding-bottom: 60px;
+	width: 100%;
+	clear: both;
+	position: relative;
+}
+
+.splitleft {
+	height: 100%;
+	width: 43%;
+	position: absolute;
+	background: rgba(118, 174, 153, .15);
+}
+
+.splitright {
+	height: 100%;
+	width: 57%;
+	position: absolute;
+	right: 0;
+	background: rgba(95, 96, 98, .15) url('images/border-dots.png') repeat-y -2px 0px;
+}
+
+.orangebox {
+	width: 289px;
+	color: #DEDED8;
+	z-index: 10;
+	position: relative;
+	background: url('images/granville.png') no-repeat bottom left #C7604C;
+	min-height:384px;
+	z-index: 200;
+	float: left;
+}
+#main .orangebox.ob1 { 	background-position:-300px bottom; }
+#main .orangebox.ob2 { 	background-position:-600px bottom; }
+#main .orangebox.ob3 { 	background-position:-900px bottom; }
+#main .orangebox.ob4 { 	background-position:-1180px bottom; }
+.orangebox h2, .orangebox h3 {
+	padding: 30px;
+	position: relative;
+}
+.orangebox h2:after, .orangebox h3:after {
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	background: url('images/main-sprite.png') repeat-x top center;
+}
+.orangebox h3 {
+	font-size: 34px;
+}
+.orangebox p {
+	padding: 30px;
+	line-height: 24px;
+}
+.orangebox > div {
+	width: 100%;
+}
+}
+.vid {
+	position: absolute;
+	right: 0;
+	top: 60px;
+	z-index: 1;
+}
+
+/* PORTFOLIO */
+div.zone1:first-child .slider-wrapper {
+	margin-top:0;
+}
+.port div.zone1:first-child .orangebox {
+	margin-top:30px;
+}
+.gallery:before {
+	content: "";
+	position:absolute;
+	top: 23%;
+	height: 77%;
+	background: rgba(118, 174, 153, .15);
+	width:100%;
+}
+
+
+/* PRODUCTS */
+.category-apparel .zone1 {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	overflow: hidden;
+	position: relative;
+	float:none;
+}
+.category-apparel .zone1.open {
+	height: auto;
+}
+.category-apparel h3 {
+	font-size: 24px;
+	display: inline-block;
+	padding: 5px;
+}
+.zone1:nth-child(3n) {
+	background: rgba(118, 174, 153, .15);
+}
+.zone1:nth-child(3n-1) {
+	background: rgba(95, 96, 98, .15);
+}
+.category-apparel .zone1 h2 {
+	color: #CF6139;
+	width: 964px;
+	margin: 0 auto;
+}
+
+.app-wrap a {
+	position: relative;
+	float: left;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: block;
+	outline-style: none;
+	outline-width: 0;
+ -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.app-wrap {
+	position: relative;
+}
+.app-wrap a:nth-child(4n) {
+	margin-right: 0;
+}
+.category-apparel .zone1 span.view-all {
+	position: absolute;
+	bottom: -22px;
+	right: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #CC6139;
+	cursor: pointer;
+	z-index: 20;
+}
+.app-desc {
+	background: #5F6062;
+	color: #DCDCD6;
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0;
+	text-align: center;
+	width: 100%;
+}
+.app-thumb:hover .app-desc {
+	background: #4E917A;
+}
+.app-desc h3 {
+	font-size: 14px;
+}
+
+.zone0 {
+	.float: left;
+}
+.product {
+	width: 40%;
+	float: left;
+	text-align: center;
+}
+.product h2 {
+	text-align: center;
+}
+.product img, .apparel img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+.product.apparel {
+	width: 25%;
+	float: left;
+}
+.productinfo {
+	width: 426px;
+	background: white;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+.flipoffset .productinfo {
+	margin-top: 30px;
+}
+.flipoffset .productimg {
+	margin-top: 60px;
+}
+.productinfo h2 {
+	color: #5F6062;
+	padding: 5px 30px 30px;
+	position:relative;
+}
+.productinfo h2:after {
+	background:url('images/main-sprite.png') repeat-x 2px -6px;
+	content: "";
+	height: 7px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+.productinfo .contentp {
+	padding: 25px 30px;
+}
+.productinfo p {
+	padding: 5px 0;
+}
+.rsrcelink {
+	display: inline-block;
+	width: 20px;
+	height: 25px;
+	overflow: hidden;
+	text-indent: -99em;
+	background: transparent url(images/main-sprite.png) no-repeat -57px -567px;
+	float: right;
+	margin: 0 30px 20px 0;	
+}
+.rsrcelink:hover {
+	background-position: -57px -591px;
+}
+.rsrcelink.templates {
+	width: 25px;
+	background-position: -78px -567px;
+	margin-right: 20px;
+	height:24px;
+}
+.rsrcelink.templates:hover {
+	background-position: -78px -591px;
+}
+.rsrcelink.samples {
+	width: 29px;
+	background-position: -103px -566px;
+	margin-right: 19px;
+}
+.rsrcelink.samples:hover {
+	background-position: -103px -591px;
+}
+.productinfo h4.sizes {
+	width:250px;
+	float:left;
+	padding-right:0;	
+}
+.rsrcelink.launchcalc, .calcbanner h3 {
+	width: 384px;
+	height:51px;
+	margin:0 auto;
+	cursor:pointer;
+	background: transparent url(images/calc-sprite.png) no-repeat 0 -185px;
+	display: block;
+	float:none;
+	clear: both;
+	overflow: hidden;
+	text-indent: -999em;
+}
+.calcbanner h3 {
+	width: 271px;
+	height: 51px;
+	position: relative;
+	margin: 0;;
+}
+.calcbanner {
+	margin: 0 auto;
+	display: block;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	position: relative;
+	width: 680px;
+}
+.calcbanner:before {
+	width: 412px;
+	height: 51px;
+	background: url(images/calc-sprite.png) no-repeat 0 -287px;
+	display: block;
+	content: '';
+	right: 0;
+	bottom: 30px;
+	position: absolute;
+}
+.rsrcelink.launchcalc:hover {
+	background-position: 0 -236px;
+}
+.productinfo h4 {
+	padding: 5px 30px;
+}
+.productinfo img {
+	margin: 20px auto;
+	display: block;
+	cursor: pointer;
+}
+.productimg {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	float: left;
+	padding: 30px;
+	background: #C5C5BE;
+}
+.swatches {
+	clear: both;
+	width: 994px;
+	float: left;
+	left: -15px;
+	position: relative;
+	margin-top: 30px;
+}
+.swatches > h4 {
+	padding-left: 15px;
+}
+.swatchall {
+	position: relative;
+}
+.swatchwrap {
+	float: left;
+	position: relative;
+}
+.swatchwrap.active {
+	background: #5F6062;
+}
+.swatch {
+	width: 110px;
+	height: 110px;
+	background-image: url('images/paperswatch.png');
+	float: left;
+	border: 1px solid #5F6062;
+	margin: 15px;
+	cursor: pointer;
+}
+.apparel .swatch {
+	background-image: url('images/colorswatch.png');
+}
+.swatchname {
+	background: #5F6062;
+	color: #DCDCD6;
+	padding: 10px 2px;
+	text-align: center;
+	display: none;
+	font-size: 9px;
+	text-transform: uppercase;
+}
+.calculator {
+	display: none;
+	padding-bottom: 80px;
+	width: 100%;
+	background-image: url('images/colorswatch.png');
+	background-color: #5F6062;
+	float: left;
+	position: relative;
+}
+.calculator.open {
+	display: block;
+}
+#ajaxLoader {
+	position: absolute;
+	left: 332px;
+	top: 97px;
+}
+.calc {
+	width: 680px;
+	margin: 0 auto;
+	position: relative;
+}
+.calctabs {
+	position: relative;
+}
+.tab {
+	display: inline-block;
+	background: #C6C7BD;
+	padding: 8px;
+	position: relative;
+	margin: 0 0 0 9px;
+	width: auto;
+	float: none;
+	cursor: pointer;
+	height: 22px;
+}
+.tab.selected {
+	background: white;
+	z-index: 10;
+}
+.tab h3 {
+	font-size: 23px;
+}
+.tableft, .tabright {
+	background: url('images/main-sprite.png') no-repeat -56px -634px;
+	height:38px;
+	width:9px;
+	position:absolute;
+	bottom:0px;
+}
+.tableft {
+	left:-9px;
+}
+.selected .tableft {
+	background-position:-74px -634px;
+}
+.tabright {
+	right:-9px;
+	background-position:-65px -634px;
+}
+.selected .tabright {
+	background-position:-83px -634px;
+}
+.xboxwrap {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.xbox {
+
+}
+.calcbox {
+	.height: 300px;
+	background: white;
+	display: none;
+	float: left;
+	width: 100%;
+}
+.selected.calcbox {
+	display: block;
+}
+.progress {
+	height: 70px;
+	position: relative;
+}
+.progressbar {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+}
+.progress1 {
+	position: absolute;
+	top: 25px;
+	left: 55px;
+	width: 18px;
+	height: 18px;
+	background: url('images/1off.png');
+}
+.progress1.on {
+	background: url('images/1on.png');
+}
+.progress2 {
+	position: absolute;
+	top: 25px;
+	left: 331px;
+	width: 18px;
+	height: 18px;
+	background: url('images/2off.png');
+}
+.progress2.on {
+	background: url('images/2on.png');
+}
+.progress3 {
+	position: absolute;
+	top: 25px;
+	right: 55px;
+	width: 18px;
+	height: 18px;
+	background: url('images/3off.png');
+}
+.progress3.on {
+	background: url('images/3on.png');
+}
+.calcboxleft {
+	height: 270px;
+	margin: 0 0 10px;
+	border-right: 2px dotted black;
+	width: 35%;
+	float: left;
+	position: relative;
+}
+.calcboxleft h4 {
+	padding: 20px 20px 5px;
+}
+.calcboxleft select {
+	width: 86%;
+	margin: 0 7%;
+	font-size: 15px;
+}
+.calcboxright {
+	width: 64%;
+	float: left;
+}
+.calcboxright h4 {
+	padding: 20px 20px 5px;
+}
+.calcboxright h4.disabled {
+	opacity: .5;
+}
+.calcboxright select {
+	width: 86%;
+	margin: 0 20px;
+	font-size: 15px;
+}
+.calcboxright label {
+	float: left;
+	margin-left: 20px;
+	margin-top: 8px;
+}
+.calcboxright label.disabled {
+	opacity: .5;
+}
+.calcboxright select.half {
+	width: 10%;
+	float: left;
+	margin: 0 5px;
+}
+.calcboxright select.threequart {
+	width: 25%;
+	float: left;
+	margin: 0 20px;
+}
+.calcboxright input {
+	width: 14%;
+	margin-left: 20px;
+}
+.calculate {
+	height: 160px;
+	background: #C6C7BD;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.calculate-button {
+	background-image: url('images/calculate-off.png');
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 172px;
+	height: 32px;
+	border: 0px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+.calculate-button.on {
+	background-image: url('images/calculate-on.png');
+	cursor: pointer;
+}
+.calculate-button.send {
+	background-image: url('images/calculate-send.png');
+	cursor: pointer;
+}
+.calculate-button.back {
+	background-image: url('images/calculate-back.png');
+	cursor: pointer;
+	top: 80px;
+	right: -40px;
+}
+.get-started h3 {
+	font-size: 18px;
+	margin-left: 20px;
+	letter-spacing: 3px;
+	margin-bottom: 5px;
+}
+.get-started  .h4, .calcboxright .h4 {
+	padding: 8px 20px 8px;
+	float: left;
+	clear: both;
+	display: inline-block;
+	color: #4E917A;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.get-started .p-right .h4 {
+	float: none;
+}
+.calcboxright .h4.total, .calcboxright .h4.peritem {
+	float: none;
+}
+.get-started .calcboxleft p, .calcboxright p {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 45px;
+	font-size: 15px;
+	clear: both;
+}
+.get-started .calcboxleft .xxl {
+	position: absolute;
+	margin-bottom: 0;
+	bottom: 0;
+}
+.get-started .calcboxleft .p-right, .calcboxright .p-right {
+	text-align: right;
+	float: right;
+	clear: both;
+	width: 200px;
+}
+.get-started .calcboxleft .p-right span, .calcboxright .p-right span {
+	padding: 0;
+}
+.get-started input[type="text"], .get-started input[type="email"] {
+	width: 303px;
+	margin: 1px 1px 5px;
+}
+.get-started input[type="date"] {
+	width: 131px;
+}
+.get-started textarea{
+	width: 365px;
+	height: 96px;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+.get-started .calculate p {
+	width: 70%;
+	margin: 20px;
+	font-size: 13px;
+	line-height: 1.5;
+}
+.content.pricing-success {
+	text-align: center;
+	margin: 50px auto 80px;
+}
+.content.pricing-success h2 {
+	margin: 30px 0;
+}
+.pricing-link {
+	display: block;
+	padding: 20px;
+	background: #C7604C;
+	width: 200px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 26px;
+	margin: 30px auto;
+	font-family: politicalight, sans-serif;
+	letter-spacing: .08em;
+}
+.pricing-link:hover {
+	color: #5F6062;
+}
+.sfwrap {
+	margin: 0 auto;
+	width: 743px;
+}
+.swatchflyout {
+	display: none;
+	width: 100%;
+	background: #5F6062;
+	position: absolute;
+	z-index: 10;
+	float: left;
+}
+.swatchflyout.active {
+	display: block;
+}
+.swatchbig {
+	width: 252px;
+	height: 252px;
+	margin: 30px;
+	float: left;
+	border: 1px solid white;
+	background-image: url('images/paperswatch.png');
+}
+.apparel .swatchbig {
+	background-image: url('images/colorswatch.png');
+}
+.swatchinfo {
+	float: left;
+	width: 309px;
+	height: 194px;
+	margin: 30px;
+	background: white;
+	padding: 30px;
+}
+.swatchinfo h3 {
+	font-size: 23px;
+	padding-bottom: 10px;
+}
+.swatchinfo h4 {
+	padding-bottom: 8px;
+}
+.swatchinfo p {
+	line-height: 1.1;
+}
+
+/* FAQ and DEFAULT */
+.lbox {
+	float: left;
+	width: 225px;
+	overflow: hidden;
+}
+.pdT {
+	padding-top: 60px;
+}
+.faqwrap h2 {
+	font-family: "open-sans",sans-serif;
+	color: #4E917A;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	margin: 0 0 20px;
+	padding: 10px 0 0;
+}
+.faqwrap h3 {
+	font-family: "open-sans",sans-serif;
+	color: #4E917A;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	margin: 0 0 10px;
+	padding-top: 10px;
+}
+.faqwrap h4 {
+	letter-spacing: .1em;
+	color: #5F6062;
+	letter-spacing: 1px;
+	margin: 0 20px 10px;
+	padding-top: 10px;
+}
+.faqwrap ul, .faqwrap ol {
+	margin:10px 0 10px 50px;	
+}
+.faqwrap li {
+	margin: 5px 0;	
+}
+.faq .zone1 {
+	position: relative;
+}
+.faq .splitzone, .faq.splitzone {
+	float: left;
+	height: auto;
+}
+.faq .orangebox {
+	margin-top: 30px;
+	float: none;
+	position: absolute;
+	left: 0;
+}
+.subnavwrap {
+	background: #4E917A;
+}
+.subnav {
+	width: 964px;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+}
+.subnav h2 {
+	font-size: 24px;
+	padding: .5em 30px;
+	text-align: left;
+}
+.home .subnavwrap {
+	background-color: #76AE99;
+}
+}
+.jump {
+	position: relative;
+	display:block;
+	top:-30px;	
+}
+.subnav a {
+	color: white;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 10px;
+}
+.faqwrapper {
+	padding-top: 60px;
+}
+.faqwrap {
+	background: white;
+	float: right;
+	width: 530px;
+	padding: 50px 90px;
+	min-height: 345px;
+}
+.faqwrap.single-col {
+	width: 100%;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+.single-col h1 {
+	font-size:3em;
+	color:#DD604C;
+}
+.hzcolors .faqwrap {
+	margin-bottom: 0;
+}
+.hzcolors .swatch, .hzcolors .swatchbig {
+	background-image:none;
+}
+.hzcolors .swatches {
+	margin-bottom: 90px;
+}
+h4 {
+	color: #4E917A;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.faqwrap p {
+	margin: 10px 20px;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.content img.alignleft {
+	float:left;
+}
+.content img.alignright {
+	float:right;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+ 
+/* The slide Slider styles */
+.gallery, .slider-wrapper, .gallery img {
+	border: none;
+	outline: none;
+}
+.slider-wrapper {
+	float:left;
+	position: relative;
+	margin-top:60px;
+	width:675px;
+}
+.slider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.portslide {
+	text-align:center;
+	width:100%;
+	height: 100%;
+	max-height: 450px;
+	display:none;
+}
+.portslide:first-child {
+	display: block;
+}
+.gallery.slider > div { 
+	display: none;
+}
+.gallery.slider > div:first-child  { 
+	display: block; 
+}
+.portslide img {
+	width: 100%;
+	height: auto;
+}
+
+/* If an image is wrapped in a link */
+.gallery.slider div p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	z-index: 5;
+	width: 90%;
+	padding: 15px 5% 10px;
+	overflow: hidden;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter: alpha(opacity=7);
+	background: #5F6062;
+	color: #DCDCD6;
+	line-height: 1.2;
+	font-size: 14px;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.slide-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.slide-prevNav {
+	left:0px;
+}
+.slide-nextNav {
+	right:0px;
+}
+
+.slider-wrapper .slider {
+	position:relative;
+	background:transparent url(images/loading.gif) no-repeat 50% 50%;
+}
+.slide-pager {
+	margin: 10px 5px;
+	position: absolute;
+	bottom: -28px;
+	z-index:100;
+}
+.slide-pager span {
+	margin:0 4px 0 0;
+	height: 11px;
+	width:11px;
+	background:transparent url(images/dots.png) 0px 0px no-repeat;
+	display:block;
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.slide-pager span:hover, .slide-pager span.cycle-pager-active {
+	background-position:-11px 0px;
+}
+.slider-wrapper .slide-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.slider-wrapper .slide-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.slider-wrapper .slide-caption a:hover {
+    color:#fff;
+}
+/* FOOTER */
+
+#footwrap {
+	width: 100%;
+	background: url('images/TSPmidfabric400.jpg');
+	border-top: 6px solid #DD604C;
+	clear:both;
+}
+
+#footer {
+	width: 688px;
+	margin: 0 auto;
+	padding: 60px 152px;
+	color: #DEDED8;
+}
+
+.footcol {
+	width: 228px;
+	border-right: 1px solid #DEDED8;
+	text-align: center;
+	float: left;
+	height: 152px;
+	padding: 24px 0;
+}
+
+#footer > p {
+	clear: both;
+	text-align: center;
+	padding: 30px 0;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#footer a {
+	color: #DEDED8;
+}
+a.facebook {
+	height:50px;
+	width:50px;
+	display:block;
+	text-indent:-999em;
+	margin:0 auto;
+	background: transparent url('images/main-sprite.png') -97px -629px;
+}
+a.facebook:hover, a.facebook:active {
+	background-position:-97px -679px;
+}
+#footer h2 {
+	font-size: 39px;
+	margin-bottom: 26px;
+	letter-spacing: .08em;
+}
+
+#foot1 {
+	border-left: 1px solid #DEDED8;
+}
+#foot1 p {
+	line-height: 20px;
+}
+.pricebadge {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999em;
+	width: 147px;
+	height: 152px;
+	background: transparent url('images/main-sprite.png') 0 -183px;
+	padding: 0;
+	margin: 0 auto;	
+}
+.pricebadge:hover {
+	background-position: 0 -27px;
+}
+.headerPBhover.small {
+	background-position:34px -392px;
+}
+
+.headerPBhover {
+	background: transparent url('images/main-sprite.png') 8px -19px no-repeat;
+}
+.headerPBhover .spriteAnimation {
+	background-repeat:no-repeat;	
+}
+body.admin-bar {
+        margin-top: -28px;
+        padding-bottom: 28px;
+    }
+    #wpadminbar {
+        top: auto !important;
+        bottom: 0;
+    }
+    #wpadminbar .quicklinks>ul>li {
+        position:relative;
+    }
+    #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+        bottom:28px;
+    }
