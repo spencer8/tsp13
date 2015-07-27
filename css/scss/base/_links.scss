@@ -1,0 +1,12 @@
+/* Links */ 
+a {
+	text-decoration: none;
+	color:$red-lt;
+}
+a:hover {
+	color: $aqua-drk;
+}
+a, img, a:focus { outline:0; border:none; }
+a:focus {
+	outline: thin dotted;
+}

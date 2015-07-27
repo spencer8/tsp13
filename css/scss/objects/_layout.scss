@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+/* Layout Container */
+.lc {
+	max-width: $max-width;	
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+/* Grid Container */
+.g {
+	overflow: hidden;
+	margin: $padpx 0;
+	padding: 0;
+	overflow: visible;
+	position: relative;
+	
+	@media all and (min-width: $bp-small) {
+	}
+
+	>a {
+		@include font-2-style();
+		font-size: $font-size-sm;
+		position: absolute;
+		bottom: $padpx;
+		right: $padpx;
+	}
+}
+
+
+/* Grid Item */
+.gi {
+	padding:0;
+	margin: 0 1% 2%;
+	position: relative;
+	float: left;
+	
+	img {
+		display: block;
+	}
+}
+
+/* Grid 3up */
+.g-3up {
+	
+	@extend .cf;
+
+	> .gi {
+		
+		width: 26%;
+		
+		@media all and (min-width: $bp-med) {
+			&:nth-of-type(2n+1) {
+				clear: none;
+			}
+			
+			&:nth-of-type(3n+1) {
+				clear: left;
+			}
+		}
+
+		@media all and (max-width: $bp-med) {
+
+			width: 47%;
+			margin: 0 1.5% 3%;
+
+			&:nth-of-type(odd) {
+				clear: left;
+			}
+
+		}
+
+
+	}
+
+	> .gi.credits {
+		width: 42%;
+	}
+
+	@media all and (max-width: $bp-full) {
+		> .gi {
+		}
+	}
+	
+	@media all and (max-width: $bp-med) {
+		> .gi,  > .gi.credits {
+			width:100%;
+			text-align:center;
+			margin-left:0;
+			margin-right:0;
+		}
+	}
+}

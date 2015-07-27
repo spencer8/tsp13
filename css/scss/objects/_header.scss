@@ -1,0 +1,218 @@
+/* Header-Related Elements */ 
+#header.trans {
+    top:-30px;
+}
+#main.trans {
+	margin-top:226px;
+}
+#readout {
+	position:fixed;
+    top:100px;
+    left:10px;
+    z-index: 100;
+}
+
+#header {
+	width: 100%;
+	display: block;
+	background: url('../images/TSPlight.jpg');
+	position:fixed;
+	z-index: 201;
+	top: 0;
+	left: 0;
+}
+#nav {
+	width: 964px;
+	padding-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	position: relative;
+	height: 43px;
+	z-index: 100;
+}
+.sticky #nav {
+/*	padding-top: 0; */
+}
+#nav .logo {
+	position: absolute;
+	z-index: 10;
+}
+#nav .minilogo {
+	position: absolute;
+	z-index: 1;
+	top: 38px;
+	left: 8px;
+	display: none;
+}
+.sticky #nav .minilogo {
+	display: block;
+}
+#nav > ul {
+	list-style-type: none;
+	display: inline-block;
+	position: absolute;
+	right: 120px;
+	padding-right:10px;
+}
+#nav .pricing {
+	position: absolute;
+	right: -22px;
+	top: 4px;
+	z-index: 500;
+}
+.minipricing {
+	display: none;
+}
+#nav > ul li {
+	display: inline-block;
+}
+
+#nav ul li a {
+	text-transform: uppercase;
+	padding: 10px 13px;
+	display: block;
+	color: #58595B;
+	font-family: politicalight, sans-serif;
+	font-size: 22px;
+	letter-spacing: .08em;
+}
+#nav ul li > a:active, 
+#nav ul li > a:hover,
+#nav ul li.current-menu-item > a,
+#nav ul li.current-menu-ancestor > a {
+	color: #CF6139;
+}
+#nav ul li a.active {
+	color: #4E917A;
+}
+.sticky2 #subhead {
+	background: none;
+	border: none;
+	height: 0;
+}
+
+.sticky #subhead p.headcontact {
+	display: none;
+}
+
+/* Displays the link as blocks. */
+.sub-menu a {
+display:block;
+float: none;
+margin: 0 auto;
+padding-top: 0;
+}
+/* sub menus!!  */
+ 
+.sub-menu {
+list-style: none;
+margin:0; /* Appear just below the hovering list */
+padding:0;
+width:140px; /* specify the width. */
+position:absolute; /* needed */
+z-index:500; /* specify the order */
+background: url('../images/TSPlight.jpg');
+text-align:left;
+}
+.sub-menu {
+top:39px; /* Positioning:Calc with top level horz list height */
+box-shadow:2px 6px 4px rgba(0,0,0,0.3); /* CSS 3 */
+}
+ 
+ 
+.sub-menu li {
+float:none; /* umm.. Appear below the previous one. mmkay? */
+}
+ 
+/* Drop Down! */
+ 
+/* Hide all the dropdowns (submenus) */
+#nav .sub-menu
+{ display: none; }
+ 
+/* Display the submenus only when li are hovered */
+#nav li:hover .sub-menu,
+#nav .sub-menu:hover
+{ display: block;}
+
+#nav ul.open
+{ display: block;}
+ 
+ul#menu-main-menu li * a:hover {
+/* Change color of links when hovered */
+color: #14ada8;
+}
+.mininav {
+	display: none;
+	width: 240px;
+	height: 34px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.mininav select {
+	background: url(images/new-arrow.png) no-repeat right transparent;
+	width: 95px;
+	padding: 5px;
+	font-size: 22px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+	font-family: politicalight, sans-serif;
+	display: block;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+}
+.mininav select option {
+}
+#subhead {
+	display: block;
+	width: 100%;
+	height: 151px;
+	background: rgba(118, 174, 153, .15);
+	border-bottom: 2px solid #4E917A;
+	padding-top:73px;
+}
+#subheadwrap {
+	bottom: -35px;
+	right: 150px;
+	position: absolute;
+}
+.borderholder {
+	width: 700px;
+    padding: 8px 0 0;
+	background: url('../images/main-sprite.png') repeat-x 2px -6px;
+	position: absolute;
+	top: 74px;
+	right: 115px;
+	z-index: 10;
+	border-top: 1px solid #58595B;
+}
+#subheadwrap p.headcontact {
+	width: 667px;
+    font-size: 13px;
+    text-align: right;
+    margin: 0 auto;
+    padding: 18px 0 0;
+	color: #5F6062;
+}
+.sticky #subhead p.headcontact {
+	display: none;
+}
+.backtotop {
+	position: absolute;
+	right: 55px;
+	top: 2000px;
+	z-index: 10;
+	width:48px;
+	height:64px;
+	text-indent:-999em;
+	background: url('../images/main-sprite.png') no-repeat 0 -565px;
+	display: none;
+}
+.backtotop:hover {
+	background-position:0 -629px;
+}

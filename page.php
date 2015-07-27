@@ -1,5 +1,5 @@
 <?php
-/**
+/*
     basic page template, single column
  */
 get_header(); ?>

@@ -1,0 +1,2739 @@
+@charset "UTF-8";
+@import url(fonts/genericons.css);
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+@font-face {
+  font-family: 'politicalight';
+  src: url("fonts/politicalight-webfont.eot");
+  src: url("fonts/politicalight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/politicalight-webfont.woff") format("woff"), url("fonts/politicalight-webfont.ttf") format("truetype"), url("fonts/politicalight-webfont.svg#politicalight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'godsendicons';
+  src: url("fonts/godsendicons.eot?v5");
+  src: url("fonts/godsendicons.eot?v5#iefix") format("embedded-opentype"), url("fonts/godsendicons.woff?v5") format("woff"), url("fonts/godsendicons.ttf?v5") format("truetype"), url("fonts/godsendicons.svg?v5#godsendicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?63208253#fontello') format('svg');
+  }
+}
+*/
+/* line 99, scss/generic/_variables.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "godsendicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  font-size: 1.125em;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+}
+
+/* line 121, scss/generic/_variables.scss */
+.icon-facebook:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 122, scss/generic/_variables.scss */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 123, scss/generic/_variables.scss */
+.icon-deviantart:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 124, scss/generic/_variables.scss */
+.icon-rss:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 125, scss/generic/_variables.scss */
+.icon-angle-left:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 126, scss/generic/_variables.scss */
+.icon-angle-right:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 127, scss/generic/_variables.scss */
+.icon-down:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 128, scss/generic/_variables.scss */
+.icon-up:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 129, scss/generic/_variables.scss */
+.icon-angle-double-left:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 130, scss/generic/_variables.scss */
+.icon-angle-double-right:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 131, scss/generic/_variables.scss */
+.icon-angle-double-up:before {
+  content: '\e80a';
+}
+
+/* '' */
+/* line 132, scss/generic/_variables.scss */
+.icon-angle-double-down:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 133, scss/generic/_variables.scss */
+.icon-menu:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 134, scss/generic/_variables.scss */
+.icon-star:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 135, scss/generic/_variables.scss */
+.icon-cancel:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 136, scss/generic/_variables.scss */
+.icon-pencil:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 137, scss/generic/_variables.scss */
+.icon-level-down:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 138, scss/generic/_variables.scss */
+.icon-gplus:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 139, scss/generic/_variables.scss */
+.icon-linkedin:before {
+  content: '\e812';
+}
+
+/* '' */
+/* line 140, scss/generic/_variables.scss */
+.icon-vimeo:before {
+  content: '\e813';
+}
+
+/* '' */
+/* line 141, scss/generic/_variables.scss */
+.icon-tumblr:before {
+  content: '\e814';
+}
+
+/* '' */
+/* line 142, scss/generic/_variables.scss */
+.icon-patreon:before {
+  content: '\e815';
+}
+
+/* '' */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
+/* Franklin Small font style
+	Usage: @include font-2-style();
+ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ 
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+*/
+/* line 13, scss/generic/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 20, scss/generic/_reset.scss */
+html {
+  width: 100%;
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 27, scss/generic/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+#footer,
+#header,
+hgroup,
+#nav,
+section {
+  display: block;
+}
+
+/* line 39, scss/generic/_reset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 44, scss/generic/_reset.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 47, scss/generic/_reset.scss */
+del {
+  color: #333;
+}
+
+/* line 50, scss/generic/_reset.scss */
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 54, scss/generic/_reset.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin: 24px;
+  margin-bottom: 1.714285714rem;
+}
+
+/* line 61, scss/generic/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 68, scss/generic/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 71, scss/generic/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 74, scss/generic/_reset.scss */
+small {
+  font-size: smaller;
+}
+
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------*/
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 8, scss/base/_global-classes.scss */
+.cf, .g-3up {
+  *zoom: 1;
+}
+
+/* Clearing floats */
+/* line 12, scss/base/_global-classes.scss */
+.clear:after,
+.wrapper:after,
+.format-status .entry-header:after {
+  clear: both;
+}
+
+/* line 17, scss/base/_global-classes.scss */
+.clear:before,
+.clear:after,
+.wrapper:before,
+.wrapper:after,
+.format-status .entry-header:before,
+.format-status .entry-header:after {
+  display: table;
+  content: "";
+}
+
+/* line 1, scss/base/_main.scss */
+body {
+  font-family: "adobe-caslon-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1;
+  width: 100%;
+  margin: 0 auto;
+  background: url("../images/TSPlight.jpg");
+  .max-width: 964px;
+}
+
+/* Links */
+/* line 2, scss/base/_links.scss */
+a {
+  text-decoration: none;
+  color: #C7604C;
+}
+
+/* line 6, scss/base/_links.scss */
+a:hover {
+  color: #4E917A;
+}
+
+/* line 9, scss/base/_links.scss */
+a, img, a:focus {
+  outline: 0;
+  border: none;
+}
+
+/* line 10, scss/base/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* Headings */
+/* line 3, scss/base/_headings.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: normal;
+}
+
+/* line 12, scss/base/_headings.scss */
+h1, h2, h3 {
+  font-family: politicalight, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  line-height: 1.15;
+}
+
+/* line 18, scss/base/_headings.scss */
+h2 {
+  font-size: 44px;
+  letter-spacing: .08em;
+  line-height: 1.15;
+}
+
+/* Text-Related Elements */
+/* line 2, scss/base/_text.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 6, scss/base/_text.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 13, scss/base/_text.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 17, scss/base/_text.scss */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 23, scss/base/_text.scss */
+p {
+  line-height: 1.3;
+}
+
+/* line 24, scss/base/_text.scss */
+strong {
+  color: #C7604C;
+}
+
+/* line 1, scss/base/_lists.scss */
+ol,
+ul {
+  margin: 0 0 10px 20px;
+  list-style: none;
+}
+
+/*------------------------------------*\
+    $MEDIA ELEMENTS
+\*------------------------------------*/
+/* line 5, scss/base/_media.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* The slide Slider styles */
+/* line 11, scss/base/_media.scss */
+.gallery, .slider-wrapper, .gallery img {
+  border: none;
+  outline: none;
+}
+
+/* line 15, scss/base/_media.scss */
+.slider-wrapper {
+  float: left;
+  position: relative;
+  margin-top: 60px;
+  width: 675px;
+}
+
+/* line 21, scss/base/_media.scss */
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 27, scss/base/_media.scss */
+.portslide {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+  display: none;
+}
+
+/* line 34, scss/base/_media.scss */
+.portslide:first-child {
+  display: block;
+}
+
+/* line 37, scss/base/_media.scss */
+.gallery.slider > div {
+  display: none;
+}
+
+/* line 40, scss/base/_media.scss */
+.gallery.slider > div:first-child {
+  display: block;
+}
+
+/* line 43, scss/base/_media.scss */
+.portslide img {
+  width: 100%;
+  height: auto;
+}
+
+/* If an image is wrapped in a link */
+/* line 48, scss/base/_media.scss */
+.gallery.slider div p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 5;
+  width: 90%;
+  padding: 15px 5% 10px;
+  overflow: hidden;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=7);
+  background: #5F6062;
+  color: #DCDCD6;
+  line-height: 1.2;
+  font-size: 14px;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+/* line 67, scss/base/_media.scss */
+.slide-directionNav a {
+  position: absolute;
+  top: 45%;
+  z-index: 9;
+  cursor: pointer;
+}
+
+/* line 73, scss/base/_media.scss */
+.slide-prevNav {
+  left: 0px;
+}
+
+/* line 76, scss/base/_media.scss */
+.slide-nextNav {
+  right: 0px;
+}
+
+/* line 80, scss/base/_media.scss */
+.slider-wrapper .slider {
+  position: relative;
+  background: transparent url("../images/loading.gif") no-repeat 50% 50%;
+}
+
+/* line 84, scss/base/_media.scss */
+.slide-pager {
+  margin: 10px 5px;
+  position: absolute;
+  bottom: -28px;
+  z-index: 100;
+}
+
+/* line 90, scss/base/_media.scss */
+.slide-pager span {
+  margin: 0 4px 0 0;
+  height: 11px;
+  width: 11px;
+  background: transparent url("../images/dots.png") 0px 0px no-repeat;
+  display: block;
+  float: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* line 101, scss/base/_media.scss */
+.slide-pager span:hover, .slide-pager span.cycle-pager-active {
+  background-position: -11px 0px;
+}
+
+/* line 104, scss/base/_media.scss */
+.slider-wrapper .slide-caption {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 107, scss/base/_media.scss */
+.slider-wrapper .slide-caption a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+/* line 111, scss/base/_media.scss */
+.slider-wrapper .slide-caption a:hover {
+  color: #fff;
+}
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/*------------------------------------*\
+    $Table
+\*------------------------------------*/
+/* line 4, scss/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  width: 100%;
+}
+
+/* line 10, scss/base/_tables.scss */
+th {
+  text-align: left;
+  border: 1px solid #5F6062;
+  padding: 0.2em;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 0.75em;
+}
+
+/* line 17, scss/base/_tables.scss */
+td {
+  border: 0;
+  padding: 0.5em;
+}
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/* Layout Container */
+/* line 6, scss/objects/_layout.scss */
+.lc {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/* Grid Container */
+/* line 18, scss/objects/_layout.scss */
+.g {
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 0;
+  overflow: visible;
+  position: relative;
+}
+/* line 28, scss/objects/_layout.scss */
+.g > a {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 0.8125em;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Grid Item */
+/* line 39, scss/objects/_layout.scss */
+.gi {
+  padding: 0;
+  margin: 0 1% 2%;
+  position: relative;
+  float: left;
+}
+/* line 45, scss/objects/_layout.scss */
+.gi img {
+  display: block;
+}
+
+/* Grid 3up */
+/* line 55, scss/objects/_layout.scss */
+.g-3up > .gi {
+  width: 26%;
+}
+@media all and (min-width: 500px) {
+  /* line 60, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(2n+1) {
+    clear: none;
+  }
+  /* line 64, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(3n+1) {
+    clear: left;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 55, scss/objects/_layout.scss */
+  .g-3up > .gi {
+    width: 47%;
+    margin: 0 1.5% 3%;
+  }
+  /* line 74, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(odd) {
+    clear: left;
+  }
+}
+/* line 83, scss/objects/_layout.scss */
+.g-3up > .gi.credits {
+  width: 42%;
+}
+@media all and (max-width: 500px) {
+  /* line 93, scss/objects/_layout.scss */
+  .g-3up > .gi, .g-3up > .gi.credits {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+/* Header-Related Elements */
+/* line 2, scss/objects/_header.scss */
+#header.trans {
+  top: -30px;
+}
+
+/* line 5, scss/objects/_header.scss */
+#main.trans {
+  margin-top: 226px;
+}
+
+/* line 8, scss/objects/_header.scss */
+#readout {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  z-index: 100;
+}
+
+/* line 15, scss/objects/_header.scss */
+#header {
+  width: 100%;
+  display: block;
+  background: url("../images/TSPlight.jpg");
+  position: fixed;
+  z-index: 201;
+  top: 0;
+  left: 0;
+}
+
+/* line 24, scss/objects/_header.scss */
+#nav {
+  width: 964px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  position: relative;
+  height: 43px;
+  z-index: 100;
+}
+
+/* line 34, scss/objects/_header.scss */
+.sticky #nav {
+  /*	padding-top: 0; */
+}
+
+/* line 37, scss/objects/_header.scss */
+#nav .logo {
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 41, scss/objects/_header.scss */
+#nav .minilogo {
+  position: absolute;
+  z-index: 1;
+  top: 38px;
+  left: 8px;
+  display: none;
+}
+
+/* line 48, scss/objects/_header.scss */
+.sticky #nav .minilogo {
+  display: block;
+}
+
+/* line 51, scss/objects/_header.scss */
+#nav > ul {
+  list-style-type: none;
+  display: inline-block;
+  position: absolute;
+  right: 120px;
+  padding-right: 10px;
+}
+
+/* line 58, scss/objects/_header.scss */
+#nav .pricing {
+  position: absolute;
+  right: -22px;
+  top: 4px;
+  z-index: 500;
+}
+
+/* line 64, scss/objects/_header.scss */
+.minipricing {
+  display: none;
+}
+
+/* line 67, scss/objects/_header.scss */
+#nav > ul li {
+  display: inline-block;
+}
+
+/* line 71, scss/objects/_header.scss */
+#nav ul li a {
+  text-transform: uppercase;
+  padding: 10px 13px;
+  display: block;
+  color: #58595B;
+  font-family: politicalight, sans-serif;
+  font-size: 22px;
+  letter-spacing: .08em;
+}
+
+/* line 80, scss/objects/_header.scss */
+#nav ul li > a:active,
+#nav ul li > a:hover,
+#nav ul li.current-menu-item > a,
+#nav ul li.current-menu-ancestor > a {
+  color: #CF6139;
+}
+
+/* line 86, scss/objects/_header.scss */
+#nav ul li a.active {
+  color: #4E917A;
+}
+
+/* line 89, scss/objects/_header.scss */
+.sticky2 #subhead {
+  background: none;
+  border: none;
+  height: 0;
+}
+
+/* line 95, scss/objects/_header.scss */
+.sticky #subhead p.headcontact {
+  display: none;
+}
+
+/* Displays the link as blocks. */
+/* line 100, scss/objects/_header.scss */
+.sub-menu a {
+  display: block;
+  float: none;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+/* sub menus!!  */
+/* line 108, scss/objects/_header.scss */
+.sub-menu {
+  list-style: none;
+  margin: 0;
+  /* Appear just below the hovering list */
+  padding: 0;
+  width: 140px;
+  /* specify the width. */
+  position: absolute;
+  /* needed */
+  z-index: 500;
+  /* specify the order */
+  background: url("../images/TSPlight.jpg");
+  text-align: left;
+}
+
+/* line 118, scss/objects/_header.scss */
+.sub-menu {
+  top: 39px;
+  /* Positioning:Calc with top level horz list height */
+  box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.3);
+  /* CSS 3 */
+}
+
+/* line 124, scss/objects/_header.scss */
+.sub-menu li {
+  float: none;
+  /* umm.. Appear below the previous one. mmkay? */
+}
+
+/* Drop Down! */
+/* Hide all the dropdowns (submenus) */
+/* line 131, scss/objects/_header.scss */
+#nav .sub-menu {
+  display: none;
+}
+
+/* Display the submenus only when li are hovered */
+/* line 135, scss/objects/_header.scss */
+#nav li:hover .sub-menu,
+#nav .sub-menu:hover {
+  display: block;
+}
+
+/* line 139, scss/objects/_header.scss */
+#nav ul.open {
+  display: block;
+}
+
+/* line 142, scss/objects/_header.scss */
+ul#menu-main-menu li * a:hover {
+  /* Change color of links when hovered */
+  color: #14ada8;
+}
+
+/* line 146, scss/objects/_header.scss */
+.mininav {
+  display: none;
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 153, scss/objects/_header.scss */
+.mininav select {
+  background: url(images/new-arrow.png) no-repeat right transparent;
+  width: 95px;
+  padding: 5px;
+  font-size: 22px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+  font-family: politicalight, sans-serif;
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* line 171, scss/objects/_header.scss */
+#subhead {
+  display: block;
+  width: 100%;
+  height: 151px;
+  background: rgba(118, 174, 153, 0.15);
+  border-bottom: 2px solid #4E917A;
+  padding-top: 73px;
+}
+
+/* line 179, scss/objects/_header.scss */
+#subheadwrap {
+  bottom: -35px;
+  right: 150px;
+  position: absolute;
+}
+
+/* line 184, scss/objects/_header.scss */
+.borderholder {
+  width: 700px;
+  padding: 8px 0 0;
+  background: url("../images/main-sprite.png") repeat-x 2px -6px;
+  position: absolute;
+  top: 74px;
+  right: 115px;
+  z-index: 10;
+  border-top: 1px solid #58595B;
+}
+
+/* line 194, scss/objects/_header.scss */
+#subheadwrap p.headcontact {
+  width: 667px;
+  font-size: 13px;
+  text-align: right;
+  margin: 0 auto;
+  padding: 18px 0 0;
+  color: #5F6062;
+}
+
+/* line 202, scss/objects/_header.scss */
+.sticky #subhead p.headcontact {
+  display: none;
+}
+
+/* line 205, scss/objects/_header.scss */
+.backtotop {
+  position: absolute;
+  right: 55px;
+  top: 2000px;
+  z-index: 10;
+  width: 48px;
+  height: 64px;
+  text-indent: -999em;
+  background: url("../images/main-sprite.png") no-repeat 0 -565px;
+  display: none;
+}
+
+/* line 216, scss/objects/_header.scss */
+.backtotop:hover {
+  background-position: 0 -629px;
+}
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
+/*
+[role=main] {
+	overflow: hidden;
+	padding: 0 0 $padpx-triple;
+	margin: 0 auto;
+	background:$white;
+	color:$drk-brwn;
+
+
+	@media all and (max-width: $bp-large) {
+		padding: 0;
+	}
+
+}
+*/
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/* FOOTER */
+/* line 6, scss/objects/_footer.scss */
+#footwrap {
+  width: 100%;
+  background: url("../images/TSPmidfabric400.jpg");
+  border-top: 6px solid #DD604C;
+  clear: both;
+}
+
+/* line 13, scss/objects/_footer.scss */
+#footer {
+  width: 688px;
+  margin: 0 auto;
+  padding: 60px 152px;
+  color: #DEDED8;
+}
+
+/* line 20, scss/objects/_footer.scss */
+.footcol {
+  width: 228px;
+  text-align: center;
+  float: left;
+  padding: 24px 0;
+}
+
+/* line 27, scss/objects/_footer.scss */
+#footer > p {
+  clear: both;
+  text-align: center;
+  padding: 30px 0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 36, scss/objects/_footer.scss */
+#footer a {
+  color: #DEDED8;
+}
+
+/* line 41, scss/objects/_footer.scss */
+a.facebook-old {
+  height: 50px;
+  width: 50px;
+  display: block;
+  text-indent: -999em;
+  margin: 0 auto;
+  background: transparent url("../images/main-sprite.png") -97px -629px;
+}
+
+/* line 49, scss/objects/_footer.scss */
+a.facebook-old:hover, a.facebook-old:active {
+  background-position: -97px -679px;
+}
+
+/* line 52, scss/objects/_footer.scss */
+#footer h2 {
+  font-size: 39px;
+  margin-bottom: 26px;
+  letter-spacing: .08em;
+}
+
+/* line 57, scss/objects/_footer.scss */
+#foot2 {
+  border-left: 1px solid #DEDED8;
+  border-right: 1px solid #DEDED8;
+}
+
+/* line 61, scss/objects/_footer.scss */
+.nav-social {
+  padding: 0 20px;
+  margin: 0;
+}
+
+/* line 65, scss/objects/_footer.scss */
+.nav-social li {
+  display: inline;
+  margin: 0 .3em;
+}
+
+/* line 69, scss/objects/_footer.scss */
+.nav-social [class*="genericon"] {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin: 0 7px .75em;
+}
+
+/* line 75, scss/objects/_footer.scss */
+.nav-social a:hover [class*="genericon"],
+.nav-social a:active [class*="genericon"],
+#footer a:hover,
+#footer a:active {
+  color: #ffffff;
+}
+
+/* line 82, scss/objects/_footer.scss */
+#foot1 p {
+  line-height: 20px;
+}
+
+/* line 85, scss/objects/_footer.scss */
+.pricebadge {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  width: 147px;
+  height: 152px;
+  background: transparent url("../images/main-sprite.png") 0 -183px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* line 95, scss/objects/_footer.scss */
+.pricebadge:hover {
+  background-position: 0 -27px;
+}
+
+/* line 98, scss/objects/_footer.scss */
+.headerPBhover.small {
+  background-position: 34px -392px;
+}
+
+/* line 102, scss/objects/_footer.scss */
+.headerPBhover {
+  background: transparent url("../images/main-sprite.png") 8px -19px no-repeat;
+}
+
+/* line 105, scss/objects/_footer.scss */
+.headerPBhover .spriteAnimation {
+  background-repeat: no-repeat;
+}
+
+/* line 108, scss/objects/_footer.scss */
+body.admin-bar {
+  margin-top: -28px;
+  padding-bottom: 28px;
+}
+
+/* line 112, scss/objects/_footer.scss */
+#wpadminbar {
+  top: auto !important;
+  bottom: 0;
+}
+
+/* line 116, scss/objects/_footer.scss */
+#wpadminbar .quicklinks > ul > li {
+  position: relative;
+}
+
+/* line 119, scss/objects/_footer.scss */
+#wpadminbar .ab-top-menu > .menupop > .ab-sub-wrapper {
+  bottom: 28px;
+}
+
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+/* Global Font Classes */
+/* line 2, scss/objects/_text.scss */
+.font-secondary {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 5, scss/objects/_text.scss */
+.font-tertiary {
+  font-family: Arial, sans-serif;
+}
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+/* HOME */
+/* line 2, scss/objects/_blocks.scss */
+.content {
+  width: 964px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 7, scss/objects/_blocks.scss */
+.content.apparel {
+  height: 321px;
+}
+
+/* line 10, scss/objects/_blocks.scss */
+.zone1 {
+  background: rgba(255, 255, 255, 0.29);
+  padding-bottom: 60px;
+}
+
+/* line 14, scss/objects/_blocks.scss */
+.galinfo {
+  width: 285px;
+  background: white;
+  float: right;
+  margin-top: -30px;
+  right: 0;
+  padding: 30px 0 20px;
+  min-height: 460px;
+}
+
+/* line 26, scss/objects/_blocks.scss */
+.galinfo h2 {
+  color: #5F6062;
+  padding: 0 30px 30px;
+  background: url("../images/border-dots.png") repeat-x bottom;
+  margin-bottom: 30px;
+}
+
+/* line 32, scss/objects/_blocks.scss */
+.galinfo p {
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+
+/* line 36, scss/objects/_blocks.scss */
+.right, .left {
+  float: left;
+}
+
+/* line 39, scss/objects/_blocks.scss */
+.orangebox.right {
+  float: right;
+}
+
+/* line 42, scss/objects/_blocks.scss */
+.orangebox.left .slide-pager {
+  right: 0;
+}
+
+/* line 45, scss/objects/_blocks.scss */
+.orangebox.gallery {
+  margin-top: 90px;
+}
+
+/* line 48, scss/objects/_blocks.scss */
+.left {
+  float: left;
+}
+
+/* line 53, scss/objects/_blocks.scss */
+.zone1 {
+  float: left;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+/* line 58, scss/objects/_blocks.scss */
+.page-template-portfolio-php .zone1 {
+  padding-top: 60px;
+}
+
+/* line 61, scss/objects/_blocks.scss */
+.page-template-portfolio-php .orangebox {
+  margin-top: 90px;
+}
+
+/* line 65, scss/objects/_blocks.scss */
+.vidwrap {
+  padding-top: 90px;
+}
+
+/* line 69, scss/objects/_blocks.scss */
+.splitzone {
+  padding-bottom: 60px;
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+
+/* line 76, scss/objects/_blocks.scss */
+.splitleft {
+  height: 100%;
+  width: 43%;
+  position: absolute;
+  background: rgba(118, 174, 153, 0.15);
+}
+
+/* line 83, scss/objects/_blocks.scss */
+.splitright {
+  height: 100%;
+  width: 57%;
+  position: absolute;
+  right: 0;
+  background: rgba(95, 96, 98, 0.15) url("../images/border-dots.png") repeat-y -2px 0px;
+}
+
+/* line 91, scss/objects/_blocks.scss */
+.orangebox {
+  width: 289px;
+  color: #DEDED8;
+  z-index: 10;
+  position: relative;
+  background: url("../images/granville.png") no-repeat bottom left #C7604C;
+  min-height: 384px;
+  z-index: 200;
+  float: left;
+}
+
+/* line 101, scss/objects/_blocks.scss */
+#main .orangebox.ob1 {
+  background-position: -300px bottom;
+}
+
+/* line 102, scss/objects/_blocks.scss */
+#main .orangebox.ob2 {
+  background-position: -600px bottom;
+}
+
+/* line 103, scss/objects/_blocks.scss */
+#main .orangebox.ob3 {
+  background-position: -900px bottom;
+}
+
+/* line 104, scss/objects/_blocks.scss */
+#main .orangebox.ob4 {
+  background-position: -1180px bottom;
+}
+
+/* line 105, scss/objects/_blocks.scss */
+.orangebox h2, .orangebox h3 {
+  padding: 30px;
+  position: relative;
+}
+
+/* line 109, scss/objects/_blocks.scss */
+.orangebox h2:after, .orangebox h3:after {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: url("../images/main-sprite.png") repeat-x top center;
+}
+
+/* line 118, scss/objects/_blocks.scss */
+.orangebox h3 {
+  font-size: 34px;
+}
+
+/* line 121, scss/objects/_blocks.scss */
+.orangebox p {
+  padding: 30px;
+  line-height: 24px;
+}
+
+/* line 125, scss/objects/_blocks.scss */
+.orangebox > div {
+  width: 100%;
+}
+
+/* line 128, scss/objects/_blocks.scss */
+.vid {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 1;
+}
+
+/* PORTFOLIO */
+/* line 135, scss/objects/_blocks.scss */
+div.zone1:first-child .slider-wrapper {
+  margin-top: 0;
+}
+
+/* line 138, scss/objects/_blocks.scss */
+.port div.zone1:first-child .orangebox {
+  margin-top: 30px;
+}
+
+/* line 141, scss/objects/_blocks.scss */
+.gallery:before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  height: 77%;
+  background: rgba(118, 174, 153, 0.15);
+  width: 100%;
+}
+
+/* PRODUCTS */
+/* line 152, scss/objects/_blocks.scss */
+.category-apparel .zone1 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  overflow: hidden;
+  position: relative;
+  float: none;
+}
+
+/* line 159, scss/objects/_blocks.scss */
+.category-apparel .zone1.open {
+  height: auto;
+}
+
+/* line 162, scss/objects/_blocks.scss */
+.category-apparel h3 {
+  font-size: 24px;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 167, scss/objects/_blocks.scss */
+.zone1:nth-child(3n) {
+  background: rgba(118, 174, 153, 0.15);
+}
+
+/* line 170, scss/objects/_blocks.scss */
+.zone1:nth-child(3n-1) {
+  background: rgba(95, 96, 98, 0.15);
+}
+
+/* line 173, scss/objects/_blocks.scss */
+.category-apparel .zone1 h2 {
+  color: #CF6139;
+  width: 964px;
+  margin: 0 auto;
+}
+
+/* line 179, scss/objects/_blocks.scss */
+.app-wrap a {
+  position: relative;
+  float: left;
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  outline-style: none;
+  outline-width: 0;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 193, scss/objects/_blocks.scss */
+.app-wrap {
+  position: relative;
+}
+
+/* line 196, scss/objects/_blocks.scss */
+.app-wrap a:nth-child(4n) {
+  margin-right: 0;
+}
+
+/* line 199, scss/objects/_blocks.scss */
+.category-apparel .zone1 span.view-all {
+  position: absolute;
+  bottom: -22px;
+  right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #CC6139;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* line 209, scss/objects/_blocks.scss */
+.app-desc {
+  background: #5F6062;
+  color: #DCDCD6;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 218, scss/objects/_blocks.scss */
+.app-thumb:hover .app-desc {
+  background: #4E917A;
+}
+
+/* line 221, scss/objects/_blocks.scss */
+.app-desc h3 {
+  font-size: 14px;
+}
+
+/* line 225, scss/objects/_blocks.scss */
+.zone0 {
+  .float: left;
+}
+
+/* line 228, scss/objects/_blocks.scss */
+.product {
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+
+/* line 233, scss/objects/_blocks.scss */
+.product h2 {
+  text-align: center;
+}
+
+/* line 236, scss/objects/_blocks.scss */
+.product img, .apparel img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 241, scss/objects/_blocks.scss */
+.product.apparel {
+  width: 25%;
+  float: left;
+}
+
+/* line 245, scss/objects/_blocks.scss */
+.productinfo {
+  width: 426px;
+  background: white;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* line 253, scss/objects/_blocks.scss */
+.flipoffset .productinfo {
+  margin-top: 30px;
+}
+
+/* line 256, scss/objects/_blocks.scss */
+.flipoffset .productimg {
+  margin-top: 60px;
+}
+
+/* line 259, scss/objects/_blocks.scss */
+.productinfo h2 {
+  color: #5F6062;
+  padding: 5px 30px 30px;
+  position: relative;
+}
+
+/* line 264, scss/objects/_blocks.scss */
+.productinfo h2:after {
+  background: url("../images/main-sprite.png") repeat-x 2px -6px;
+  content: "";
+  height: 7px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 273, scss/objects/_blocks.scss */
+.productinfo .contentp {
+  padding: 25px 30px;
+}
+
+/* line 276, scss/objects/_blocks.scss */
+.productinfo p {
+  padding: 5px 0;
+}
+
+/* line 279, scss/objects/_blocks.scss */
+.rsrcelink {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -99em;
+  background: transparent url("../images/main-sprite.png") no-repeat -57px -567px;
+  float: right;
+  margin: 0 30px 20px 0;
+}
+
+/* line 289, scss/objects/_blocks.scss */
+.rsrcelink:hover {
+  background-position: -57px -591px;
+}
+
+/* line 292, scss/objects/_blocks.scss */
+.rsrcelink.templates {
+  width: 25px;
+  background-position: -78px -567px;
+  margin-right: 20px;
+  height: 24px;
+}
+
+/* line 298, scss/objects/_blocks.scss */
+.rsrcelink.templates:hover {
+  background-position: -78px -591px;
+}
+
+/* line 301, scss/objects/_blocks.scss */
+.rsrcelink.samples {
+  width: 29px;
+  background-position: -103px -566px;
+  margin-right: 19px;
+}
+
+/* line 306, scss/objects/_blocks.scss */
+.rsrcelink.samples:hover {
+  background-position: -103px -591px;
+}
+
+/* line 309, scss/objects/_blocks.scss */
+.productinfo h4.sizes {
+  width: 250px;
+  float: left;
+  padding-right: 0;
+}
+
+/* line 314, scss/objects/_blocks.scss */
+.rsrcelink.launchcalc, .calcbanner h3 {
+  width: 384px;
+  height: 51px;
+  margin: 0 auto;
+  cursor: pointer;
+  background: transparent url("../images/calc-sprite.png") no-repeat 0 -185px;
+  display: block;
+  float: none;
+  clear: both;
+  overflow: hidden;
+  text-indent: -999em;
+}
+
+/* line 326, scss/objects/_blocks.scss */
+.calcbanner h3 {
+  width: 271px;
+  height: 51px;
+  position: relative;
+  margin: 0;
+}
+
+/* line 332, scss/objects/_blocks.scss */
+.calcbanner {
+  margin: 0 auto;
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  width: 680px;
+}
+
+/* line 340, scss/objects/_blocks.scss */
+.calcbanner:before {
+  width: 412px;
+  height: 51px;
+  background: url("../images/calc-sprite.png") no-repeat 0 -287px;
+  display: block;
+  content: '';
+  right: 0;
+  bottom: 30px;
+  position: absolute;
+}
+
+/* line 350, scss/objects/_blocks.scss */
+.rsrcelink.launchcalc:hover {
+  background-position: 0 -236px;
+}
+
+/* line 353, scss/objects/_blocks.scss */
+.productinfo h4 {
+  padding: 5px 30px;
+}
+
+/* line 356, scss/objects/_blocks.scss */
+.productinfo img {
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* line 361, scss/objects/_blocks.scss */
+.productimg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: left;
+  padding: 30px;
+  background: #C5C5BE;
+}
+
+/* line 368, scss/objects/_blocks.scss */
+.swatches {
+  clear: both;
+  width: 994px;
+  float: left;
+  left: -15px;
+  position: relative;
+  margin-top: 30px;
+}
+
+/* line 376, scss/objects/_blocks.scss */
+.swatches > h4 {
+  padding-left: 15px;
+}
+
+/* line 379, scss/objects/_blocks.scss */
+.swatchall {
+  position: relative;
+}
+
+/* line 382, scss/objects/_blocks.scss */
+.swatchwrap {
+  float: left;
+  position: relative;
+}
+
+/* line 386, scss/objects/_blocks.scss */
+.swatchwrap.active {
+  background: #5F6062;
+}
+
+/* line 389, scss/objects/_blocks.scss */
+.swatch {
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/paperswatch.png");
+  float: left;
+  border: 1px solid #5F6062;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* line 398, scss/objects/_blocks.scss */
+.apparel .swatch {
+  background-image: url("../images/colorswatch.png");
+}
+
+/* line 401, scss/objects/_blocks.scss */
+.swatchname {
+  background: #5F6062;
+  color: #DCDCD6;
+  padding: 10px 2px;
+  text-align: center;
+  display: none;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+/* line 410, scss/objects/_blocks.scss */
+.calculator {
+  display: none;
+  padding-bottom: 80px;
+  width: 100%;
+  background-image: url("../images/colorswatch.png");
+  background-color: #5F6062;
+  float: left;
+  position: relative;
+}
+
+/* line 419, scss/objects/_blocks.scss */
+.calculator.open {
+  display: block;
+}
+
+/* line 422, scss/objects/_blocks.scss */
+#ajaxLoader {
+  position: absolute;
+  left: 332px;
+  top: 97px;
+}
+
+/* line 427, scss/objects/_blocks.scss */
+.calc {
+  width: 680px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 432, scss/objects/_blocks.scss */
+.calctabs {
+  position: relative;
+}
+
+/* line 435, scss/objects/_blocks.scss */
+.tab {
+  display: inline-block;
+  background: #C6C7BD;
+  padding: 8px;
+  position: relative;
+  margin: 0 0 0 9px;
+  width: auto;
+  float: none;
+  cursor: pointer;
+  height: 22px;
+}
+
+/* line 446, scss/objects/_blocks.scss */
+.tab.selected {
+  background: white;
+  z-index: 10;
+}
+
+/* line 450, scss/objects/_blocks.scss */
+.tab h3 {
+  font-size: 23px;
+}
+
+/* line 453, scss/objects/_blocks.scss */
+.tableft, .tabright {
+  background: url("../images/main-sprite.png") no-repeat -56px -634px;
+  height: 38px;
+  width: 9px;
+  position: absolute;
+  bottom: 0px;
+}
+
+/* line 460, scss/objects/_blocks.scss */
+.tableft {
+  left: -9px;
+}
+
+/* line 463, scss/objects/_blocks.scss */
+.selected .tableft {
+  background-position: -74px -634px;
+}
+
+/* line 466, scss/objects/_blocks.scss */
+.tabright {
+  right: -9px;
+  background-position: -65px -634px;
+}
+
+/* line 470, scss/objects/_blocks.scss */
+.selected .tabright {
+  background-position: -83px -634px;
+}
+
+/* line 473, scss/objects/_blocks.scss */
+.xboxwrap {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* line 481, scss/objects/_blocks.scss */
+.calcbox {
+  .height: 300px;
+  background: white;
+  display: none;
+  float: left;
+  width: 100%;
+}
+
+/* line 488, scss/objects/_blocks.scss */
+.selected.calcbox {
+  display: block;
+}
+
+/* line 491, scss/objects/_blocks.scss */
+.progress {
+  height: 70px;
+  position: relative;
+}
+
+/* line 495, scss/objects/_blocks.scss */
+.progressbar {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+/* line 500, scss/objects/_blocks.scss */
+.progress1 {
+  position: absolute;
+  top: 25px;
+  left: 55px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/1off.png");
+}
+
+/* line 508, scss/objects/_blocks.scss */
+.progress1.on {
+  background: url("../images/1on.png");
+}
+
+/* line 511, scss/objects/_blocks.scss */
+.progress2 {
+  position: absolute;
+  top: 25px;
+  left: 331px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/2off.png");
+}
+
+/* line 519, scss/objects/_blocks.scss */
+.progress2.on {
+  background: url("../images/2on.png");
+}
+
+/* line 522, scss/objects/_blocks.scss */
+.progress3 {
+  position: absolute;
+  top: 25px;
+  right: 55px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/3off.png");
+}
+
+/* line 530, scss/objects/_blocks.scss */
+.progress3.on {
+  background: url("../images/3on.png");
+}
+
+/* line 533, scss/objects/_blocks.scss */
+.calcboxleft {
+  height: 270px;
+  margin: 0 0 10px;
+  border-right: 2px dotted black;
+  width: 35%;
+  float: left;
+  position: relative;
+}
+
+/* line 541, scss/objects/_blocks.scss */
+.calcboxleft h4 {
+  padding: 20px 20px 5px;
+}
+
+/* line 544, scss/objects/_blocks.scss */
+.calcboxleft select {
+  width: 86%;
+  margin: 0 7%;
+  font-size: 15px;
+}
+
+/* line 549, scss/objects/_blocks.scss */
+.calcboxright {
+  width: 64%;
+  float: left;
+}
+
+/* line 553, scss/objects/_blocks.scss */
+.calcboxright h4 {
+  padding: 20px 20px 5px;
+}
+
+/* line 556, scss/objects/_blocks.scss */
+.calcboxright h4.disabled {
+  opacity: .5;
+}
+
+/* line 559, scss/objects/_blocks.scss */
+.calcboxright select {
+  width: 86%;
+  margin: 0 20px;
+  font-size: 15px;
+}
+
+/* line 564, scss/objects/_blocks.scss */
+.calcboxright label {
+  float: left;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+/* line 569, scss/objects/_blocks.scss */
+.calcboxright label.disabled {
+  opacity: .5;
+}
+
+/* line 572, scss/objects/_blocks.scss */
+.calcboxright select.half {
+  width: 10%;
+  float: left;
+  margin: 0 5px;
+}
+
+/* line 577, scss/objects/_blocks.scss */
+.calcboxright select.threequart {
+  width: 25%;
+  float: left;
+  margin: 0 20px;
+}
+
+/* line 582, scss/objects/_blocks.scss */
+.calcboxright input {
+  width: 14%;
+  margin-left: 20px;
+}
+
+/* line 586, scss/objects/_blocks.scss */
+.calculate {
+  height: 160px;
+  background: #C6C7BD;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 594, scss/objects/_blocks.scss */
+.calculate-button {
+  background-image: url("../images/calculate-off.png");
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 172px;
+  height: 32px;
+  border: 0px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+/* line 605, scss/objects/_blocks.scss */
+.calculate-button.on {
+  background-image: url("../images/calculate-on.png");
+  cursor: pointer;
+}
+
+/* line 609, scss/objects/_blocks.scss */
+.calculate-button.send {
+  background-image: url("../images/calculate-send.png");
+  cursor: pointer;
+}
+
+/* line 613, scss/objects/_blocks.scss */
+.calculate-button.back {
+  background-image: url("../images/calculate-back.png");
+  cursor: pointer;
+  top: 80px;
+  right: -40px;
+}
+
+/* line 619, scss/objects/_blocks.scss */
+.get-started h3 {
+  font-size: 18px;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* line 625, scss/objects/_blocks.scss */
+.get-started .h4, .calcboxright .h4 {
+  padding: 8px 20px 8px;
+  float: left;
+  clear: both;
+  display: inline-block;
+  color: #4E917A;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 635, scss/objects/_blocks.scss */
+.get-started .p-right .h4 {
+  float: none;
+}
+
+/* line 638, scss/objects/_blocks.scss */
+.calcboxright .h4.total, .calcboxright .h4.peritem {
+  float: none;
+}
+
+/* line 641, scss/objects/_blocks.scss */
+.get-started .calcboxleft p, .calcboxright p {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 45px;
+  font-size: 15px;
+  clear: both;
+}
+
+/* line 649, scss/objects/_blocks.scss */
+.get-started .calcboxleft .xxl {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+/* line 654, scss/objects/_blocks.scss */
+.get-started .calcboxleft .p-right, .calcboxright .p-right {
+  text-align: right;
+  float: right;
+  clear: both;
+  width: 200px;
+}
+
+/* line 660, scss/objects/_blocks.scss */
+.get-started .calcboxleft .p-right span, .calcboxright .p-right span {
+  padding: 0;
+}
+
+/* line 663, scss/objects/_blocks.scss */
+.get-started input[type="text"], .get-started input[type="email"] {
+  width: 303px;
+  margin: 1px 1px 5px;
+}
+
+/* line 667, scss/objects/_blocks.scss */
+.get-started input[type="date"] {
+  width: 131px;
+}
+
+/* line 670, scss/objects/_blocks.scss */
+.get-started textarea {
+  width: 365px;
+  height: 96px;
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+/* line 676, scss/objects/_blocks.scss */
+.get-started .calculate p {
+  width: 70%;
+  margin: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* line 682, scss/objects/_blocks.scss */
+.content.pricing-success {
+  text-align: center;
+  margin: 50px auto 80px;
+}
+
+/* line 686, scss/objects/_blocks.scss */
+.content.pricing-success h2 {
+  margin: 30px 0;
+}
+
+/* line 689, scss/objects/_blocks.scss */
+.pricing-link {
+  display: block;
+  padding: 20px;
+  background: #C7604C;
+  width: 200px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin: 30px auto;
+  font-family: politicalight, sans-serif;
+  letter-spacing: .08em;
+}
+
+/* line 701, scss/objects/_blocks.scss */
+.pricing-link:hover {
+  color: #5F6062;
+}
+
+/* line 704, scss/objects/_blocks.scss */
+.sfwrap {
+  margin: 0 auto;
+  width: 743px;
+}
+
+/* line 708, scss/objects/_blocks.scss */
+.swatchflyout {
+  display: none;
+  width: 100%;
+  background: #5F6062;
+  position: absolute;
+  z-index: 10;
+  float: left;
+}
+
+/* line 716, scss/objects/_blocks.scss */
+.swatchflyout.active {
+  display: block;
+}
+
+/* line 719, scss/objects/_blocks.scss */
+.swatchbig {
+  width: 252px;
+  height: 252px;
+  margin: 30px;
+  float: left;
+  border: 1px solid white;
+  background-image: url("../images/paperswatch.png");
+}
+
+/* line 727, scss/objects/_blocks.scss */
+.apparel .swatchbig {
+  background-image: url("../images/colorswatch.png");
+}
+
+/* line 730, scss/objects/_blocks.scss */
+.swatchinfo {
+  float: left;
+  width: 309px;
+  height: 194px;
+  margin: 30px;
+  background: white;
+  padding: 30px;
+}
+
+/* line 738, scss/objects/_blocks.scss */
+.swatchinfo h3 {
+  font-size: 23px;
+  padding-bottom: 10px;
+}
+
+/* line 742, scss/objects/_blocks.scss */
+.swatchinfo h4 {
+  padding-bottom: 8px;
+}
+
+/* line 745, scss/objects/_blocks.scss */
+.swatchinfo p {
+  line-height: 1.1;
+}
+
+/* FAQ and DEFAULT */
+/* line 750, scss/objects/_blocks.scss */
+.lbox {
+  float: left;
+  width: 225px;
+  overflow: hidden;
+}
+
+/* line 755, scss/objects/_blocks.scss */
+.pdT {
+  padding-top: 60px;
+}
+
+/* line 758, scss/objects/_blocks.scss */
+.faqwrap h2 {
+  font-family: "open-sans",sans-serif;
+  color: #4E917A;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin: 0 0 20px;
+  padding: 10px 0 0;
+}
+
+/* line 767, scss/objects/_blocks.scss */
+.faqwrap h3 {
+  font-family: "open-sans",sans-serif;
+  color: #4E917A;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin: 0 0 10px;
+  padding-top: 10px;
+}
+
+/* line 776, scss/objects/_blocks.scss */
+.faqwrap h4 {
+  letter-spacing: .1em;
+  color: #5F6062;
+  letter-spacing: 1px;
+  margin: 0 20px 10px;
+  padding-top: 10px;
+}
+
+/* line 783, scss/objects/_blocks.scss */
+.faqwrap ul, .faqwrap ol {
+  margin: 10px 0 10px 50px;
+}
+
+/* line 786, scss/objects/_blocks.scss */
+.faqwrap li {
+  margin: 5px 0;
+}
+
+/* line 789, scss/objects/_blocks.scss */
+.faq .zone1 {
+  position: relative;
+}
+
+/* line 792, scss/objects/_blocks.scss */
+.faq .splitzone, .faq.splitzone {
+  float: left;
+  height: auto;
+}
+
+/* line 796, scss/objects/_blocks.scss */
+.faq .orangebox {
+  margin-top: 30px;
+  float: none;
+  position: absolute;
+  left: 0;
+}
+
+/* line 802, scss/objects/_blocks.scss */
+.subnavwrap {
+  background: #4E917A;
+}
+
+/* line 805, scss/objects/_blocks.scss */
+.subnav {
+  width: 964px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+/* line 811, scss/objects/_blocks.scss */
+.subnav h2 {
+  font-size: 24px;
+  padding: .5em 30px;
+  text-align: left;
+}
+
+/* line 816, scss/objects/_blocks.scss */
+.home .subnavwrap {
+  background-color: #76AE99;
+}
+
+/* line 819, scss/objects/_blocks.scss */
+.jump {
+  position: relative;
+  display: block;
+  top: -30px;
+}
+
+/* line 824, scss/objects/_blocks.scss */
+.subnav a {
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+}
+
+/* line 830, scss/objects/_blocks.scss */
+.faqwrapper {
+  padding-top: 60px;
+}
+
+/* line 833, scss/objects/_blocks.scss */
+.faqwrap {
+  background: white;
+  float: right;
+  width: 530px;
+  padding: 50px 90px;
+  min-height: 345px;
+}
+
+/* line 840, scss/objects/_blocks.scss */
+.faqwrap.single-col {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 846, scss/objects/_blocks.scss */
+.single-col h1 {
+  font-size: 3em;
+  color: #DD604C;
+}
+
+/* line 850, scss/objects/_blocks.scss */
+.hzcolors .faqwrap {
+  margin-bottom: 0;
+}
+
+/* line 853, scss/objects/_blocks.scss */
+.hzcolors .swatch, .hzcolors .swatchbig {
+  background-image: none;
+}
+
+/* line 856, scss/objects/_blocks.scss */
+.hzcolors .swatches {
+  margin-bottom: 90px;
+}
+
+/* line 859, scss/objects/_blocks.scss */
+h4 {
+  color: #4E917A;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 865, scss/objects/_blocks.scss */
+.faqwrap p {
+  margin: 10px 20px;
+}
+
+/* line 868, scss/objects/_blocks.scss */
+.cf:before, .g-3up:before,
+.cf:after,
+.g-3up:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 874, scss/objects/_blocks.scss */
+.cf:after, .g-3up:after {
+  clear: both;
+}
+
+/* line 878, scss/objects/_blocks.scss */
+.content img.alignleft {
+  float: left;
+}
+
+/* line 881, scss/objects/_blocks.scss */
+.content img.alignright {
+  float: right;
+}
+
+/* line 2, scss/objects/_lists.scss */
+.inline-list li {
+  display: inline-block;
+}
+
+/**
+ * 6.14 Comments
+ * -----------------------------------------------------------------------------
+ */
+/* line 6, scss/objects/_comments.scss */
+.comments-area {
+  margin: 3.5rem auto 0;
+  max-width: 100%;
+  padding: 0 35px;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 12, scss/objects/_comments.scss */
+.comments-area > div, .comments-area > ol, .comments-area > p {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+@media all and (max-width: 730px) {
+  /* line 12, scss/objects/_comments.scss */
+  .comments-area > div, .comments-area > ol, .comments-area > p {
+    padding: 0 5%;
+  }
+}
+@media all and (max-width: 575px) {
+  /* line 12, scss/objects/_comments.scss */
+  .comments-area > div, .comments-area > ol, .comments-area > p {
+    padding: 0;
+  }
+}
+
+/* line 27, scss/objects/_comments.scss */
+.comment-list, .comment-respond, .comments-area > p {
+  display: none;
+}
+
+/* line 31, scss/objects/_comments.scss */
+.comment-reply-title,
+.comments-title {
+  font: 400 16px/1.5 Lato, sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 38, scss/objects/_comments.scss */
+.comment-reply-title.border,
+.comments-title.border {
+  border-top: 1px solid;
+  padding-top: .5em;
+}
+
+/* line 44, scss/objects/_comments.scss */
+.comment-list {
+  list-style: none;
+  margin: 0 0 48px 0;
+}
+
+/* line 49, scss/objects/_comments.scss */
+.comment-author {
+  font-size: 14px;
+  line-height: 1.7142857142;
+}
+
+/* line 54, scss/objects/_comments.scss */
+.comment-list .reply,
+.comment-metadata {
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+/* line 61, scss/objects/_comments.scss */
+.comment-list .reply {
+  margin-top: 24px;
+}
+
+/* line 65, scss/objects/_comments.scss */
+.comment-author .fn {
+  font-weight: 700;
+}
+
+/* line 69, scss/objects/_comments.scss */
+.comment-author a {
+  color: #2b2b2b;
+}
+
+/* line 73, scss/objects/_comments.scss */
+.comment-list .trackback a,
+.comment-list .pingback a,
+.comment-metadata a {
+  color: #767676;
+}
+
+/* line 79, scss/objects/_comments.scss */
+.comment-author a:hover,
+.comment-list .pingback a:hover,
+.comment-list .trackback a:hover,
+.comment-metadata a:hover {
+  color: #41a62a;
+}
+
+/* line 86, scss/objects/_comments.scss */
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding-top: 24px;
+}
+
+/* line 94, scss/objects/_comments.scss */
+.comment-list > li:first-child > article,
+.comment-list > .pingback:first-child,
+.comment-list > .trackback:first-child {
+  border-top: 0;
+}
+
+/* line 100, scss/objects/_comments.scss */
+.comment-author {
+  position: relative;
+}
+
+/* line 104, scss/objects/_comments.scss */
+.comment-author .avatar {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 30px;
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+/* line 114, scss/objects/_comments.scss */
+.bypostauthor > article .fn:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80d";
+  margin: 0 2px 0 -2px;
+  position: relative;
+  top: -1px;
+}
+
+/* line 122, scss/objects/_comments.scss */
+.says {
+  display: none;
+}
+
+/* line 126, scss/objects/_comments.scss */
+.comment-author,
+.comment-awaiting-moderation,
+.comment-content,
+.comment-list .reply,
+.comment-metadata {
+  padding-left: 40px;
+  font-size: .875em;
+}
+
+/* line 135, scss/objects/_comments.scss */
+.comment-edit-link {
+  margin-left: 10px;
+}
+
+/* line 139, scss/objects/_comments.scss */
+.comment-edit-link:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80f";
+  margin-right: 2px;
+  text-decoration: none;
+}
+
+/* line 146, scss/objects/_comments.scss */
+.comment-reply-link:before,
+.comment-reply-login:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e810";
+  margin-right: 2px;
+  text-decoration: none;
+}
+
+/* line 154, scss/objects/_comments.scss */
+.comment-content {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 162, scss/objects/_comments.scss */
+.comment-content ul,
+.comment-content ol {
+  margin: 0 0 24px 22px;
+}
+
+/* line 167, scss/objects/_comments.scss */
+.comment-content li > ul,
+.comment-content li > ol {
+  margin-bottom: 0;
+}
+
+/* line 172, scss/objects/_comments.scss */
+.comment-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 176, scss/objects/_comments.scss */
+.comment-list .children {
+  list-style: none;
+  margin-left: 15px;
+}
+
+/* line 181, scss/objects/_comments.scss */
+.comment-respond {
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+/* line 186, scss/objects/_comments.scss */
+.comment .comment-respond {
+  margin-top: 24px;
+}
+
+/* line 190, scss/objects/_comments.scss */
+.comment-respond h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* line 195, scss/objects/_comments.scss */
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.no-comments,
+.form-allowed-tags,
+.form-allowed-tags code {
+  color: #767676;
+}
+
+/* line 204, scss/objects/_comments.scss */
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as {
+  font-size: 14px;
+  line-height: 1.7142857142;
+}
+
+/* line 211, scss/objects/_comments.scss */
+.no-comments {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+
+/* line 219, scss/objects/_comments.scss */
+.comment-form label {
+  display: block;
+}
+
+/* line 223, scss/objects/_comments.scss */
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+  width: 100%;
+}
+
+/* line 229, scss/objects/_comments.scss */
+.form-allowed-tags,
+.form-allowed-tags code {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* line 235, scss/objects/_comments.scss */
+.required {
+  color: #c0392b;
+}
+
+/* line 239, scss/objects/_comments.scss */
+.comment-reply-title small a {
+  color: #2b2b2b;
+  float: right;
+  height: 24px;
+  overflow: hidden;
+  width: 24px;
+}
+
+/* line 247, scss/objects/_comments.scss */
+.comment-reply-title small a:hover {
+  color: #41a62a;
+}
+
+/* line 251, scss/objects/_comments.scss */
+.comment-reply-title small a:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80e";
+  font-size: 32px;
+}
+
+/* line 257, scss/objects/_comments.scss */
+.comment-navigation {
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+/* line 264, scss/objects/_comments.scss */
+.comment-navigation .nav-next,
+.comment-navigation .nav-previous {
+  display: inline-block;
+}
+
+/* line 269, scss/objects/_comments.scss */
+.comment-navigation .nav-previous a {
+  margin-right: 10px;
+}
+
+/* line 273, scss/objects/_comments.scss */
+#comment-nav-above {
+  margin-top: 36px;
+  margin-bottom: 0;
+}

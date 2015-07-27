@@ -28,6 +28,9 @@ add_action( 'after_setup_theme', 'tsp13_setup' );
  * @return void
  */
 function tsp13_scripts_styles() {
+	// Loads our main stylesheet.
+	wp_enqueue_style( 'tsp13-style', get_template_directory_uri() . '/css/style.css?v=1.1', array(), '2015-07-25' );
+
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/cycle.js', array('jquery'));
 	wp_enqueue_script('jquery-spriteAnimation', get_template_directory_uri() . '/js/spriteAnimation.js', array('jquery'));

@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    $MEDIA ELEMENTS
+\*------------------------------------*/
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* The slide Slider styles */
+.gallery, .slider-wrapper, .gallery img {
+	border: none;
+	outline: none;
+}
+.slider-wrapper {
+	float:left;
+	position: relative;
+	margin-top:60px;
+	width:675px;
+}
+.slider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.portslide {
+	text-align:center;
+	width:100%;
+	height: 100%;
+	max-height: 450px;
+	display:none;
+}
+.portslide:first-child {
+	display: block;
+}
+.gallery.slider > div { 
+	display: none;
+}
+.gallery.slider > div:first-child  { 
+	display: block; 
+}
+.portslide img {
+	width: 100%;
+	height: auto;
+}
+/* If an image is wrapped in a link */
+.gallery.slider div p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	z-index: 5;
+	width: 90%;
+	padding: 15px 5% 10px;
+	overflow: hidden;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter: alpha(opacity=7);
+	background: $gray;
+	color: $gray-lt;
+	line-height: 1.2;
+	font-size: 14px;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.slide-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.slide-prevNav {
+	left:0px;
+}
+.slide-nextNav {
+	right:0px;
+}
+
+.slider-wrapper .slider {
+	position:relative;
+	background:transparent url('../images/loading.gif') no-repeat 50% 50%;
+}
+.slide-pager {
+	margin: 10px 5px;
+	position: absolute;
+	bottom: -28px;
+	z-index:100;
+}
+.slide-pager span {
+	margin:0 4px 0 0;
+	height: 11px;
+	width:11px;
+	background:transparent url('../images/dots.png') 0px 0px no-repeat;
+	display:block;
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.slide-pager span:hover, .slide-pager span.cycle-pager-active {
+	background-position:-11px 0px;
+}
+.slider-wrapper .slide-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.slider-wrapper .slide-caption a {
+    color:$white;
+    border-bottom:1px dotted $white;
+}
+.slider-wrapper .slide-caption a:hover {
+    color:$white;
+}
+
+
