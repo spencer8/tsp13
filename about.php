@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 	Template Name: About Page
  */
 
@@ -43,6 +43,48 @@ get_header(); ?>
 			</div>
 		</div><!-- .content -->
 	</div><!-- #zone1 -->
+
+<?php
+$rows = get_field('team_bios');
+if($rows){ 
+	foreach($rows as $row) { ?>
+	<div class="splitzone faq">
+
+		<div class="splitleft"></div>
+		<div class="splitright"></div>
+
+		<div class="content faqwrapper">
+			<div class="orangebox left">
+				<?php 
+
+				$image = $row['image'];
+
+				if( !empty($image) ): 
+					// vars
+					$title = $image['title'];
+					$alt = $image['alt'];
+
+					// thumbnail
+					$size = 'thumbnail';
+					$thumb = $image['sizes'][ $size ];
+					$width = $image['sizes'][ $size . '-width' ];
+					$height = $image['sizes'][ $size . '-height' ];
+
+					?>
+
+					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+				<?php endif; ?>
+			</div>
+			<div class="faqwrap cf">
+				<?php echo $row['bio']; ?>
+			</div>
+		</div><!-- .content -->
+	</div><!-- #zone1 -->
+<?php } } ?>
+
+
+
 <?php
 $rows = get_field('sections');
 if($rows){ 

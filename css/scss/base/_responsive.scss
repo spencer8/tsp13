@@ -1,0 +1,541 @@
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/*	html {
+		.width: 1024px;
+	}
+	.logo {
+		top: 30px;
+		left: 30px;
+	}
+	.productimg, .productinfo {
+		width: 600px;
+	}
+	.productimg img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
+	.swatches {
+		width: 600px;
+		margin: 30px auto;
+		float: none;
+	}
+	.swatch {
+		margin: 10px;
+	}
+	.swatchbig {
+		display: none;
+	}
+*/
+	#nav, #subheadwrap, .content, .category-apparel .zone1 h2, .subnav { 
+		width: 748px;
+	}
+	.subnav {
+		padding-top: 20px;
+	}
+	#nav {
+		padding-top: 0;
+	}
+	.headcontact, .logo, #subhead, .pricing {
+		display: none;
+	}
+	#nav > ul { right: 60px; }
+	#nav .minilogo {
+		display: block;
+		top:10px;
+	}
+	.minipricing {
+		display: block;
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		z-index: 500;
+	}
+	#main {
+		padding-top:45px;	
+	}
+	.galinfo {
+		margin-top:30px;
+	}
+	.slider-wrapper {
+		margin-top:60px;
+	}
+	.borderholder {
+		top: 45px;
+		right: 0;
+		width: 100%;
+	}
+	.slider-wrapper { width:459px; }
+	.port .orangebox {
+		margin-top: 30px;
+	}
+	div.zone1:first-child .slider-wrapper {
+		margin-top:60px;
+	}
+	.port div.zone1:first-child .orangebox {
+		margin-top:30px;
+	}
+
+	.app-thumb {
+		width: 172px;
+		height:auto;
+	}
+	.app-wrap a {
+		margin-right:20px;	
+	}
+	.category-apparel .zone1 h2 { font-size: 36px; }
+	.content.apparel {
+		height: 275px;
+	}
+	.productimg img { 
+		width: 292px;
+		height: auto;
+	}
+	.productimg { 
+		padding: 10px;
+		margin-top:60px;
+	}
+	.productinfo { margin-top:30px; }
+	.faqwrap {
+		width: 391px;
+		padding: 50px 50px;
+	}
+	#footer {
+		padding:60px 30px;
+	}
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1023px) {
+	.swatches {
+		width: 100%;
+		margin: 6% auto;
+		float: none;
+		left: 0;
+		padding-top: 5px;
+	}
+	.hzcolors .swatches {
+		margin-bottom: 6%;
+	}
+	.swatchwrap {
+		float: left;
+		position: relative;
+		margin: 0;
+		width: 14%;
+		padding: 1.33%;
+	}
+	.swatch {
+		margin: 0;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+	}
+	.sfwrap {
+		width: 100%;
+	}
+	.swatchinfo {
+		width: 80%;
+margin: 5%;
+padding: 5%;
+	}
+	.swatchbig {
+		display: none;
+	}
+	.galinfo {
+		min-height: 30px;
+	}
+
+}
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 600px) {
+	.get-started .calculate p {
+		margin: 140px 20px 20px;
+	}
+}
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px) {
+	html {
+		width: 100%;
+	}
+	body {
+		margin: 0 auto;
+	}
+	h2 {
+		font-size: 32px;
+		.letter-spacing: 3px;
+		text-align:center;
+	}
+	.content.apparel {
+		height: auto;
+	}
+	#header {
+		border-bottom: 1px solid #58595B;
+	}
+	.content, .galslidewrap {
+		width: 90%;
+	}
+	#nav, #subheadwrap, .subnav {
+		width: 100%;
+	}
+	.subnav {
+		padding: 20px 0;
+	}
+	#nav {
+		padding-top: 0;
+	}
+	.headcontact, .logo, #subhead, .pricing, #nav ul {
+		display: none;
+	}
+	.mininav {
+		display: block;
+	}
+	#nav .minilogo {
+		display: block;
+		top: 7px;
+	}
+	.minipricing {
+		display: block;
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		z-index: 500;
+	}
+	#main {
+		padding-top:43px;	
+	}
+	.borderholder {
+		top: 45px;
+		right: 0;
+		width: 100%;
+		border-top: none;
+	}
+	.galinfo {
+		position: relative;
+		width: 94%;
+		height: auto;
+		margin: 0 3% 0;
+		top: 0;
+	}
+	.galinfo h2 {
+		padding: 0 30px 30px;
+	}
+	.zone1 {
+		padding-bottom: 6%;
+	}
+	.category-apparel .zone1 span.view-all {
+		top: 310px;
+		right: 38%;
+	}
+	.category-apparel .zone1 h2 {
+		width:100%;
+	}
+	.slidenav.right {
+		float: left;
+	}
+	img.loading {
+		padding: 127px 48%;
+		height: auto;
+		border: none;
+		visibility: none;
+	}
+	.slider-wrapper { margin: 0 0 1% 0; width: 100%; }
+
+	.splitleft {
+		width: 100%;
+	}
+	.splitright {
+		display: none;
+	}
+	.orangebox, .faq .orangebox {
+		width: 100%;
+		margin-top: 1%;
+		position: relative;
+		left: 0;
+		min-height: 0;
+	}
+	.orangebox.gallery {
+		margin-top: 1%;
+	}
+	.orangebox h2, .faq .orangebox h2 {
+		padding: 10px;
+		text-align: center;
+	}
+	.orangebox p, .faq .orangebox p {
+		padding: 10px;
+		background: none;
+		text-align: center;
+	}
+	#main .orangebox {
+		background-image:none;
+	}
+	.port .orangebox {
+		margin-top: 30px;
+	}
+	.port .zone1 {
+		padding-bottom: 0;
+	}
+	.port .splitzone {
+		height: auto;
+		padding-bottom:0;
+	}
+	.productimg {
+		width: 30%;
+		padding: 3% 32%;
+		margin: 6% 3% 0;
+	}
+	.productimg img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
+	.productinfo {
+		width: 100%;
+		margin: 0 0 6%;
+	}
+	.swatchwrap {
+		width: 18%;
+		padding: 1%;
+	}
+	.app-wrap a {
+		margin: 30px 3% 0 0;
+		width: 31%;
+		float: left;
+	}
+	.app-wrap a:nth-child(3n) {
+		margin-right: 0;
+	}
+	.app-thumb {
+		width: 100%;
+		height:auto;
+	}
+	.app-wrap a:nth-child(4n) {
+		margin-right: 3%;
+	}
+	.category-apparel .zone1.closed {
+		height:auto;
+	}
+	.category-apparel .zone1 span.view-all {
+		display: none;
+	}
+	.nivo-controlNav {
+		margin: 3% 3% 6%;
+	}
+	
+	/* CALCULATOR SYTLES */
+	.calcbanner {
+		width:383px;
+	}
+	.calcbanner h3 {
+		width:274px;
+	}
+	.calcbanner:before {
+		width:70%;
+		background-position: right -287px;
+	}
+	.calc {
+		width: 90%;
+		margin-top:20px;
+	}
+	.calc .tab:first-child {
+		margin-left:9px;	
+		float:left;
+	}
+	.progress {
+		width: 100%;
+	}
+	img.progressbar {
+		max-width: 85%;
+	}
+	.progress1 {
+		left: 10%;
+		top: 21px;
+	}
+	.progress2 {
+		left: 50%;
+		top: 21px;
+	}
+	.progress3 {
+		right: 11%;
+		top: 21px;
+	}
+	.calcboxleft {
+		height: auto;
+		width: 100%;
+		padding-bottom: 30px;
+		border:none;
+	}
+	.calcboxleft:after {
+		width:100%;
+		height:3px;
+		position:absolute;
+		bottom:0;
+		left:0;
+		content:'';
+		background:url('../images/main-sprite.png') repeat-x 2px -8px;
+	}
+	.calcboxright {
+		width: 100%;
+		padding: 30px 0;
+	}
+	.calculate {
+		height: auto;
+		min-height: 100px;
+	}
+	.get-started input[type="text"], .get-started input[type="email"] {
+		width: 60%;
+	}
+	.get-started textarea {
+		width: 83%;
+	}
+	.get-started input[type="date"] {
+		width: 44%;
+		margin-left: 0;
+	}
+	.faqwrapper {
+		padding-top: 0;
+	}
+	.faqwrap {
+		width: 96%;
+		padding: 2%;
+		margin-bottom: 6%;
+		min-height: 0;
+	}
+	.faqwrap h3 {
+		margin: 0 2% 10px;	
+	}
+	.jump {
+		top: -120px;
+	}
+	.vidwrap .orangebox {
+		width: 90%;
+		margin: 195px auto 0;
+	}
+	.vidwrap .orangebox p {
+		padding: 30px;
+		background: none;
+	}
+	.vidwrap .vid {
+		width: 100%;
+	}
+	.vidwrap .vid iframe {
+		width: 96%;
+		height: 225px;
+		padding: 0 2%;
+	}
+	.product {
+		width: 90%;
+	}
+	#footer {
+		width: 52%;
+		padding: 0;
+	}
+	.footcol {
+		
+		height: auto;
+		width: 100%;
+	}
+	#foot1 {
+		border-left: none;
+		border-bottom: 1px solid #DEDED8;
+	}
+	#foot2 {
+		border-left: none;
+		border-right: none;
+	}
+	#foot3 {
+		display: none;
+	}
+	#footer > p {
+		padding: 10px 0;
+	}
+	.tab h3 {
+		font-size: 18px;
+	}
+}
+@media only screen 
+and (min-width : 461px) 
+and (max-width : 600px) {
+	.swatchwrap {
+		width: 22%;
+		padding: 1.5%;
+	}
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 460px) {
+	.tab h3 {
+		font-size: 16px;
+	}
+	.calctabs {
+		padding-right: 40px;
+	}
+	.calc .tab {
+		margin-left:-30px;
+		float:right;
+	}
+	.calc .tab:hover {
+		z-index:12;	
+	}
+	.calcbanner {
+		width:263px;
+	}
+	.calcbanner h3 {
+		width:248px;
+	}
+	.calcbanner:before {
+		width:70%;
+		background-position: right -287px;
+	}
+	.productimg {
+		width: 46%;
+		padding: 3% 24%;
+		margin: 6% 3% 0;
+	}
+	.productinfo h4.sizes {
+		width: auto;
+		float: none;
+	}
+	.rsrcelink.launchcalc {
+		width: 252px;
+		position:relative;
+		overflow: visible;
+		left: -4px;
+	}
+	.rsrcelink.launchcalc:after {
+		width: 9px;
+		position:absolute;
+		right:-9px;
+		top:0;
+		content:'';
+		height:51px;
+		background: transparent url(../images/pricing-banner-sm.png) no-repeat -375px 0;
+		cursor:pointer;
+		display: block;
+		
+	}
+	.rsrcelink.launchcalc:hover:after {
+		background-position: -375px -51px;
+	}
+	.swatchwrap {
+		width: 29%;
+		padding: 2%;
+	}
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px)
+and (orientation: landscape) {
+
+	img.loading, .vidwrap .vid iframe {
+		height: 307px !important;
+	}
+	.vidwrap .orangebox {
+		margin: 277px auto 0;
+	}
+}
