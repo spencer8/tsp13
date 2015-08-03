@@ -1136,47 +1136,55 @@ body.admin-bar {
 /* HOME */
 /* line 7, scss/objects/_blocks.scss */
 .additional .content header {
-  width: 37%;
-  float: left;
-  box-sizing: border-box;
-  padding: 40px 40px 40px 0;
+  margin: 40px 0 20px;
 }
-/* line 13, scss/objects/_blocks.scss */
+@media only screen and (min-width: 768px) {
+  /* line 7, scss/objects/_blocks.scss */
+  .additional .content header {
+    width: 37%;
+    float: left;
+    box-sizing: border-box;
+    padding: 40px 40px 40px 0;
+  }
+}
+/* line 19, scss/objects/_blocks.scss */
 .additional .content header h2 {
   color: #5F6062;
 }
-/* line 17, scss/objects/_blocks.scss */
-.additional .content .intro {
-  box-sizing: border-box;
-  padding: 40px 0 40px 40px;
-  float: right;
-  width: 63%;
-  background: url("../images/border-dots.png") repeat-y -2px center;
+@media only screen and (min-width: 768px) {
+  /* line 23, scss/objects/_blocks.scss */
+  .additional .content .intro {
+    box-sizing: border-box;
+    padding: 40px 0 40px 40px;
+    float: right;
+    width: 63%;
+    background: url("../images/border-dots.png") repeat-y -2px center;
+  }
 }
-/* line 24, scss/objects/_blocks.scss */
+/* line 33, scss/objects/_blocks.scss */
 .additional .content .intro p {
   margin-bottom: .5em;
 }
 
-/* line 33, scss/objects/_blocks.scss */
+/* line 43, scss/objects/_blocks.scss */
 .content {
   width: 964px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 38, scss/objects/_blocks.scss */
+/* line 48, scss/objects/_blocks.scss */
 .content.apparel {
   height: 321px;
 }
 
-/* line 41, scss/objects/_blocks.scss */
+/* line 51, scss/objects/_blocks.scss */
 .zone1 {
   background: rgba(255, 255, 255, 0.25);
   padding-bottom: 60px;
 }
 
-/* line 45, scss/objects/_blocks.scss */
+/* line 55, scss/objects/_blocks.scss */
 .fullwidth {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1187,24 +1195,24 @@ body.admin-bar {
   background: #4E917A;
   color: #fff;
 }
-/* line 56, scss/objects/_blocks.scss */
+/* line 66, scss/objects/_blocks.scss */
 .fullwidth .content {
   width: 100%;
   margin: 0 auto;
 }
-/* line 60, scss/objects/_blocks.scss */
+/* line 70, scss/objects/_blocks.scss */
 .fullwidth .content h3 {
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin-bottom: .75em;
   font-size: 1.3em;
 }
-/* line 65, scss/objects/_blocks.scss */
+/* line 75, scss/objects/_blocks.scss */
 .fullwidth .content p {
   font-style: italic;
   font-size: 1.2em;
 }
 
-/* line 71, scss/objects/_blocks.scss */
+/* line 81, scss/objects/_blocks.scss */
 .galinfo {
   width: 285px;
   background: white;
@@ -1215,7 +1223,7 @@ body.admin-bar {
   min-height: 460px;
 }
 
-/* line 83, scss/objects/_blocks.scss */
+/* line 93, scss/objects/_blocks.scss */
 .galinfo h2 {
   color: #5F6062;
   padding: 0 30px 30px;
@@ -1223,60 +1231,60 @@ body.admin-bar {
   margin-bottom: 30px;
 }
 
-/* line 89, scss/objects/_blocks.scss */
+/* line 99, scss/objects/_blocks.scss */
 .galinfo p {
   padding: 0 30px;
   margin-bottom: 10px;
 }
 
-/* line 93, scss/objects/_blocks.scss */
+/* line 103, scss/objects/_blocks.scss */
 .right, .left {
   float: left;
 }
 
-/* line 96, scss/objects/_blocks.scss */
+/* line 106, scss/objects/_blocks.scss */
 .orangebox.right {
   float: right;
 }
 
-/* line 99, scss/objects/_blocks.scss */
+/* line 109, scss/objects/_blocks.scss */
 .orangebox.left .slide-pager {
   right: 0;
 }
 
-/* line 102, scss/objects/_blocks.scss */
+/* line 112, scss/objects/_blocks.scss */
 .orangebox.gallery {
   margin-top: 90px;
 }
 
-/* line 105, scss/objects/_blocks.scss */
+/* line 115, scss/objects/_blocks.scss */
 .left {
   float: left;
 }
 
-/* line 110, scss/objects/_blocks.scss */
+/* line 120, scss/objects/_blocks.scss */
 .zone1 {
   float: left;
   width: 100%;
   padding-bottom: 60px;
 }
 
-/* line 115, scss/objects/_blocks.scss */
+/* line 125, scss/objects/_blocks.scss */
 .page-template-portfolio-php .zone1 {
   padding-top: 60px;
 }
 
-/* line 118, scss/objects/_blocks.scss */
+/* line 128, scss/objects/_blocks.scss */
 .page-template-portfolio-php .orangebox {
   margin-top: 90px;
 }
 
-/* line 122, scss/objects/_blocks.scss */
+/* line 132, scss/objects/_blocks.scss */
 .vidwrap {
   padding-top: 90px;
 }
 
-/* line 126, scss/objects/_blocks.scss */
+/* line 136, scss/objects/_blocks.scss */
 .splitzone {
   padding-bottom: 60px;
   width: 100%;
@@ -1284,7 +1292,7 @@ body.admin-bar {
   position: relative;
 }
 
-/* line 133, scss/objects/_blocks.scss */
+/* line 143, scss/objects/_blocks.scss */
 .splitleft {
   height: 100%;
   width: 43%;
@@ -1292,7 +1300,7 @@ body.admin-bar {
   background: rgba(118, 174, 153, 0.1);
 }
 
-/* line 140, scss/objects/_blocks.scss */
+/* line 150, scss/objects/_blocks.scss */
 .splitright {
   height: 100%;
   width: 57%;
@@ -1301,7 +1309,7 @@ body.admin-bar {
   background: rgba(95, 96, 98, 0.1) url("../images/border-dots.png") repeat-y -2px 0px;
 }
 
-/* line 148, scss/objects/_blocks.scss */
+/* line 158, scss/objects/_blocks.scss */
 .orangebox {
   width: 289px;
   color: #DEDED8;
@@ -1313,33 +1321,33 @@ body.admin-bar {
   float: left;
 }
 
-/* line 158, scss/objects/_blocks.scss */
+/* line 168, scss/objects/_blocks.scss */
 #main .orangebox.ob1 {
   background-position: -300px bottom;
 }
 
-/* line 159, scss/objects/_blocks.scss */
+/* line 169, scss/objects/_blocks.scss */
 #main .orangebox.ob2 {
   background-position: -600px bottom;
 }
 
-/* line 160, scss/objects/_blocks.scss */
+/* line 170, scss/objects/_blocks.scss */
 #main .orangebox.ob3 {
   background-position: -900px bottom;
 }
 
-/* line 161, scss/objects/_blocks.scss */
+/* line 171, scss/objects/_blocks.scss */
 #main .orangebox.ob4 {
   background-position: -1180px bottom;
 }
 
-/* line 162, scss/objects/_blocks.scss */
+/* line 172, scss/objects/_blocks.scss */
 .orangebox h2, .orangebox h3 {
   padding: 30px;
   position: relative;
 }
 
-/* line 166, scss/objects/_blocks.scss */
+/* line 176, scss/objects/_blocks.scss */
 .orangebox h2:after, .orangebox h3:after {
   width: 100%;
   height: 5px;
@@ -1350,23 +1358,23 @@ body.admin-bar {
   background: url("../images/main-sprite.png") repeat-x top center;
 }
 
-/* line 175, scss/objects/_blocks.scss */
+/* line 185, scss/objects/_blocks.scss */
 .orangebox h3 {
   font-size: 34px;
 }
 
-/* line 178, scss/objects/_blocks.scss */
+/* line 188, scss/objects/_blocks.scss */
 .orangebox p {
   padding: 30px;
   line-height: 24px;
 }
 
-/* line 182, scss/objects/_blocks.scss */
+/* line 192, scss/objects/_blocks.scss */
 .orangebox > div {
   width: 100%;
 }
 
-/* line 185, scss/objects/_blocks.scss */
+/* line 195, scss/objects/_blocks.scss */
 .vid {
   position: absolute;
   right: 0;
@@ -1375,17 +1383,17 @@ body.admin-bar {
 }
 
 /* PORTFOLIO */
-/* line 192, scss/objects/_blocks.scss */
+/* line 202, scss/objects/_blocks.scss */
 div.zone1:first-child .slider-wrapper {
   margin-top: 0;
 }
 
-/* line 195, scss/objects/_blocks.scss */
+/* line 205, scss/objects/_blocks.scss */
 .port div.zone1:first-child .orangebox {
   margin-top: 30px;
 }
 
-/* line 198, scss/objects/_blocks.scss */
+/* line 208, scss/objects/_blocks.scss */
 .gallery:before {
   content: "";
   position: absolute;
@@ -1396,7 +1404,7 @@ div.zone1:first-child .slider-wrapper {
 }
 
 /* PRODUCTS */
-/* line 209, scss/objects/_blocks.scss */
+/* line 219, scss/objects/_blocks.scss */
 .category-apparel .zone1 {
   padding-top: 45px;
   padding-bottom: 45px;
@@ -1405,36 +1413,36 @@ div.zone1:first-child .slider-wrapper {
   float: none;
 }
 
-/* line 216, scss/objects/_blocks.scss */
+/* line 226, scss/objects/_blocks.scss */
 .category-apparel .zone1.open {
   height: auto;
 }
 
-/* line 219, scss/objects/_blocks.scss */
+/* line 229, scss/objects/_blocks.scss */
 .category-apparel h3 {
   font-size: 24px;
   display: inline-block;
   padding: 5px;
 }
 
-/* line 224, scss/objects/_blocks.scss */
+/* line 234, scss/objects/_blocks.scss */
 .zone1:nth-child(3n) {
   background: rgba(118, 174, 153, 0.1);
 }
 
-/* line 227, scss/objects/_blocks.scss */
+/* line 237, scss/objects/_blocks.scss */
 .zone1:nth-child(3n-1) {
   background: rgba(95, 96, 98, 0.1);
 }
 
-/* line 230, scss/objects/_blocks.scss */
+/* line 240, scss/objects/_blocks.scss */
 .category-apparel .zone1 h2 {
   color: #CF6139;
   width: 964px;
   margin: 0 auto;
 }
 
-/* line 236, scss/objects/_blocks.scss */
+/* line 246, scss/objects/_blocks.scss */
 .app-wrap a {
   position: relative;
   float: left;
@@ -1450,17 +1458,17 @@ div.zone1:first-child .slider-wrapper {
   user-select: none;
 }
 
-/* line 250, scss/objects/_blocks.scss */
+/* line 260, scss/objects/_blocks.scss */
 .app-wrap {
   position: relative;
 }
 
-/* line 253, scss/objects/_blocks.scss */
+/* line 263, scss/objects/_blocks.scss */
 .app-wrap a:nth-child(4n) {
   margin-right: 0;
 }
 
-/* line 256, scss/objects/_blocks.scss */
+/* line 266, scss/objects/_blocks.scss */
 .category-apparel .zone1 span.view-all {
   position: absolute;
   bottom: -22px;
@@ -1472,7 +1480,7 @@ div.zone1:first-child .slider-wrapper {
   z-index: 20;
 }
 
-/* line 266, scss/objects/_blocks.scss */
+/* line 276, scss/objects/_blocks.scss */
 .app-desc {
   background: #5F6062;
   color: #DCDCD6;
@@ -1483,47 +1491,54 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 275, scss/objects/_blocks.scss */
+/* line 285, scss/objects/_blocks.scss */
 .app-thumb:hover .app-desc {
   background: #4E917A;
 }
 
-/* line 278, scss/objects/_blocks.scss */
+/* line 289, scss/objects/_blocks.scss */
+.app-thumb img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 295, scss/objects/_blocks.scss */
 .app-desc h3 {
   font-size: 14px;
 }
 
-/* line 282, scss/objects/_blocks.scss */
+/* line 299, scss/objects/_blocks.scss */
 .zone0 {
   .float: left;
 }
 
-/* line 285, scss/objects/_blocks.scss */
+/* line 302, scss/objects/_blocks.scss */
 .product {
   width: 40%;
   float: left;
   text-align: center;
 }
 
-/* line 290, scss/objects/_blocks.scss */
+/* line 307, scss/objects/_blocks.scss */
 .product h2 {
   text-align: center;
 }
 
-/* line 293, scss/objects/_blocks.scss */
+/* line 310, scss/objects/_blocks.scss */
 .product img, .apparel img {
   width: auto;
   height: auto;
   max-width: 100%;
 }
 
-/* line 298, scss/objects/_blocks.scss */
+/* line 315, scss/objects/_blocks.scss */
 .product.apparel {
   width: 25%;
   float: left;
 }
 
-/* line 302, scss/objects/_blocks.scss */
+/* line 319, scss/objects/_blocks.scss */
 .productinfo {
   width: 426px;
   background: white;
@@ -1533,24 +1548,24 @@ div.zone1:first-child .slider-wrapper {
   margin-bottom: 30px;
 }
 
-/* line 310, scss/objects/_blocks.scss */
+/* line 327, scss/objects/_blocks.scss */
 .flipoffset .productinfo {
   margin-top: 30px;
 }
 
-/* line 313, scss/objects/_blocks.scss */
+/* line 330, scss/objects/_blocks.scss */
 .flipoffset .productimg {
   margin-top: 60px;
 }
 
-/* line 316, scss/objects/_blocks.scss */
+/* line 333, scss/objects/_blocks.scss */
 .productinfo h2 {
   color: #5F6062;
   padding: 5px 30px 30px;
   position: relative;
 }
 
-/* line 321, scss/objects/_blocks.scss */
+/* line 338, scss/objects/_blocks.scss */
 .productinfo h2:after {
   background: url("../images/main-sprite.png") repeat-x 2px -6px;
   content: "";
@@ -1561,17 +1576,17 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 330, scss/objects/_blocks.scss */
+/* line 347, scss/objects/_blocks.scss */
 .productinfo .contentp {
   padding: 25px 30px;
 }
 
-/* line 333, scss/objects/_blocks.scss */
+/* line 350, scss/objects/_blocks.scss */
 .productinfo p {
   padding: 5px 0;
 }
 
-/* line 336, scss/objects/_blocks.scss */
+/* line 353, scss/objects/_blocks.scss */
 .rsrcelink {
   display: inline-block;
   width: 20px;
@@ -1583,12 +1598,12 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 30px 20px 0;
 }
 
-/* line 346, scss/objects/_blocks.scss */
+/* line 363, scss/objects/_blocks.scss */
 .rsrcelink:hover {
   background-position: -57px -591px;
 }
 
-/* line 349, scss/objects/_blocks.scss */
+/* line 366, scss/objects/_blocks.scss */
 .rsrcelink.templates {
   width: 25px;
   background-position: -78px -567px;
@@ -1596,31 +1611,31 @@ div.zone1:first-child .slider-wrapper {
   height: 24px;
 }
 
-/* line 355, scss/objects/_blocks.scss */
+/* line 372, scss/objects/_blocks.scss */
 .rsrcelink.templates:hover {
   background-position: -78px -591px;
 }
 
-/* line 358, scss/objects/_blocks.scss */
+/* line 375, scss/objects/_blocks.scss */
 .rsrcelink.samples {
   width: 29px;
   background-position: -103px -566px;
   margin-right: 19px;
 }
 
-/* line 363, scss/objects/_blocks.scss */
+/* line 380, scss/objects/_blocks.scss */
 .rsrcelink.samples:hover {
   background-position: -103px -591px;
 }
 
-/* line 366, scss/objects/_blocks.scss */
+/* line 383, scss/objects/_blocks.scss */
 .productinfo h4.sizes {
   width: 250px;
   float: left;
   padding-right: 0;
 }
 
-/* line 371, scss/objects/_blocks.scss */
+/* line 388, scss/objects/_blocks.scss */
 .rsrcelink.launchcalc, .calcbanner h3 {
   width: 384px;
   height: 51px;
@@ -1634,7 +1649,7 @@ div.zone1:first-child .slider-wrapper {
   text-indent: -999em;
 }
 
-/* line 383, scss/objects/_blocks.scss */
+/* line 400, scss/objects/_blocks.scss */
 .calcbanner h3 {
   width: 271px;
   height: 51px;
@@ -1642,7 +1657,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 0;
 }
 
-/* line 389, scss/objects/_blocks.scss */
+/* line 406, scss/objects/_blocks.scss */
 .calcbanner {
   margin: 0 auto;
   display: block;
@@ -1652,7 +1667,7 @@ div.zone1:first-child .slider-wrapper {
   width: 680px;
 }
 
-/* line 397, scss/objects/_blocks.scss */
+/* line 414, scss/objects/_blocks.scss */
 .calcbanner:before {
   width: 412px;
   height: 51px;
@@ -1664,24 +1679,24 @@ div.zone1:first-child .slider-wrapper {
   position: absolute;
 }
 
-/* line 407, scss/objects/_blocks.scss */
+/* line 424, scss/objects/_blocks.scss */
 .rsrcelink.launchcalc:hover {
   background-position: 0 -236px;
 }
 
-/* line 410, scss/objects/_blocks.scss */
+/* line 427, scss/objects/_blocks.scss */
 .productinfo h4 {
   padding: 5px 30px;
 }
 
-/* line 413, scss/objects/_blocks.scss */
+/* line 430, scss/objects/_blocks.scss */
 .productinfo img {
   margin: 20px auto;
   display: block;
   cursor: pointer;
 }
 
-/* line 418, scss/objects/_blocks.scss */
+/* line 435, scss/objects/_blocks.scss */
 .productimg {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1690,7 +1705,7 @@ div.zone1:first-child .slider-wrapper {
   background: #C5C5BE;
 }
 
-/* line 425, scss/objects/_blocks.scss */
+/* line 442, scss/objects/_blocks.scss */
 .swatches {
   clear: both;
   width: 994px;
@@ -1700,28 +1715,28 @@ div.zone1:first-child .slider-wrapper {
   margin-top: 30px;
 }
 
-/* line 433, scss/objects/_blocks.scss */
+/* line 450, scss/objects/_blocks.scss */
 .swatches > h4 {
   padding-left: 15px;
 }
 
-/* line 436, scss/objects/_blocks.scss */
+/* line 453, scss/objects/_blocks.scss */
 .swatchall {
   position: relative;
 }
 
-/* line 439, scss/objects/_blocks.scss */
+/* line 456, scss/objects/_blocks.scss */
 .swatchwrap {
   float: left;
   position: relative;
 }
 
-/* line 443, scss/objects/_blocks.scss */
+/* line 460, scss/objects/_blocks.scss */
 .swatchwrap.active {
   background: #5F6062;
 }
 
-/* line 446, scss/objects/_blocks.scss */
+/* line 463, scss/objects/_blocks.scss */
 .swatch {
   width: 110px;
   height: 110px;
@@ -1732,12 +1747,12 @@ div.zone1:first-child .slider-wrapper {
   cursor: pointer;
 }
 
-/* line 455, scss/objects/_blocks.scss */
+/* line 472, scss/objects/_blocks.scss */
 .apparel .swatch {
   background-image: url("../images/colorswatch.png");
 }
 
-/* line 458, scss/objects/_blocks.scss */
+/* line 475, scss/objects/_blocks.scss */
 .swatchname {
   background: #5F6062;
   color: #DCDCD6;
@@ -1748,7 +1763,7 @@ div.zone1:first-child .slider-wrapper {
   text-transform: uppercase;
 }
 
-/* line 467, scss/objects/_blocks.scss */
+/* line 484, scss/objects/_blocks.scss */
 .calculator {
   display: none;
   padding-bottom: 80px;
@@ -1759,31 +1774,31 @@ div.zone1:first-child .slider-wrapper {
   position: relative;
 }
 
-/* line 476, scss/objects/_blocks.scss */
+/* line 493, scss/objects/_blocks.scss */
 .calculator.open {
   display: block;
 }
 
-/* line 479, scss/objects/_blocks.scss */
+/* line 496, scss/objects/_blocks.scss */
 #ajaxLoader {
   position: absolute;
   left: 332px;
   top: 97px;
 }
 
-/* line 484, scss/objects/_blocks.scss */
+/* line 501, scss/objects/_blocks.scss */
 .calc {
   width: 680px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 489, scss/objects/_blocks.scss */
+/* line 506, scss/objects/_blocks.scss */
 .calctabs {
   position: relative;
 }
 
-/* line 492, scss/objects/_blocks.scss */
+/* line 509, scss/objects/_blocks.scss */
 .tab {
   display: inline-block;
   background: #C6C7BD;
@@ -1796,18 +1811,18 @@ div.zone1:first-child .slider-wrapper {
   height: 22px;
 }
 
-/* line 503, scss/objects/_blocks.scss */
+/* line 520, scss/objects/_blocks.scss */
 .tab.selected {
   background: white;
   z-index: 10;
 }
 
-/* line 507, scss/objects/_blocks.scss */
+/* line 524, scss/objects/_blocks.scss */
 .tab h3 {
   font-size: 23px;
 }
 
-/* line 510, scss/objects/_blocks.scss */
+/* line 527, scss/objects/_blocks.scss */
 .tableft, .tabright {
   background: url("../images/main-sprite.png") no-repeat -56px -634px;
   height: 38px;
@@ -1816,35 +1831,35 @@ div.zone1:first-child .slider-wrapper {
   bottom: 0px;
 }
 
-/* line 517, scss/objects/_blocks.scss */
+/* line 534, scss/objects/_blocks.scss */
 .tableft {
   left: -9px;
 }
 
-/* line 520, scss/objects/_blocks.scss */
+/* line 537, scss/objects/_blocks.scss */
 .selected .tableft {
   background-position: -74px -634px;
 }
 
-/* line 523, scss/objects/_blocks.scss */
+/* line 540, scss/objects/_blocks.scss */
 .tabright {
   right: -9px;
   background-position: -65px -634px;
 }
 
-/* line 527, scss/objects/_blocks.scss */
+/* line 544, scss/objects/_blocks.scss */
 .selected .tabright {
   background-position: -83px -634px;
 }
 
-/* line 530, scss/objects/_blocks.scss */
+/* line 547, scss/objects/_blocks.scss */
 .xboxwrap {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-/* line 538, scss/objects/_blocks.scss */
+/* line 555, scss/objects/_blocks.scss */
 .calcbox {
   .height: 300px;
   background: white;
@@ -1853,25 +1868,25 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 545, scss/objects/_blocks.scss */
+/* line 562, scss/objects/_blocks.scss */
 .selected.calcbox {
   display: block;
 }
 
-/* line 548, scss/objects/_blocks.scss */
+/* line 565, scss/objects/_blocks.scss */
 .progress {
   height: 70px;
   position: relative;
 }
 
-/* line 552, scss/objects/_blocks.scss */
+/* line 569, scss/objects/_blocks.scss */
 .progressbar {
   position: absolute;
   top: 25px;
   left: 30px;
 }
 
-/* line 557, scss/objects/_blocks.scss */
+/* line 574, scss/objects/_blocks.scss */
 .progress1 {
   position: absolute;
   top: 25px;
@@ -1881,12 +1896,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/1off.png");
 }
 
-/* line 565, scss/objects/_blocks.scss */
+/* line 582, scss/objects/_blocks.scss */
 .progress1.on {
   background: url("../images/1on.png");
 }
 
-/* line 568, scss/objects/_blocks.scss */
+/* line 585, scss/objects/_blocks.scss */
 .progress2 {
   position: absolute;
   top: 25px;
@@ -1896,12 +1911,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/2off.png");
 }
 
-/* line 576, scss/objects/_blocks.scss */
+/* line 593, scss/objects/_blocks.scss */
 .progress2.on {
   background: url("../images/2on.png");
 }
 
-/* line 579, scss/objects/_blocks.scss */
+/* line 596, scss/objects/_blocks.scss */
 .progress3 {
   position: absolute;
   top: 25px;
@@ -1911,12 +1926,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/3off.png");
 }
 
-/* line 587, scss/objects/_blocks.scss */
+/* line 604, scss/objects/_blocks.scss */
 .progress3.on {
   background: url("../images/3on.png");
 }
 
-/* line 590, scss/objects/_blocks.scss */
+/* line 607, scss/objects/_blocks.scss */
 .calcboxleft {
   height: 270px;
   margin: 0 0 10px;
@@ -1925,65 +1940,65 @@ div.zone1:first-child .slider-wrapper {
   float: left;
   position: relative;
 }
-/* line 598, scss/objects/_blocks.scss */
+/* line 615, scss/objects/_blocks.scss */
 .calcboxleft h4 {
   padding: 20px 20px 5px;
 }
-/* line 602, scss/objects/_blocks.scss */
+/* line 619, scss/objects/_blocks.scss */
 .calcboxleft select {
   width: 86%;
   margin: 0 7%;
   font-size: 15px;
 }
 
-/* line 608, scss/objects/_blocks.scss */
+/* line 625, scss/objects/_blocks.scss */
 .calcboxright {
   width: 64%;
   float: left;
 }
-/* line 612, scss/objects/_blocks.scss */
+/* line 629, scss/objects/_blocks.scss */
 .calcboxright h4 {
   padding: 20px 20px 5px;
 }
-/* line 616, scss/objects/_blocks.scss */
+/* line 633, scss/objects/_blocks.scss */
 .calcboxright h4.disabled {
   opacity: .5;
 }
-/* line 620, scss/objects/_blocks.scss */
+/* line 637, scss/objects/_blocks.scss */
 .calcboxright select {
   width: 86%;
   margin: 0 20px;
   font-size: 15px;
 }
-/* line 626, scss/objects/_blocks.scss */
+/* line 643, scss/objects/_blocks.scss */
 .calcboxright label {
   float: left;
   margin-left: 20px;
   margin-top: 8px;
 }
-/* line 632, scss/objects/_blocks.scss */
+/* line 649, scss/objects/_blocks.scss */
 .calcboxright label.disabled {
   opacity: .5;
 }
-/* line 636, scss/objects/_blocks.scss */
+/* line 653, scss/objects/_blocks.scss */
 .calcboxright select.half {
   width: 10%;
   float: left;
   margin: 0 5px;
 }
-/* line 642, scss/objects/_blocks.scss */
+/* line 659, scss/objects/_blocks.scss */
 .calcboxright select.threequart {
   width: 25%;
   float: left;
   margin: 0 20px;
 }
-/* line 648, scss/objects/_blocks.scss */
+/* line 665, scss/objects/_blocks.scss */
 .calcboxright input {
   width: 14%;
   margin-left: 20px;
 }
 
-/* line 653, scss/objects/_blocks.scss */
+/* line 670, scss/objects/_blocks.scss */
 .calculate {
   height: 160px;
   background: #C6C7BD;
@@ -1992,7 +2007,7 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 661, scss/objects/_blocks.scss */
+/* line 678, scss/objects/_blocks.scss */
 .calculate-button {
   background-image: url("../images/calculate-off.png");
   position: absolute;
@@ -2004,17 +2019,17 @@ div.zone1:first-child .slider-wrapper {
   background-color: transparent;
   background-repeat: no-repeat;
 }
-/* line 672, scss/objects/_blocks.scss */
+/* line 689, scss/objects/_blocks.scss */
 .calculate-button.on {
   background-image: url("../images/calculate-on.png");
   cursor: pointer;
 }
-/* line 676, scss/objects/_blocks.scss */
+/* line 693, scss/objects/_blocks.scss */
 .calculate-button.send {
   background-image: url("../images/calculate-send.png");
   cursor: pointer;
 }
-/* line 680, scss/objects/_blocks.scss */
+/* line 697, scss/objects/_blocks.scss */
 .calculate-button.back {
   background-image: url("../images/calculate-back.png");
   cursor: pointer;
@@ -2022,19 +2037,19 @@ div.zone1:first-child .slider-wrapper {
   right: -40px;
 }
 
-/* line 687, scss/objects/_blocks.scss */
+/* line 704, scss/objects/_blocks.scss */
 .calcboxright .h4.total, .calcboxright .h4.peritem {
   float: none;
 }
 
-/* line 692, scss/objects/_blocks.scss */
+/* line 709, scss/objects/_blocks.scss */
 .get-started h3 {
   font-size: 18px;
   margin-left: 20px;
   letter-spacing: 3px;
   margin-bottom: 5px;
 }
-/* line 698, scss/objects/_blocks.scss */
+/* line 715, scss/objects/_blocks.scss */
 .get-started .h4, .get-started .calcboxright .h4 {
   padding: 8px 20px 8px;
   float: left;
@@ -2045,11 +2060,11 @@ div.zone1:first-child .slider-wrapper {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 708, scss/objects/_blocks.scss */
+/* line 725, scss/objects/_blocks.scss */
 .get-started .p-right .h4 {
   float: none;
 }
-/* line 712, scss/objects/_blocks.scss */
+/* line 729, scss/objects/_blocks.scss */
 .get-started .calcboxleft p, .get-started .calcboxright p {
   float: left;
   margin-left: 20px;
@@ -2058,40 +2073,40 @@ div.zone1:first-child .slider-wrapper {
   font-size: 15px;
   clear: both;
 }
-/* line 720, scss/objects/_blocks.scss */
+/* line 737, scss/objects/_blocks.scss */
 .get-started .calcboxleft .xxl {
   position: absolute;
   margin-bottom: 0;
   bottom: 0;
 }
-/* line 725, scss/objects/_blocks.scss */
+/* line 742, scss/objects/_blocks.scss */
 .get-started .calcboxleft .p-right, .get-started .calcboxright .p-right {
   text-align: right;
   float: right;
   clear: both;
   width: 200px;
 }
-/* line 731, scss/objects/_blocks.scss */
+/* line 748, scss/objects/_blocks.scss */
 .get-started .calcboxleft .p-right span, .get-started .calcboxright .p-right span {
   padding: 0;
 }
-/* line 734, scss/objects/_blocks.scss */
+/* line 751, scss/objects/_blocks.scss */
 .get-started input[type="text"], .get-started input[type="email"] {
   width: 303px;
   margin: 1px 1px 5px;
 }
-/* line 738, scss/objects/_blocks.scss */
+/* line 755, scss/objects/_blocks.scss */
 .get-started input[type="date"] {
   width: 131px;
 }
-/* line 741, scss/objects/_blocks.scss */
+/* line 758, scss/objects/_blocks.scss */
 .get-started textarea {
   width: 365px;
   height: 96px;
   margin-left: 20px;
   margin-right: 0px;
 }
-/* line 747, scss/objects/_blocks.scss */
+/* line 764, scss/objects/_blocks.scss */
 .get-started .calculate p {
   width: 70%;
   margin: 20px;
@@ -2099,18 +2114,18 @@ div.zone1:first-child .slider-wrapper {
   line-height: 1.5;
 }
 
-/* line 754, scss/objects/_blocks.scss */
+/* line 771, scss/objects/_blocks.scss */
 .content.pricing-success {
   text-align: center;
   margin: 50px auto 80px;
 }
 
-/* line 758, scss/objects/_blocks.scss */
+/* line 775, scss/objects/_blocks.scss */
 .content.pricing-success h2 {
   margin: 30px 0;
 }
 
-/* line 761, scss/objects/_blocks.scss */
+/* line 778, scss/objects/_blocks.scss */
 .pricing-link {
   display: block;
   padding: 20px;
@@ -2124,18 +2139,18 @@ div.zone1:first-child .slider-wrapper {
   letter-spacing: .08em;
 }
 
-/* line 773, scss/objects/_blocks.scss */
+/* line 790, scss/objects/_blocks.scss */
 .pricing-link:hover {
   color: #5F6062;
 }
 
-/* line 776, scss/objects/_blocks.scss */
+/* line 793, scss/objects/_blocks.scss */
 .sfwrap {
   margin: 0 auto;
   width: 743px;
 }
 
-/* line 780, scss/objects/_blocks.scss */
+/* line 797, scss/objects/_blocks.scss */
 .swatchflyout {
   display: none;
   width: 100%;
@@ -2144,12 +2159,12 @@ div.zone1:first-child .slider-wrapper {
   z-index: 10;
   float: left;
 }
-/* line 788, scss/objects/_blocks.scss */
+/* line 805, scss/objects/_blocks.scss */
 .swatchflyout.active {
   display: block;
 }
 
-/* line 792, scss/objects/_blocks.scss */
+/* line 809, scss/objects/_blocks.scss */
 .swatchbig {
   width: 252px;
   height: 252px;
@@ -2159,12 +2174,12 @@ div.zone1:first-child .slider-wrapper {
   background-image: url("../images/paperswatch.png");
 }
 
-/* line 800, scss/objects/_blocks.scss */
+/* line 817, scss/objects/_blocks.scss */
 .apparel .swatchbig {
   background-image: url("../images/colorswatch.png");
 }
 
-/* line 803, scss/objects/_blocks.scss */
+/* line 820, scss/objects/_blocks.scss */
 .swatchinfo {
   float: left;
   width: 309px;
@@ -2173,38 +2188,38 @@ div.zone1:first-child .slider-wrapper {
   background: white;
   padding: 30px;
 }
-/* line 810, scss/objects/_blocks.scss */
+/* line 827, scss/objects/_blocks.scss */
 .swatchinfo h3 {
   font-size: 23px;
   padding-bottom: 10px;
 }
-/* line 814, scss/objects/_blocks.scss */
+/* line 831, scss/objects/_blocks.scss */
 .swatchinfo h4 {
   padding-bottom: 8px;
 }
-/* line 817, scss/objects/_blocks.scss */
+/* line 834, scss/objects/_blocks.scss */
 .swatchinfo p {
   line-height: 1.1;
 }
 
 /* FAQ and DEFAULT */
-/* line 823, scss/objects/_blocks.scss */
+/* line 840, scss/objects/_blocks.scss */
 .lbox {
   float: left;
   width: 225px;
   overflow: hidden;
 }
 
-/* line 828, scss/objects/_blocks.scss */
+/* line 845, scss/objects/_blocks.scss */
 .pdT {
   padding-top: 60px;
 }
 
-/* line 831, scss/objects/_blocks.scss */
+/* line 848, scss/objects/_blocks.scss */
 .single-col {
   margin-top: 60px;
 }
-/* line 835, scss/objects/_blocks.scss */
+/* line 852, scss/objects/_blocks.scss */
 .single-col h2 {
   margin-bottom: .5em;
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2212,7 +2227,7 @@ div.zone1:first-child .slider-wrapper {
   font-size: 1.25em;
 }
 
-/* line 842, scss/objects/_blocks.scss */
+/* line 859, scss/objects/_blocks.scss */
 .faqwrap {
   background: white;
   float: right;
@@ -2220,7 +2235,7 @@ div.zone1:first-child .slider-wrapper {
   padding: 50px 90px;
   min-height: 345px;
 }
-/* line 849, scss/objects/_blocks.scss */
+/* line 866, scss/objects/_blocks.scss */
 .faqwrap.single-col {
   width: 100%;
   -moz-box-sizing: border-box;
@@ -2228,11 +2243,11 @@ div.zone1:first-child .slider-wrapper {
   box-sizing: border-box;
   margin-top: 0;
 }
-/* line 857, scss/objects/_blocks.scss */
+/* line 874, scss/objects/_blocks.scss */
 .faqwrap p {
   margin: 10px 20px;
 }
-/* line 861, scss/objects/_blocks.scss */
+/* line 878, scss/objects/_blocks.scss */
 .faqwrap h2 {
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #4E917A;
@@ -2242,7 +2257,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 0 20px;
   padding: 10px 0 0;
 }
-/* line 870, scss/objects/_blocks.scss */
+/* line 887, scss/objects/_blocks.scss */
 .faqwrap h3 {
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #4E917A;
@@ -2252,7 +2267,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 0 10px;
   padding-top: 10px;
 }
-/* line 879, scss/objects/_blocks.scss */
+/* line 896, scss/objects/_blocks.scss */
 .faqwrap h4 {
   letter-spacing: .1em;
   color: #5F6062;
@@ -2260,25 +2275,25 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 20px 10px;
   padding-top: 10px;
 }
-/* line 886, scss/objects/_blocks.scss */
+/* line 903, scss/objects/_blocks.scss */
 .faqwrap ul, .faqwrap ol {
   margin: 10px 0 10px 50px;
 }
-/* line 889, scss/objects/_blocks.scss */
+/* line 906, scss/objects/_blocks.scss */
 .faqwrap li {
   margin: 5px 0;
 }
 
-/* line 894, scss/objects/_blocks.scss */
+/* line 911, scss/objects/_blocks.scss */
 .faq .zone1 {
   position: relative;
 }
-/* line 897, scss/objects/_blocks.scss */
+/* line 914, scss/objects/_blocks.scss */
 .faq .splitzone {
   float: left;
   height: auto;
 }
-/* line 901, scss/objects/_blocks.scss */
+/* line 918, scss/objects/_blocks.scss */
 .faq .orangebox {
   margin-top: 30px;
   float: none;
@@ -2286,35 +2301,35 @@ div.zone1:first-child .slider-wrapper {
   left: 0;
 }
 
-/* line 908, scss/objects/_blocks.scss */
+/* line 925, scss/objects/_blocks.scss */
 .jump {
   position: relative;
   display: block;
   top: -30px;
 }
 
-/* line 913, scss/objects/_blocks.scss */
+/* line 930, scss/objects/_blocks.scss */
 .faqwrapper {
   padding-top: 60px;
 }
 
-/* line 916, scss/objects/_blocks.scss */
+/* line 933, scss/objects/_blocks.scss */
 .single-col h1 {
   font-size: 3em;
   color: #DD604C;
 }
 
-/* line 920, scss/objects/_blocks.scss */
+/* line 937, scss/objects/_blocks.scss */
 .hzcolors .faqwrap {
   margin-bottom: 0;
 }
 
-/* line 923, scss/objects/_blocks.scss */
+/* line 940, scss/objects/_blocks.scss */
 .hzcolors .swatch, .hzcolors .swatchbig {
   background-image: none;
 }
 
-/* line 926, scss/objects/_blocks.scss */
+/* line 943, scss/objects/_blocks.scss */
 .hzcolors .swatches {
   margin-bottom: 90px;
 }

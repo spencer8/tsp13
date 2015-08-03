@@ -38,6 +38,7 @@ get_header(); ?>
                <?php } ?>
 			</div>
 		</div><!-- .content -->
+	<?php if($_GET['admin']=='t8-seo-check'){ echo '<div class="content cf">'; the_meta(); echo '</div>'; } ?>
 	</div><!-- #zone1 -->
     <?php  $gal++; } endwhile; ?>
 </div><!--end port-->

@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 	Template Name: FAQ Page
  */
 
@@ -11,7 +11,8 @@ get_header(); ?>
 $rows = get_field('faq_sections');
 if($rows){ 
 	foreach($rows as $row) { 
-		$subnavitems[] = '<a href="#'. str_replace(' ','', $row['section_name']) .'">'. $row['section_name'].'</a>';
+		$jumplink = preg_replace('/[^a-z\d]+/i', '', $row['section_name']);
+		$subnavitems[] = '<a href="#'. $jumplink .'">'. $row['section_name'].'</a>';
 	}
 	echo implode(' | ', $subnavitems);
 	if(get_field('house_colors_title')) echo ' | <a href="#'. str_replace(' ','', get_field('house_colors_title')) .'">'. get_field('house_colors_title') .'</a>';
@@ -19,6 +20,7 @@ if($rows){
 ?>
     </div>
 </div>
+	<?php if($_GET['admin']=='t8-seo-check'){ echo '<div class="content cf">'; the_meta(); echo '</div>'; } ?>
 <div class="faq">
 <div class="topwrapper">
 	<a href="javascript:void(0)" class="backtotop" title="Back to Top">Back to Top</a>
@@ -28,8 +30,9 @@ $rows = get_field('faq_sections');
 if($rows){ 
 	$rownum = rand(1,5) - 1;
 	foreach($rows as $row) { ?>
+		<?php $jumplink = preg_replace('/[^a-z\d]+/i', '', $row['section_name']); ?>
 	<div class="<?php echo $rownum % 2 ? 'splitzone' : 'zone1'; ?>">
-		<a class="jump" id="<?php echo str_replace(' ','', $row['section_name']); ?>"></a>
+		<a class="jump" id="<?php echo $jumplink; ?>"></a>
 		<?php if($rownum % 2){ ?>
 		<div class="splitleft"></div>
 		<div class="splitright"></div>

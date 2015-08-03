@@ -21,5 +21,6 @@ get_header(); ?>
 		<?php } ?>
 	<?php endwhile; // end of the loop. ?>
 	</div>
+	<?php if($_GET['admin']=='t8-seo-check'){ echo '<div class="content cf">'; the_meta(); echo '</div>'; } ?>
 </div>
 <?php get_footer(); ?>

@@ -3,28 +3,38 @@
 .additional {
 	
 	.content {
-
+		
 		header {
-			width: 37%;
-			float: left;
-			box-sizing: border-box;
-			padding: $padpx-double $padpx-double $padpx-double 0;
+
+			margin: $padpx-double 0 $padpx;
+
+			@media only screen 
+			and (min-width : 768px) {
+				width: 37%;
+				float: left;
+				box-sizing: border-box;
+				padding: $padpx-double $padpx-double $padpx-double 0;
+			}
 
 			h2 {
 				color:$gray;
 			}
 		}
 		.intro {
-			box-sizing: border-box;
-			padding: $padpx-double 0 $padpx-double $padpx-double;
-			float:right;
-			width:63%;
-			background: url("../images/border-dots.png") repeat-y -2px center;
+			@media only screen 
+			and (min-width : 768px) {
+				box-sizing: border-box;
+				padding: $padpx-double 0 $padpx-double $padpx-double;
+				float:right;
+				width:63%;
+				background: url("../images/border-dots.png") repeat-y -2px center;
+			}
 
 			p {
 				margin-bottom: .5em;
 			}
 		}
+		
 
 	}
 
@@ -274,6 +284,13 @@ div.zone1:first-child .slider-wrapper {
 }
 .app-thumb:hover .app-desc {
 	background: #4E917A;
+}
+.app-thumb {
+	img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
 }
 .app-desc h3 {
 	font-size: 14px;

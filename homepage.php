@@ -14,6 +14,7 @@ get_header(); ?>
 		<div class="content cf">
 			<?php the_content(); ?>
 		</div>
+		<?php if($_GET['admin']=='t8-seo-check'){ echo '<div class="content cf">'; the_meta(); echo '</div>'; } ?>
 	</div>
 
 	<?php
