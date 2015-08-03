@@ -176,7 +176,12 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="calculate">
-					<div class="calculate-button <?php echo (empty($post_cat)) ? 'off' : 'on'; ?>"></div>
+					<div class="calculate-button cf <?php echo (empty($post_cat)) ? 'off' : 'on'; ?>"></div>
+					<section>
+					<?php if( get_field( "apparel_text" ) ): 
+						 the_field( "apparel_text" ); 
+					endif; ?>
+					</section>
 				</div>
 			</div>
 			<div class="calcbox posters">
@@ -242,7 +247,12 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="calculate">
-					<div class="calculate-button off"></div>
+					<div class="calculate-button cf off"></div>
+					<section>
+					<?php if( get_field( "posters_text" ) ): 
+						 the_field( "posters_text" ); 
+					endif; ?>
+					</section>
 				</div>
 			</div>
 			<div class="calcbox stationery">
@@ -306,7 +316,12 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="calculate">
-					<div class="calculate-button off"></div>
+					<div class="calculate-button cf off"></div>
+					<section>
+					<?php if( get_field( "stationery_text" ) ): 
+						 the_field( "stationery_text" ); 
+					endif; ?>
+					</section>
 				</div>
 			</div>
 			<div class="calcbox packaging">
@@ -360,7 +375,12 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="calculate">
-					<div class="calculate-button off"></div>
+					<div class="calculate-button off cf"></div>
+					<section>
+					<?php if( get_field( "packaging_text" ) ): 
+						 the_field( "packaging_text" ); 
+					endif; ?>
+					</section>
 				</div>
 			</div>
 			<div class="calcbox get-started">
@@ -400,23 +420,32 @@ get_header(); ?>
 					<input type="text" id="lastname" name="lastname" placeholder="Leave Blank If Human" autocomplete="off">
 				</div>
 				<div class="calculate">
-					<p>
-					Pricing does not include shipping and assumes a standard turnaround time of 10 business days plus transit. All pricing is subject to change once we review the art and project details.<br>
-					Virginia sales tax applies to all liable Virginia-based customers.<br>
-					There are many more products, t-shirts, and paper stocks available. If you are unable to find the right options for your project, email us the specifics and we will contact you directly.
-					</p>
 					<input type="hidden" id="project-details-style" name="project-details-style" value="" />
 					<input type="hidden" id="project-details-qty" name="project-details-qty" value="" />
 					<input type="hidden" id="project-details-front" name="project-details-front" value="" />
 					<input type="hidden" id="project-details-back" name="project-details-back" value="" />
 					<input type="hidden" id="project-total" name="project-total" value="" />
 					<input type="hidden" id="project-peritem" name="project-peritem" value="" />
-					<input type="submit" class="calculate-button send" value="" name="submit" />
+					<input type="submit" class="calculate-button cf send" value="" name="submit" />
 					<div class="calculate-button back"></div>
+					<section>
+					<?php if( get_field( "step_3_text" ) ): 
+						 the_field( "step_3_text" ); 
+					endif; ?>
+					</section>
 				</div>
 				</form>
 			</div>
 			</div>
+		</div>
+	</div>
+	<div class="zone1 pricing-page">
+		<div class="content">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<div class="single-col">
+				<?php the_content(); ?>
+			</div>
+		<?php endwhile; // end of the loop. ?>
 		</div>
 	</div>
 <?php } get_footer(); ?> 

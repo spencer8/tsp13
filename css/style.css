@@ -280,7 +280,12 @@ p {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 28, scss/base/_text.scss */
+/* line 29, scss/base/_text.scss */
+.content p {
+  margin: 10px 0;
+}
+
+/* line 32, scss/base/_text.scss */
 strong {
   color: #C7604C;
 }
@@ -289,7 +294,12 @@ strong {
 ol,
 ul {
   margin: 0 0 10px 20px;
-  list-style: none;
+  line-height: 1.3;
+}
+/* line 6, scss/base/_lists.scss */
+ol li,
+ul li {
+  margin-bottom: .25em;
 }
 
 /*------------------------------------*\
@@ -1763,394 +1773,13 @@ div.zone1:first-child .slider-wrapper {
   text-transform: uppercase;
 }
 
-/* line 484, scss/objects/_blocks.scss */
-.calculator {
-  display: none;
-  padding-bottom: 80px;
-  width: 100%;
-  background-image: url("../images/colorswatch.png");
-  background-color: #5F6062;
-  float: left;
-  position: relative;
-}
-
-/* line 493, scss/objects/_blocks.scss */
-.calculator.open {
-  display: block;
-}
-
-/* line 496, scss/objects/_blocks.scss */
-#ajaxLoader {
-  position: absolute;
-  left: 332px;
-  top: 97px;
-}
-
-/* line 501, scss/objects/_blocks.scss */
-.calc {
-  width: 680px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* line 506, scss/objects/_blocks.scss */
-.calctabs {
-  position: relative;
-}
-
-/* line 509, scss/objects/_blocks.scss */
-.tab {
-  display: inline-block;
-  background: #C6C7BD;
-  padding: 8px;
-  position: relative;
-  margin: 0 0 0 9px;
-  width: auto;
-  float: none;
-  cursor: pointer;
-  height: 22px;
-}
-
-/* line 520, scss/objects/_blocks.scss */
-.tab.selected {
-  background: white;
-  z-index: 10;
-}
-
-/* line 524, scss/objects/_blocks.scss */
-.tab h3 {
-  font-size: 23px;
-}
-
-/* line 527, scss/objects/_blocks.scss */
-.tableft, .tabright {
-  background: url("../images/main-sprite.png") no-repeat -56px -634px;
-  height: 38px;
-  width: 9px;
-  position: absolute;
-  bottom: 0px;
-}
-
-/* line 534, scss/objects/_blocks.scss */
-.tableft {
-  left: -9px;
-}
-
-/* line 537, scss/objects/_blocks.scss */
-.selected .tableft {
-  background-position: -74px -634px;
-}
-
-/* line 540, scss/objects/_blocks.scss */
-.tabright {
-  right: -9px;
-  background-position: -65px -634px;
-}
-
-/* line 544, scss/objects/_blocks.scss */
-.selected .tabright {
-  background-position: -83px -634px;
-}
-
-/* line 547, scss/objects/_blocks.scss */
-.xboxwrap {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-/* line 555, scss/objects/_blocks.scss */
-.calcbox {
-  .height: 300px;
-  background: white;
-  display: none;
-  float: left;
-  width: 100%;
-}
-
-/* line 562, scss/objects/_blocks.scss */
-.selected.calcbox {
-  display: block;
-}
-
-/* line 565, scss/objects/_blocks.scss */
-.progress {
-  height: 70px;
-  position: relative;
-}
-
-/* line 569, scss/objects/_blocks.scss */
-.progressbar {
-  position: absolute;
-  top: 25px;
-  left: 30px;
-}
-
-/* line 574, scss/objects/_blocks.scss */
-.progress1 {
-  position: absolute;
-  top: 25px;
-  left: 55px;
-  width: 18px;
-  height: 18px;
-  background: url("../images/1off.png");
-}
-
-/* line 582, scss/objects/_blocks.scss */
-.progress1.on {
-  background: url("../images/1on.png");
-}
-
-/* line 585, scss/objects/_blocks.scss */
-.progress2 {
-  position: absolute;
-  top: 25px;
-  left: 331px;
-  width: 18px;
-  height: 18px;
-  background: url("../images/2off.png");
-}
-
-/* line 593, scss/objects/_blocks.scss */
-.progress2.on {
-  background: url("../images/2on.png");
-}
-
-/* line 596, scss/objects/_blocks.scss */
-.progress3 {
-  position: absolute;
-  top: 25px;
-  right: 55px;
-  width: 18px;
-  height: 18px;
-  background: url("../images/3off.png");
-}
-
-/* line 604, scss/objects/_blocks.scss */
-.progress3.on {
-  background: url("../images/3on.png");
-}
-
-/* line 607, scss/objects/_blocks.scss */
-.calcboxleft {
-  height: 270px;
-  margin: 0 0 10px;
-  border-right: 2px dotted black;
-  width: 35%;
-  float: left;
-  position: relative;
-}
-/* line 615, scss/objects/_blocks.scss */
-.calcboxleft h4 {
-  padding: 20px 20px 5px;
-}
-/* line 619, scss/objects/_blocks.scss */
-.calcboxleft select {
-  width: 86%;
-  margin: 0 7%;
-  font-size: 15px;
-}
-
-/* line 625, scss/objects/_blocks.scss */
-.calcboxright {
-  width: 64%;
-  float: left;
-}
-/* line 629, scss/objects/_blocks.scss */
-.calcboxright h4 {
-  padding: 20px 20px 5px;
-}
-/* line 633, scss/objects/_blocks.scss */
-.calcboxright h4.disabled {
-  opacity: .5;
-}
-/* line 637, scss/objects/_blocks.scss */
-.calcboxright select {
-  width: 86%;
-  margin: 0 20px;
-  font-size: 15px;
-}
-/* line 643, scss/objects/_blocks.scss */
-.calcboxright label {
-  float: left;
-  margin-left: 20px;
-  margin-top: 8px;
-}
-/* line 649, scss/objects/_blocks.scss */
-.calcboxright label.disabled {
-  opacity: .5;
-}
-/* line 653, scss/objects/_blocks.scss */
-.calcboxright select.half {
-  width: 10%;
-  float: left;
-  margin: 0 5px;
-}
-/* line 659, scss/objects/_blocks.scss */
-.calcboxright select.threequart {
-  width: 25%;
-  float: left;
-  margin: 0 20px;
-}
-/* line 665, scss/objects/_blocks.scss */
-.calcboxright input {
-  width: 14%;
-  margin-left: 20px;
-}
-
-/* line 670, scss/objects/_blocks.scss */
-.calculate {
-  height: 160px;
-  background: #C6C7BD;
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
-/* line 678, scss/objects/_blocks.scss */
-.calculate-button {
-  background-image: url("../images/calculate-off.png");
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  width: 172px;
-  height: 32px;
-  border: 0px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-/* line 689, scss/objects/_blocks.scss */
-.calculate-button.on {
-  background-image: url("../images/calculate-on.png");
-  cursor: pointer;
-}
-/* line 693, scss/objects/_blocks.scss */
-.calculate-button.send {
-  background-image: url("../images/calculate-send.png");
-  cursor: pointer;
-}
-/* line 697, scss/objects/_blocks.scss */
-.calculate-button.back {
-  background-image: url("../images/calculate-back.png");
-  cursor: pointer;
-  top: 80px;
-  right: -40px;
-}
-
-/* line 704, scss/objects/_blocks.scss */
-.calcboxright .h4.total, .calcboxright .h4.peritem {
-  float: none;
-}
-
-/* line 709, scss/objects/_blocks.scss */
-.get-started h3 {
-  font-size: 18px;
-  margin-left: 20px;
-  letter-spacing: 3px;
-  margin-bottom: 5px;
-}
-/* line 715, scss/objects/_blocks.scss */
-.get-started .h4, .get-started .calcboxright .h4 {
-  padding: 8px 20px 8px;
-  float: left;
-  clear: both;
-  display: inline-block;
-  color: #4E917A;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* line 725, scss/objects/_blocks.scss */
-.get-started .p-right .h4 {
-  float: none;
-}
-/* line 729, scss/objects/_blocks.scss */
-.get-started .calcboxleft p, .get-started .calcboxright p {
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 45px;
-  font-size: 15px;
-  clear: both;
-}
-/* line 737, scss/objects/_blocks.scss */
-.get-started .calcboxleft .xxl {
-  position: absolute;
-  margin-bottom: 0;
-  bottom: 0;
-}
-/* line 742, scss/objects/_blocks.scss */
-.get-started .calcboxleft .p-right, .get-started .calcboxright .p-right {
-  text-align: right;
-  float: right;
-  clear: both;
-  width: 200px;
-}
-/* line 748, scss/objects/_blocks.scss */
-.get-started .calcboxleft .p-right span, .get-started .calcboxright .p-right span {
-  padding: 0;
-}
-/* line 751, scss/objects/_blocks.scss */
-.get-started input[type="text"], .get-started input[type="email"] {
-  width: 303px;
-  margin: 1px 1px 5px;
-}
-/* line 755, scss/objects/_blocks.scss */
-.get-started input[type="date"] {
-  width: 131px;
-}
-/* line 758, scss/objects/_blocks.scss */
-.get-started textarea {
-  width: 365px;
-  height: 96px;
-  margin-left: 20px;
-  margin-right: 0px;
-}
-/* line 764, scss/objects/_blocks.scss */
-.get-started .calculate p {
-  width: 70%;
-  margin: 20px;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-/* line 771, scss/objects/_blocks.scss */
-.content.pricing-success {
-  text-align: center;
-  margin: 50px auto 80px;
-}
-
-/* line 775, scss/objects/_blocks.scss */
-.content.pricing-success h2 {
-  margin: 30px 0;
-}
-
-/* line 778, scss/objects/_blocks.scss */
-.pricing-link {
-  display: block;
-  padding: 20px;
-  background: #C7604C;
-  width: 200px;
-  color: white;
-  text-transform: uppercase;
-  font-size: 26px;
-  margin: 30px auto;
-  font-family: politicalight, sans-serif;
-  letter-spacing: .08em;
-}
-
-/* line 790, scss/objects/_blocks.scss */
-.pricing-link:hover {
-  color: #5F6062;
-}
-
-/* line 793, scss/objects/_blocks.scss */
+/* line 485, scss/objects/_blocks.scss */
 .sfwrap {
   margin: 0 auto;
   width: 743px;
 }
 
-/* line 797, scss/objects/_blocks.scss */
+/* line 489, scss/objects/_blocks.scss */
 .swatchflyout {
   display: none;
   width: 100%;
@@ -2159,12 +1788,12 @@ div.zone1:first-child .slider-wrapper {
   z-index: 10;
   float: left;
 }
-/* line 805, scss/objects/_blocks.scss */
+/* line 497, scss/objects/_blocks.scss */
 .swatchflyout.active {
   display: block;
 }
 
-/* line 809, scss/objects/_blocks.scss */
+/* line 501, scss/objects/_blocks.scss */
 .swatchbig {
   width: 252px;
   height: 252px;
@@ -2174,12 +1803,12 @@ div.zone1:first-child .slider-wrapper {
   background-image: url("../images/paperswatch.png");
 }
 
-/* line 817, scss/objects/_blocks.scss */
+/* line 509, scss/objects/_blocks.scss */
 .apparel .swatchbig {
   background-image: url("../images/colorswatch.png");
 }
 
-/* line 820, scss/objects/_blocks.scss */
+/* line 512, scss/objects/_blocks.scss */
 .swatchinfo {
   float: left;
   width: 309px;
@@ -2188,38 +1817,38 @@ div.zone1:first-child .slider-wrapper {
   background: white;
   padding: 30px;
 }
-/* line 827, scss/objects/_blocks.scss */
+/* line 519, scss/objects/_blocks.scss */
 .swatchinfo h3 {
   font-size: 23px;
   padding-bottom: 10px;
 }
-/* line 831, scss/objects/_blocks.scss */
+/* line 523, scss/objects/_blocks.scss */
 .swatchinfo h4 {
   padding-bottom: 8px;
 }
-/* line 834, scss/objects/_blocks.scss */
+/* line 526, scss/objects/_blocks.scss */
 .swatchinfo p {
   line-height: 1.1;
 }
 
 /* FAQ and DEFAULT */
-/* line 840, scss/objects/_blocks.scss */
+/* line 532, scss/objects/_blocks.scss */
 .lbox {
   float: left;
   width: 225px;
   overflow: hidden;
 }
 
-/* line 845, scss/objects/_blocks.scss */
+/* line 537, scss/objects/_blocks.scss */
 .pdT {
   padding-top: 60px;
 }
 
-/* line 848, scss/objects/_blocks.scss */
+/* line 540, scss/objects/_blocks.scss */
 .single-col {
   margin-top: 60px;
 }
-/* line 852, scss/objects/_blocks.scss */
+/* line 544, scss/objects/_blocks.scss */
 .single-col h2 {
   margin-bottom: .5em;
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2227,7 +1856,7 @@ div.zone1:first-child .slider-wrapper {
   font-size: 1.25em;
 }
 
-/* line 859, scss/objects/_blocks.scss */
+/* line 551, scss/objects/_blocks.scss */
 .faqwrap {
   background: white;
   float: right;
@@ -2235,7 +1864,7 @@ div.zone1:first-child .slider-wrapper {
   padding: 50px 90px;
   min-height: 345px;
 }
-/* line 866, scss/objects/_blocks.scss */
+/* line 558, scss/objects/_blocks.scss */
 .faqwrap.single-col {
   width: 100%;
   -moz-box-sizing: border-box;
@@ -2243,11 +1872,11 @@ div.zone1:first-child .slider-wrapper {
   box-sizing: border-box;
   margin-top: 0;
 }
-/* line 874, scss/objects/_blocks.scss */
+/* line 566, scss/objects/_blocks.scss */
 .faqwrap p {
   margin: 10px 20px;
 }
-/* line 878, scss/objects/_blocks.scss */
+/* line 570, scss/objects/_blocks.scss */
 .faqwrap h2 {
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #4E917A;
@@ -2257,7 +1886,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 0 20px;
   padding: 10px 0 0;
 }
-/* line 887, scss/objects/_blocks.scss */
+/* line 579, scss/objects/_blocks.scss */
 .faqwrap h3 {
   font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #4E917A;
@@ -2267,7 +1896,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 0 10px;
   padding-top: 10px;
 }
-/* line 896, scss/objects/_blocks.scss */
+/* line 588, scss/objects/_blocks.scss */
 .faqwrap h4 {
   letter-spacing: .1em;
   color: #5F6062;
@@ -2275,25 +1904,25 @@ div.zone1:first-child .slider-wrapper {
   margin: 0 20px 10px;
   padding-top: 10px;
 }
-/* line 903, scss/objects/_blocks.scss */
+/* line 595, scss/objects/_blocks.scss */
 .faqwrap ul, .faqwrap ol {
   margin: 10px 0 10px 50px;
 }
-/* line 906, scss/objects/_blocks.scss */
+/* line 598, scss/objects/_blocks.scss */
 .faqwrap li {
   margin: 5px 0;
 }
 
-/* line 911, scss/objects/_blocks.scss */
+/* line 603, scss/objects/_blocks.scss */
 .faq .zone1 {
   position: relative;
 }
-/* line 914, scss/objects/_blocks.scss */
+/* line 606, scss/objects/_blocks.scss */
 .faq .splitzone {
   float: left;
   height: auto;
 }
-/* line 918, scss/objects/_blocks.scss */
+/* line 610, scss/objects/_blocks.scss */
 .faq .orangebox {
   margin-top: 30px;
   float: none;
@@ -2301,35 +1930,35 @@ div.zone1:first-child .slider-wrapper {
   left: 0;
 }
 
-/* line 925, scss/objects/_blocks.scss */
+/* line 617, scss/objects/_blocks.scss */
 .jump {
   position: relative;
   display: block;
   top: -30px;
 }
 
-/* line 930, scss/objects/_blocks.scss */
+/* line 622, scss/objects/_blocks.scss */
 .faqwrapper {
   padding-top: 60px;
 }
 
-/* line 933, scss/objects/_blocks.scss */
+/* line 625, scss/objects/_blocks.scss */
 .single-col h1 {
   font-size: 3em;
   color: #DD604C;
 }
 
-/* line 937, scss/objects/_blocks.scss */
+/* line 629, scss/objects/_blocks.scss */
 .hzcolors .faqwrap {
   margin-bottom: 0;
 }
 
-/* line 940, scss/objects/_blocks.scss */
+/* line 632, scss/objects/_blocks.scss */
 .hzcolors .swatch, .hzcolors .swatchbig {
   background-image: none;
 }
 
-/* line 943, scss/objects/_blocks.scss */
+/* line 635, scss/objects/_blocks.scss */
 .hzcolors .swatches {
   margin-bottom: 90px;
 }
@@ -2660,6 +2289,426 @@ div.zone1:first-child .slider-wrapper {
 #comment-nav-above {
   margin-top: 36px;
   margin-bottom: 0;
+}
+
+/*------------------------------------*\
+    $PARTIALS
+\*------------------------------------*/
+/* Pricing */
+/* line 2, scss/partials/_pricing.scss */
+.pricing-page {
+  background: rgba(95, 96, 98, 0.25);
+}
+/* line 5, scss/partials/_pricing.scss */
+.pricing-page .content {
+  margin-top: 60px;
+}
+/* line 9, scss/partials/_pricing.scss */
+.pricing-page .single-col {
+  width: 680px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Calculator */
+/* line 18, scss/partials/_pricing.scss */
+.calculator {
+  display: none;
+  padding-bottom: 80px;
+  width: 100%;
+  background-image: url("../images/colorswatch.png");
+  background-color: #5F6062;
+  float: left;
+  position: relative;
+}
+
+/* line 27, scss/partials/_pricing.scss */
+.calculator.open {
+  display: block;
+}
+
+/* line 30, scss/partials/_pricing.scss */
+#ajaxLoader {
+  position: absolute;
+  left: 332px;
+  top: 97px;
+}
+
+/* line 35, scss/partials/_pricing.scss */
+.calc {
+  width: 680px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 40, scss/partials/_pricing.scss */
+.calctabs {
+  position: relative;
+}
+
+/* line 43, scss/partials/_pricing.scss */
+.tab {
+  display: inline-block;
+  background: #C6C7BD;
+  padding: 8px;
+  position: relative;
+  margin: 0 0 0 9px;
+  width: auto;
+  float: none;
+  cursor: pointer;
+  height: 22px;
+}
+
+/* line 54, scss/partials/_pricing.scss */
+.tab.selected {
+  background: white;
+  z-index: 10;
+}
+
+/* line 58, scss/partials/_pricing.scss */
+.tab h3 {
+  font-size: 23px;
+}
+
+/* line 61, scss/partials/_pricing.scss */
+.tableft, .tabright {
+  background: url("../images/main-sprite.png") no-repeat -56px -634px;
+  height: 38px;
+  width: 9px;
+  position: absolute;
+  bottom: 0px;
+}
+
+/* line 68, scss/partials/_pricing.scss */
+.tableft {
+  left: -9px;
+}
+
+/* line 71, scss/partials/_pricing.scss */
+.selected .tableft {
+  background-position: -74px -634px;
+}
+
+/* line 74, scss/partials/_pricing.scss */
+.tabright {
+  right: -9px;
+  background-position: -65px -634px;
+}
+
+/* line 78, scss/partials/_pricing.scss */
+.selected .tabright {
+  background-position: -83px -634px;
+}
+
+/* line 81, scss/partials/_pricing.scss */
+.xboxwrap {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* line 89, scss/partials/_pricing.scss */
+.calcbox {
+  .height: 300px;
+  background: white;
+  display: none;
+  float: left;
+  width: 100%;
+}
+
+/* line 96, scss/partials/_pricing.scss */
+.selected.calcbox {
+  display: block;
+}
+
+/* line 99, scss/partials/_pricing.scss */
+.progress {
+  height: 70px;
+  position: relative;
+}
+
+/* line 103, scss/partials/_pricing.scss */
+.progressbar {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+/* line 108, scss/partials/_pricing.scss */
+.progress1 {
+  position: absolute;
+  top: 25px;
+  left: 55px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/1off.png");
+}
+
+/* line 116, scss/partials/_pricing.scss */
+.progress1.on {
+  background: url("../images/1on.png");
+}
+
+/* line 119, scss/partials/_pricing.scss */
+.progress2 {
+  position: absolute;
+  top: 25px;
+  left: 331px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/2off.png");
+}
+
+/* line 127, scss/partials/_pricing.scss */
+.progress2.on {
+  background: url("../images/2on.png");
+}
+
+/* line 130, scss/partials/_pricing.scss */
+.progress3 {
+  position: absolute;
+  top: 25px;
+  right: 55px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/3off.png");
+}
+
+/* line 138, scss/partials/_pricing.scss */
+.progress3.on {
+  background: url("../images/3on.png");
+}
+
+/* line 141, scss/partials/_pricing.scss */
+.calcboxleft {
+  height: 270px;
+  margin: 0 0 10px;
+  border-right: 2px dotted black;
+  width: 35%;
+  float: left;
+  position: relative;
+}
+/* line 149, scss/partials/_pricing.scss */
+.calcboxleft h4 {
+  padding: 20px 20px 5px;
+}
+/* line 153, scss/partials/_pricing.scss */
+.calcboxleft select {
+  width: 86%;
+  margin: 0 7%;
+  font-size: 15px;
+}
+
+/* line 159, scss/partials/_pricing.scss */
+.calcboxright {
+  width: 64%;
+  float: left;
+}
+/* line 163, scss/partials/_pricing.scss */
+.calcboxright h4 {
+  padding: 20px 20px 5px;
+}
+/* line 167, scss/partials/_pricing.scss */
+.calcboxright h4.disabled {
+  opacity: .5;
+}
+/* line 171, scss/partials/_pricing.scss */
+.calcboxright select {
+  width: 86%;
+  margin: 0 20px;
+  font-size: 15px;
+}
+/* line 177, scss/partials/_pricing.scss */
+.calcboxright label {
+  float: left;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+/* line 183, scss/partials/_pricing.scss */
+.calcboxright label.disabled {
+  opacity: .5;
+}
+/* line 187, scss/partials/_pricing.scss */
+.calcboxright select.half {
+  width: 10%;
+  float: left;
+  margin: 0 5px;
+}
+/* line 193, scss/partials/_pricing.scss */
+.calcboxright select.threequart {
+  width: 25%;
+  float: left;
+  margin: 0 20px;
+}
+/* line 199, scss/partials/_pricing.scss */
+.calcboxright input {
+  width: 14%;
+  margin-left: 20px;
+}
+
+/* line 204, scss/partials/_pricing.scss */
+.calculate {
+  background: #C6C7BD;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+/* line 210, scss/partials/_pricing.scss */
+.calculate section {
+  margin: 0 20px 40px;
+  clear: both;
+  font-size: .925em;
+}
+
+/* line 217, scss/partials/_pricing.scss */
+.calculate-button {
+  background-image: url("../images/calculate-off.png");
+  width: 172px;
+  height: 32px;
+  border: 0px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: relative;
+  float: right;
+  margin: 40px 20px 20px;
+}
+/* line 228, scss/partials/_pricing.scss */
+.calculate-button.on {
+  background-image: url("../images/calculate-on.png");
+  cursor: pointer;
+}
+/* line 232, scss/partials/_pricing.scss */
+.calculate-button.send {
+  background-image: url("../images/calculate-send.png");
+  cursor: pointer;
+  float: right;
+  margin: 40px 20px 20px;
+  position: relative;
+}
+/* line 239, scss/partials/_pricing.scss */
+.calculate-button.back {
+  background-image: url("../images/calculate-back.png");
+  cursor: pointer;
+  top: 0px;
+  left: 20px;
+  position: absolute;
+}
+
+/* line 247, scss/partials/_pricing.scss */
+.calcboxright .h4.total, .calcboxright .h4.peritem {
+  float: none;
+}
+
+/* line 252, scss/partials/_pricing.scss */
+.get-started h3 {
+  font-size: 18px;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* line 259, scss/partials/_pricing.scss */
+.h4, .calcboxright .h4 {
+  padding: 8px 20px 8px;
+  float: left;
+  clear: both;
+  display: inline-block;
+  color: #4E917A;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 269, scss/partials/_pricing.scss */
+.p-right .h4 {
+  float: none;
+}
+
+/* line 273, scss/partials/_pricing.scss */
+.calcboxleft p, .calcboxright p {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 45px;
+  font-size: 15px;
+  clear: both;
+}
+
+/* line 281, scss/partials/_pricing.scss */
+.calcboxleft .xxl {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+/* line 286, scss/partials/_pricing.scss */
+.calcboxleft .p-right, .calcboxright .p-right {
+  text-align: right;
+  float: right;
+  clear: both;
+  width: 200px;
+}
+
+/* line 292, scss/partials/_pricing.scss */
+.calcboxleft .p-right span, .calcboxright .p-right span {
+  padding: 0;
+}
+
+/* line 295, scss/partials/_pricing.scss */
+input[type="text"], input[type="email"] {
+  width: 303px;
+  margin: 1px 1px 5px;
+}
+
+/* line 299, scss/partials/_pricing.scss */
+input[type="date"] {
+  width: 131px;
+}
+
+/* line 302, scss/partials/_pricing.scss */
+textarea {
+  width: 365px;
+  height: 96px;
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+/* line 308, scss/partials/_pricing.scss */
+.calculate p {
+  width: 70%;
+  margin: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* line 314, scss/partials/_pricing.scss */
+.content.pricing-success {
+  text-align: center;
+  margin: 50px auto 80px;
+}
+
+/* line 318, scss/partials/_pricing.scss */
+.content.pricing-success h2 {
+  margin: 30px 0;
+}
+
+/* line 321, scss/partials/_pricing.scss */
+.pricing-link {
+  display: block;
+  padding: 20px;
+  background: #C7604C;
+  width: 200px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin: 30px auto;
+  font-family: politicalight, sans-serif;
+  letter-spacing: .08em;
+}
+
+/* line 333, scss/partials/_pricing.scss */
+.pricing-link:hover {
+  color: #5F6062;
 }
 
 /*------------------------------------*\
