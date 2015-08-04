@@ -2327,15 +2327,21 @@ div.zone1:first-child .slider-wrapper {
 }
 /* line 9, scss/partials/_pricing.scss */
 .pricing-page .single-col {
-  width: 680px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
   box-sizing: border-box;
 }
+@media only screen and (min-width: 767px) {
+  /* line 9, scss/partials/_pricing.scss */
+  .pricing-page .single-col {
+    width: 680px;
+  }
+}
 
 /* Calculator */
-/* line 20, scss/partials/_pricing.scss */
+/* line 24, scss/partials/_pricing.scss */
 .calculator {
   display: none;
   padding-bottom: 80px;
@@ -2346,31 +2352,31 @@ div.zone1:first-child .slider-wrapper {
   position: relative;
 }
 
-/* line 29, scss/partials/_pricing.scss */
+/* line 33, scss/partials/_pricing.scss */
 .calculator.open {
   display: block;
 }
 
-/* line 32, scss/partials/_pricing.scss */
+/* line 36, scss/partials/_pricing.scss */
 #ajaxLoader {
   position: absolute;
   left: 332px;
   top: 97px;
 }
 
-/* line 37, scss/partials/_pricing.scss */
+/* line 41, scss/partials/_pricing.scss */
 .calc {
   width: 680px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 42, scss/partials/_pricing.scss */
+/* line 46, scss/partials/_pricing.scss */
 .calctabs {
   position: relative;
 }
 
-/* line 45, scss/partials/_pricing.scss */
+/* line 49, scss/partials/_pricing.scss */
 .tab {
   display: inline-block;
   background: #C6C7BD;
@@ -2383,18 +2389,18 @@ div.zone1:first-child .slider-wrapper {
   height: 22px;
 }
 
-/* line 56, scss/partials/_pricing.scss */
+/* line 60, scss/partials/_pricing.scss */
 .tab.selected {
   background: white;
   z-index: 10;
 }
 
-/* line 60, scss/partials/_pricing.scss */
+/* line 64, scss/partials/_pricing.scss */
 .tab h3 {
   font-size: 23px;
 }
 
-/* line 63, scss/partials/_pricing.scss */
+/* line 67, scss/partials/_pricing.scss */
 .tableft, .tabright {
   background: url("../images/main-sprite.png") no-repeat -56px -634px;
   height: 38px;
@@ -2403,35 +2409,35 @@ div.zone1:first-child .slider-wrapper {
   bottom: 0px;
 }
 
-/* line 70, scss/partials/_pricing.scss */
+/* line 74, scss/partials/_pricing.scss */
 .tableft {
   left: -9px;
 }
 
-/* line 73, scss/partials/_pricing.scss */
+/* line 77, scss/partials/_pricing.scss */
 .selected .tableft {
   background-position: -74px -634px;
 }
 
-/* line 76, scss/partials/_pricing.scss */
+/* line 80, scss/partials/_pricing.scss */
 .tabright {
   right: -9px;
   background-position: -65px -634px;
 }
 
-/* line 80, scss/partials/_pricing.scss */
+/* line 84, scss/partials/_pricing.scss */
 .selected .tabright {
   background-position: -83px -634px;
 }
 
-/* line 83, scss/partials/_pricing.scss */
+/* line 87, scss/partials/_pricing.scss */
 .xboxwrap {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-/* line 91, scss/partials/_pricing.scss */
+/* line 95, scss/partials/_pricing.scss */
 .calcbox {
   .height: 300px;
   background: white;
@@ -2440,25 +2446,25 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 98, scss/partials/_pricing.scss */
+/* line 102, scss/partials/_pricing.scss */
 .selected.calcbox {
   display: block;
 }
 
-/* line 101, scss/partials/_pricing.scss */
+/* line 105, scss/partials/_pricing.scss */
 .progress {
   height: 70px;
   position: relative;
 }
 
-/* line 105, scss/partials/_pricing.scss */
+/* line 109, scss/partials/_pricing.scss */
 .progressbar {
   position: absolute;
   top: 25px;
   left: 30px;
 }
 
-/* line 110, scss/partials/_pricing.scss */
+/* line 114, scss/partials/_pricing.scss */
 .progress1 {
   position: absolute;
   top: 25px;
@@ -2468,12 +2474,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/1off.png");
 }
 
-/* line 118, scss/partials/_pricing.scss */
+/* line 122, scss/partials/_pricing.scss */
 .progress1.on {
   background: url("../images/1on.png");
 }
 
-/* line 121, scss/partials/_pricing.scss */
+/* line 125, scss/partials/_pricing.scss */
 .progress2 {
   position: absolute;
   top: 25px;
@@ -2483,12 +2489,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/2off.png");
 }
 
-/* line 129, scss/partials/_pricing.scss */
+/* line 133, scss/partials/_pricing.scss */
 .progress2.on {
   background: url("../images/2on.png");
 }
 
-/* line 132, scss/partials/_pricing.scss */
+/* line 136, scss/partials/_pricing.scss */
 .progress3 {
   position: absolute;
   top: 25px;
@@ -2498,12 +2504,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/3off.png");
 }
 
-/* line 140, scss/partials/_pricing.scss */
+/* line 144, scss/partials/_pricing.scss */
 .progress3.on {
   background: url("../images/3on.png");
 }
 
-/* line 143, scss/partials/_pricing.scss */
+/* line 147, scss/partials/_pricing.scss */
 .calcboxleft {
   height: 270px;
   margin: 0 0 10px;
@@ -2512,79 +2518,85 @@ div.zone1:first-child .slider-wrapper {
   float: left;
   position: relative;
 }
-/* line 151, scss/partials/_pricing.scss */
+/* line 155, scss/partials/_pricing.scss */
 .calcboxleft h4 {
   padding: 20px 20px 5px;
 }
-/* line 155, scss/partials/_pricing.scss */
+/* line 159, scss/partials/_pricing.scss */
 .calcboxleft select {
   width: 86%;
   margin: 0 7%;
   font-size: 15px;
 }
 
-/* line 161, scss/partials/_pricing.scss */
+/* line 165, scss/partials/_pricing.scss */
 .calcboxright {
   width: 64%;
   float: left;
 }
-/* line 165, scss/partials/_pricing.scss */
+/* line 169, scss/partials/_pricing.scss */
 .calcboxright h4 {
   padding: 20px 20px 5px;
 }
-/* line 169, scss/partials/_pricing.scss */
+/* line 173, scss/partials/_pricing.scss */
 .calcboxright h4.disabled {
   opacity: .5;
 }
-/* line 173, scss/partials/_pricing.scss */
+/* line 177, scss/partials/_pricing.scss */
 .calcboxright select {
   width: 86%;
   margin: 0 20px;
   font-size: 15px;
 }
-/* line 179, scss/partials/_pricing.scss */
+/* line 183, scss/partials/_pricing.scss */
 .calcboxright label {
   float: left;
   margin-left: 20px;
   margin-top: 8px;
 }
-/* line 185, scss/partials/_pricing.scss */
+/* line 189, scss/partials/_pricing.scss */
 .calcboxright label.disabled {
   opacity: .5;
 }
-/* line 189, scss/partials/_pricing.scss */
+/* line 193, scss/partials/_pricing.scss */
 .calcboxright select.half {
   width: 10%;
   float: left;
   margin: 0 5px;
 }
-/* line 195, scss/partials/_pricing.scss */
+/* line 199, scss/partials/_pricing.scss */
 .calcboxright select.threequart {
   width: 25%;
   float: left;
   margin: 0 20px;
 }
-/* line 201, scss/partials/_pricing.scss */
+/* line 205, scss/partials/_pricing.scss */
 .calcboxright input {
   width: 14%;
   margin-left: 20px;
 }
 
-/* line 206, scss/partials/_pricing.scss */
+/* line 210, scss/partials/_pricing.scss */
 .calculate {
   background: #C6C7BD;
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 212, scss/partials/_pricing.scss */
+/* line 216, scss/partials/_pricing.scss */
 .calculate section {
   margin: 0 20px 40px;
   clear: both;
   font-size: .925em;
 }
+/* line 221, scss/partials/_pricing.scss */
+.calculate section p {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
 
-/* line 219, scss/partials/_pricing.scss */
+/* line 229, scss/partials/_pricing.scss */
 .calculate-button {
   background-image: url("../images/calculate-off.png");
   width: 172px;
@@ -2596,12 +2608,12 @@ div.zone1:first-child .slider-wrapper {
   float: right;
   margin: 40px 20px 20px;
 }
-/* line 230, scss/partials/_pricing.scss */
+/* line 240, scss/partials/_pricing.scss */
 .calculate-button.on {
   background-image: url("../images/calculate-on.png");
   cursor: pointer;
 }
-/* line 234, scss/partials/_pricing.scss */
+/* line 244, scss/partials/_pricing.scss */
 .calculate-button.send {
   background-image: url("../images/calculate-send.png");
   cursor: pointer;
@@ -2609,7 +2621,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 40px 20px 20px;
   position: relative;
 }
-/* line 241, scss/partials/_pricing.scss */
+/* line 251, scss/partials/_pricing.scss */
 .calculate-button.back {
   background-image: url("../images/calculate-back.png");
   cursor: pointer;
@@ -2618,12 +2630,12 @@ div.zone1:first-child .slider-wrapper {
   position: absolute;
 }
 
-/* line 249, scss/partials/_pricing.scss */
+/* line 259, scss/partials/_pricing.scss */
 .calcboxright .h4.total, .calcboxright .h4.peritem {
   float: none;
 }
 
-/* line 254, scss/partials/_pricing.scss */
+/* line 264, scss/partials/_pricing.scss */
 .get-started h3 {
   font-size: 18px;
   margin-left: 20px;
@@ -2631,7 +2643,7 @@ div.zone1:first-child .slider-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 261, scss/partials/_pricing.scss */
+/* line 271, scss/partials/_pricing.scss */
 .h4, .calcboxright .h4 {
   padding: 8px 20px 8px;
   float: left;
@@ -2643,12 +2655,12 @@ div.zone1:first-child .slider-wrapper {
   text-transform: uppercase;
 }
 
-/* line 271, scss/partials/_pricing.scss */
+/* line 281, scss/partials/_pricing.scss */
 .p-right .h4 {
   float: none;
 }
 
-/* line 275, scss/partials/_pricing.scss */
+/* line 285, scss/partials/_pricing.scss */
 .calcboxleft p, .calcboxright p {
   float: left;
   margin-left: 20px;
@@ -2658,14 +2670,14 @@ div.zone1:first-child .slider-wrapper {
   clear: both;
 }
 
-/* line 283, scss/partials/_pricing.scss */
+/* line 293, scss/partials/_pricing.scss */
 .calcboxleft .xxl {
   position: absolute;
   margin-bottom: 0;
   bottom: 0;
 }
 
-/* line 288, scss/partials/_pricing.scss */
+/* line 298, scss/partials/_pricing.scss */
 .calcboxleft .p-right, .calcboxright .p-right {
   text-align: right;
   float: right;
@@ -2673,23 +2685,23 @@ div.zone1:first-child .slider-wrapper {
   width: 200px;
 }
 
-/* line 294, scss/partials/_pricing.scss */
+/* line 304, scss/partials/_pricing.scss */
 .calcboxleft .p-right span, .calcboxright .p-right span {
   padding: 0;
 }
 
-/* line 297, scss/partials/_pricing.scss */
+/* line 307, scss/partials/_pricing.scss */
 input[type="text"], input[type="email"] {
   width: 303px;
   margin: 1px 1px 5px;
 }
 
-/* line 301, scss/partials/_pricing.scss */
+/* line 311, scss/partials/_pricing.scss */
 input[type="date"] {
   width: 131px;
 }
 
-/* line 304, scss/partials/_pricing.scss */
+/* line 314, scss/partials/_pricing.scss */
 textarea {
   width: 365px;
   height: 96px;
@@ -2697,7 +2709,7 @@ textarea {
   margin-right: 0px;
 }
 
-/* line 310, scss/partials/_pricing.scss */
+/* line 320, scss/partials/_pricing.scss */
 .calculate p {
   width: 70%;
   margin: 20px;
@@ -2705,18 +2717,18 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 316, scss/partials/_pricing.scss */
+/* line 326, scss/partials/_pricing.scss */
 .content.pricing-success {
   text-align: center;
   margin: 50px auto 80px;
 }
 
-/* line 320, scss/partials/_pricing.scss */
+/* line 330, scss/partials/_pricing.scss */
 .content.pricing-success h2 {
   margin: 30px 0;
 }
 
-/* line 323, scss/partials/_pricing.scss */
+/* line 333, scss/partials/_pricing.scss */
 .pricing-link {
   display: block;
   padding: 20px;
@@ -2730,7 +2742,7 @@ textarea {
   letter-spacing: .08em;
 }
 
-/* line 335, scss/partials/_pricing.scss */
+/* line 345, scss/partials/_pricing.scss */
 .pricing-link:hover {
   color: #5F6062;
 }
@@ -2951,77 +2963,71 @@ textarea {
     min-height: 30px;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 600px) {
-  /* line 154, scss/base/_responsive.scss */
-  .get-started .calculate p {
-    margin: 140px 20px 20px;
-  }
-}
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  /* line 161, scss/base/_responsive.scss */
+  /* line 154, scss/base/_responsive.scss */
   html {
     width: 100%;
   }
 
-  /* line 164, scss/base/_responsive.scss */
+  /* line 157, scss/base/_responsive.scss */
   body {
     margin: 0 auto;
   }
 
-  /* line 167, scss/base/_responsive.scss */
+  /* line 160, scss/base/_responsive.scss */
   h2 {
     font-size: 32px;
     .letter-spacing: 3px;
     text-align: center;
   }
 
-  /* line 172, scss/base/_responsive.scss */
+  /* line 165, scss/base/_responsive.scss */
   .content.apparel {
     height: auto;
   }
 
-  /* line 175, scss/base/_responsive.scss */
+  /* line 168, scss/base/_responsive.scss */
   #header {
     border-bottom: 1px solid #58595B;
   }
 
-  /* line 178, scss/base/_responsive.scss */
+  /* line 171, scss/base/_responsive.scss */
   .content, .galslidewrap {
     width: 90%;
   }
 
-  /* line 181, scss/base/_responsive.scss */
+  /* line 174, scss/base/_responsive.scss */
   #nav, #subheadwrap, .subnav {
     width: 100%;
   }
 
-  /* line 184, scss/base/_responsive.scss */
+  /* line 177, scss/base/_responsive.scss */
   .subnav {
     padding: 20px 0;
   }
 
-  /* line 187, scss/base/_responsive.scss */
+  /* line 180, scss/base/_responsive.scss */
   #nav {
     padding-top: 0;
   }
 
-  /* line 190, scss/base/_responsive.scss */
+  /* line 183, scss/base/_responsive.scss */
   .headcontact, .logo, #subhead, .pricing, #nav ul {
     display: none;
   }
 
-  /* line 193, scss/base/_responsive.scss */
+  /* line 186, scss/base/_responsive.scss */
   .mininav {
     display: block;
   }
 
-  /* line 196, scss/base/_responsive.scss */
+  /* line 189, scss/base/_responsive.scss */
   #nav .minilogo {
     display: block;
     top: 7px;
   }
 
-  /* line 200, scss/base/_responsive.scss */
+  /* line 193, scss/base/_responsive.scss */
   .minipricing {
     display: block;
     position: absolute;
@@ -3030,12 +3036,12 @@ textarea {
     z-index: 500;
   }
 
-  /* line 207, scss/base/_responsive.scss */
+  /* line 200, scss/base/_responsive.scss */
   #main {
     padding-top: 43px;
   }
 
-  /* line 210, scss/base/_responsive.scss */
+  /* line 203, scss/base/_responsive.scss */
   .borderholder {
     top: 45px;
     right: 0;
@@ -3043,7 +3049,7 @@ textarea {
     border-top: none;
   }
 
-  /* line 216, scss/base/_responsive.scss */
+  /* line 209, scss/base/_responsive.scss */
   .galinfo {
     position: relative;
     width: 94%;
@@ -3052,33 +3058,33 @@ textarea {
     top: 0;
   }
 
-  /* line 223, scss/base/_responsive.scss */
+  /* line 216, scss/base/_responsive.scss */
   .galinfo h2 {
     padding: 0 30px 30px;
   }
 
-  /* line 226, scss/base/_responsive.scss */
+  /* line 219, scss/base/_responsive.scss */
   .zone1 {
     padding-bottom: 6%;
   }
 
-  /* line 229, scss/base/_responsive.scss */
+  /* line 222, scss/base/_responsive.scss */
   .category-apparel .zone1 span.view-all {
     top: 310px;
     right: 38%;
   }
 
-  /* line 233, scss/base/_responsive.scss */
+  /* line 226, scss/base/_responsive.scss */
   .category-apparel .zone1 h2 {
     width: 100%;
   }
 
-  /* line 236, scss/base/_responsive.scss */
+  /* line 229, scss/base/_responsive.scss */
   .slidenav.right {
     float: left;
   }
 
-  /* line 239, scss/base/_responsive.scss */
+  /* line 232, scss/base/_responsive.scss */
   img.loading {
     padding: 127px 48%;
     height: auto;
@@ -3086,23 +3092,23 @@ textarea {
     visibility: none;
   }
 
-  /* line 245, scss/base/_responsive.scss */
+  /* line 238, scss/base/_responsive.scss */
   .slider-wrapper {
     margin: 0 0 1% 0;
     width: 100%;
   }
 
-  /* line 247, scss/base/_responsive.scss */
+  /* line 240, scss/base/_responsive.scss */
   .splitleft {
     width: 100%;
   }
 
-  /* line 250, scss/base/_responsive.scss */
+  /* line 243, scss/base/_responsive.scss */
   .splitright {
     display: none;
   }
 
-  /* line 253, scss/base/_responsive.scss */
+  /* line 246, scss/base/_responsive.scss */
   .orangebox, .faq .orangebox {
     width: 100%;
     margin-top: 1%;
@@ -3111,167 +3117,167 @@ textarea {
     min-height: 0;
   }
 
-  /* line 260, scss/base/_responsive.scss */
+  /* line 253, scss/base/_responsive.scss */
   .orangebox.gallery {
     margin-top: 1%;
   }
 
-  /* line 263, scss/base/_responsive.scss */
+  /* line 256, scss/base/_responsive.scss */
   .orangebox h2, .faq .orangebox h2 {
     padding: 10px;
     text-align: center;
   }
 
-  /* line 267, scss/base/_responsive.scss */
+  /* line 260, scss/base/_responsive.scss */
   .orangebox p, .faq .orangebox p {
     padding: 10px;
     background: none;
     text-align: center;
   }
 
-  /* line 272, scss/base/_responsive.scss */
+  /* line 265, scss/base/_responsive.scss */
   #main .orangebox {
     background-image: none;
   }
 
-  /* line 275, scss/base/_responsive.scss */
+  /* line 268, scss/base/_responsive.scss */
   .port .orangebox {
     margin-top: 30px;
   }
 
-  /* line 278, scss/base/_responsive.scss */
+  /* line 271, scss/base/_responsive.scss */
   .port .zone1 {
     padding-bottom: 0;
   }
 
-  /* line 281, scss/base/_responsive.scss */
+  /* line 274, scss/base/_responsive.scss */
   .port .splitzone {
     height: auto;
     padding-bottom: 0;
   }
 
-  /* line 285, scss/base/_responsive.scss */
+  /* line 278, scss/base/_responsive.scss */
   .productimg {
     width: 30%;
     padding: 3% 32%;
     margin: 6% 3% 0;
   }
 
-  /* line 290, scss/base/_responsive.scss */
+  /* line 283, scss/base/_responsive.scss */
   .productimg img {
     width: auto;
     height: auto;
     max-width: 100%;
   }
 
-  /* line 295, scss/base/_responsive.scss */
+  /* line 288, scss/base/_responsive.scss */
   .productinfo {
     width: 100%;
     margin: 0 0 6%;
   }
 
-  /* line 299, scss/base/_responsive.scss */
+  /* line 292, scss/base/_responsive.scss */
   .swatchwrap {
     width: 18%;
     padding: 1%;
   }
 
-  /* line 303, scss/base/_responsive.scss */
+  /* line 296, scss/base/_responsive.scss */
   .app-wrap a {
     margin: 30px 3% 0 0;
     width: 31%;
     float: left;
   }
 
-  /* line 308, scss/base/_responsive.scss */
+  /* line 301, scss/base/_responsive.scss */
   .app-wrap a:nth-child(3n) {
     margin-right: 0;
   }
 
-  /* line 311, scss/base/_responsive.scss */
+  /* line 304, scss/base/_responsive.scss */
   .app-thumb {
     width: 100%;
     height: auto;
   }
 
-  /* line 315, scss/base/_responsive.scss */
+  /* line 308, scss/base/_responsive.scss */
   .app-wrap a:nth-child(4n) {
     margin-right: 3%;
   }
 
-  /* line 318, scss/base/_responsive.scss */
+  /* line 311, scss/base/_responsive.scss */
   .category-apparel .zone1.closed {
     height: auto;
   }
 
-  /* line 321, scss/base/_responsive.scss */
+  /* line 314, scss/base/_responsive.scss */
   .category-apparel .zone1 span.view-all {
     display: none;
   }
 
-  /* line 324, scss/base/_responsive.scss */
+  /* line 317, scss/base/_responsive.scss */
   .nivo-controlNav {
     margin: 3% 3% 6%;
   }
 
   /* CALCULATOR SYTLES */
-  /* line 329, scss/base/_responsive.scss */
+  /* line 322, scss/base/_responsive.scss */
   .calcbanner {
     width: 383px;
   }
 
-  /* line 332, scss/base/_responsive.scss */
+  /* line 325, scss/base/_responsive.scss */
   .calcbanner h3 {
     width: 274px;
   }
 
-  /* line 335, scss/base/_responsive.scss */
+  /* line 328, scss/base/_responsive.scss */
   .calcbanner:before {
     width: 70%;
     background-position: right -287px;
   }
 
-  /* line 339, scss/base/_responsive.scss */
+  /* line 332, scss/base/_responsive.scss */
   .calc {
     width: 90%;
     margin-top: 20px;
   }
 
-  /* line 343, scss/base/_responsive.scss */
+  /* line 336, scss/base/_responsive.scss */
   .calc .tab:first-child {
     margin-left: 9px;
     float: left;
   }
 
-  /* line 347, scss/base/_responsive.scss */
+  /* line 340, scss/base/_responsive.scss */
   .progress {
     width: 100%;
   }
 
-  /* line 350, scss/base/_responsive.scss */
+  /* line 343, scss/base/_responsive.scss */
   img.progressbar {
     max-width: 85%;
   }
 
-  /* line 353, scss/base/_responsive.scss */
+  /* line 346, scss/base/_responsive.scss */
   .progress1 {
     left: 10%;
     top: 21px;
   }
 
-  /* line 357, scss/base/_responsive.scss */
+  /* line 350, scss/base/_responsive.scss */
   .progress2 {
     left: 50%;
     top: 21px;
   }
 
-  /* line 361, scss/base/_responsive.scss */
+  /* line 354, scss/base/_responsive.scss */
   .progress3 {
     right: 11%;
     top: 21px;
   }
 
-  /* line 365, scss/base/_responsive.scss */
+  /* line 358, scss/base/_responsive.scss */
   .calcboxleft {
     height: auto;
     width: 100%;
@@ -3279,7 +3285,7 @@ textarea {
     border: none;
   }
 
-  /* line 371, scss/base/_responsive.scss */
+  /* line 364, scss/base/_responsive.scss */
   .calcboxleft:after {
     width: 100%;
     height: 3px;
@@ -3290,40 +3296,40 @@ textarea {
     background: url("../images/main-sprite.png") repeat-x 2px -8px;
   }
 
-  /* line 380, scss/base/_responsive.scss */
+  /* line 373, scss/base/_responsive.scss */
   .calcboxright {
     width: 100%;
     padding: 30px 0;
   }
 
-  /* line 384, scss/base/_responsive.scss */
+  /* line 377, scss/base/_responsive.scss */
   .calculate {
     height: auto;
     min-height: 100px;
   }
 
-  /* line 388, scss/base/_responsive.scss */
+  /* line 381, scss/base/_responsive.scss */
   .get-started input[type="text"], .get-started input[type="email"] {
     width: 60%;
   }
 
-  /* line 391, scss/base/_responsive.scss */
+  /* line 384, scss/base/_responsive.scss */
   .get-started textarea {
     width: 83%;
   }
 
-  /* line 394, scss/base/_responsive.scss */
+  /* line 387, scss/base/_responsive.scss */
   .get-started input[type="date"] {
     width: 44%;
     margin-left: 0;
   }
 
-  /* line 398, scss/base/_responsive.scss */
+  /* line 391, scss/base/_responsive.scss */
   .faqwrapper {
     padding-top: 0;
   }
 
-  /* line 401, scss/base/_responsive.scss */
+  /* line 394, scss/base/_responsive.scss */
   .faqwrap {
     width: 96%;
     padding: 2%;
@@ -3331,143 +3337,143 @@ textarea {
     min-height: 0;
   }
 
-  /* line 407, scss/base/_responsive.scss */
+  /* line 400, scss/base/_responsive.scss */
   .faqwrap h3 {
     margin: 0 2% 10px;
   }
 
-  /* line 410, scss/base/_responsive.scss */
+  /* line 403, scss/base/_responsive.scss */
   .jump {
     top: -120px;
   }
 
-  /* line 413, scss/base/_responsive.scss */
+  /* line 406, scss/base/_responsive.scss */
   .vidwrap .orangebox {
     width: 90%;
     margin: 195px auto 0;
   }
 
-  /* line 417, scss/base/_responsive.scss */
+  /* line 410, scss/base/_responsive.scss */
   .vidwrap .orangebox p {
     padding: 30px;
     background: none;
   }
 
-  /* line 421, scss/base/_responsive.scss */
+  /* line 414, scss/base/_responsive.scss */
   .vidwrap .vid {
     width: 100%;
   }
 
-  /* line 424, scss/base/_responsive.scss */
+  /* line 417, scss/base/_responsive.scss */
   .vidwrap .vid iframe {
     width: 96%;
     height: 225px;
     padding: 0 2%;
   }
 
-  /* line 429, scss/base/_responsive.scss */
+  /* line 422, scss/base/_responsive.scss */
   .product {
     width: 90%;
   }
 
-  /* line 432, scss/base/_responsive.scss */
+  /* line 425, scss/base/_responsive.scss */
   #footer {
     width: 52%;
     padding: 0;
   }
 
-  /* line 436, scss/base/_responsive.scss */
+  /* line 429, scss/base/_responsive.scss */
   .footcol {
     height: auto;
     width: 100%;
   }
 
-  /* line 441, scss/base/_responsive.scss */
+  /* line 434, scss/base/_responsive.scss */
   #foot1 {
     border-left: none;
     border-bottom: 1px solid #DEDED8;
   }
 
-  /* line 445, scss/base/_responsive.scss */
+  /* line 438, scss/base/_responsive.scss */
   #foot2 {
     border-left: none;
     border-right: none;
   }
 
-  /* line 449, scss/base/_responsive.scss */
+  /* line 442, scss/base/_responsive.scss */
   #foot3 {
     display: none;
   }
 
-  /* line 452, scss/base/_responsive.scss */
+  /* line 445, scss/base/_responsive.scss */
   #footer > p {
     padding: 10px 0;
   }
 
-  /* line 455, scss/base/_responsive.scss */
+  /* line 448, scss/base/_responsive.scss */
   .tab h3 {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 461px) and (max-width: 600px) {
-  /* line 462, scss/base/_responsive.scss */
+  /* line 455, scss/base/_responsive.scss */
   .swatchwrap {
     width: 22%;
     padding: 1.5%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 460px) {
-  /* line 471, scss/base/_responsive.scss */
+  /* line 464, scss/base/_responsive.scss */
   .tab h3 {
     font-size: 16px;
   }
 
-  /* line 474, scss/base/_responsive.scss */
+  /* line 467, scss/base/_responsive.scss */
   .calctabs {
     padding-right: 40px;
   }
 
-  /* line 477, scss/base/_responsive.scss */
+  /* line 470, scss/base/_responsive.scss */
   .calc .tab {
     margin-left: -30px;
     float: right;
   }
 
-  /* line 481, scss/base/_responsive.scss */
+  /* line 474, scss/base/_responsive.scss */
   .calc .tab:hover {
     z-index: 12;
   }
 
-  /* line 484, scss/base/_responsive.scss */
+  /* line 477, scss/base/_responsive.scss */
   .calcbanner {
     width: 263px;
   }
 
-  /* line 487, scss/base/_responsive.scss */
+  /* line 480, scss/base/_responsive.scss */
   .calcbanner h3 {
     width: 248px;
   }
 
-  /* line 490, scss/base/_responsive.scss */
+  /* line 483, scss/base/_responsive.scss */
   .calcbanner:before {
     width: 70%;
     background-position: right -287px;
   }
 
-  /* line 494, scss/base/_responsive.scss */
+  /* line 487, scss/base/_responsive.scss */
   .productimg {
     width: 46%;
     padding: 3% 24%;
     margin: 6% 3% 0;
   }
 
-  /* line 499, scss/base/_responsive.scss */
+  /* line 492, scss/base/_responsive.scss */
   .productinfo h4.sizes {
     width: auto;
     float: none;
   }
 
-  /* line 503, scss/base/_responsive.scss */
+  /* line 496, scss/base/_responsive.scss */
   .rsrcelink.launchcalc {
     width: 252px;
     position: relative;
@@ -3475,7 +3481,7 @@ textarea {
     left: -4px;
   }
 
-  /* line 509, scss/base/_responsive.scss */
+  /* line 502, scss/base/_responsive.scss */
   .rsrcelink.launchcalc:after {
     width: 9px;
     position: absolute;
@@ -3488,24 +3494,24 @@ textarea {
     display: block;
   }
 
-  /* line 521, scss/base/_responsive.scss */
+  /* line 514, scss/base/_responsive.scss */
   .rsrcelink.launchcalc:hover:after {
     background-position: -375px -51px;
   }
 
-  /* line 524, scss/base/_responsive.scss */
+  /* line 517, scss/base/_responsive.scss */
   .swatchwrap {
     width: 29%;
     padding: 2%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  /* line 535, scss/base/_responsive.scss */
+  /* line 528, scss/base/_responsive.scss */
   img.loading, .vidwrap .vid iframe {
     height: 307px !important;
   }
 
-  /* line 538, scss/base/_responsive.scss */
+  /* line 531, scss/base/_responsive.scss */
   .vidwrap .orangebox {
     margin: 277px auto 0;
   }
