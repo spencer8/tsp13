@@ -7,3 +7,26 @@ ul {
     	margin-bottom: .25em;
     }
 }
+
+.content {
+	ol {
+	  list-style-type: none;
+    	margin: 0 0 10px 0;
+
+		li {
+		  counter-increment: step-counter;
+		  position:relative;
+		  padding-left:1em;
+		}
+
+		li::before {
+		  content: counter(step-counter);
+		  position:absolute;
+		  left:0;
+		  top:-.219em;
+		  line-height:$padpx;
+		  font-family:$font-tertiary;
+		  color: $green-drk;
+		}
+	}
+}

@@ -302,6 +302,28 @@ ul li {
   margin-bottom: .25em;
 }
 
+/* line 12, scss/base/_lists.scss */
+.content ol {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+}
+/* line 16, scss/base/_lists.scss */
+.content ol li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 1em;
+}
+/* line 22, scss/base/_lists.scss */
+.content ol li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: -.219em;
+  line-height: 20px;
+  font-family: "open-sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #4E917A;
+}
+
 /*------------------------------------*\
     $MEDIA ELEMENTS
 \*------------------------------------*/
@@ -2308,10 +2330,12 @@ div.zone1:first-child .slider-wrapper {
   width: 680px;
   margin: 0 auto;
   position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Calculator */
-/* line 18, scss/partials/_pricing.scss */
+/* line 20, scss/partials/_pricing.scss */
 .calculator {
   display: none;
   padding-bottom: 80px;
@@ -2322,31 +2346,31 @@ div.zone1:first-child .slider-wrapper {
   position: relative;
 }
 
-/* line 27, scss/partials/_pricing.scss */
+/* line 29, scss/partials/_pricing.scss */
 .calculator.open {
   display: block;
 }
 
-/* line 30, scss/partials/_pricing.scss */
+/* line 32, scss/partials/_pricing.scss */
 #ajaxLoader {
   position: absolute;
   left: 332px;
   top: 97px;
 }
 
-/* line 35, scss/partials/_pricing.scss */
+/* line 37, scss/partials/_pricing.scss */
 .calc {
   width: 680px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 40, scss/partials/_pricing.scss */
+/* line 42, scss/partials/_pricing.scss */
 .calctabs {
   position: relative;
 }
 
-/* line 43, scss/partials/_pricing.scss */
+/* line 45, scss/partials/_pricing.scss */
 .tab {
   display: inline-block;
   background: #C6C7BD;
@@ -2359,18 +2383,18 @@ div.zone1:first-child .slider-wrapper {
   height: 22px;
 }
 
-/* line 54, scss/partials/_pricing.scss */
+/* line 56, scss/partials/_pricing.scss */
 .tab.selected {
   background: white;
   z-index: 10;
 }
 
-/* line 58, scss/partials/_pricing.scss */
+/* line 60, scss/partials/_pricing.scss */
 .tab h3 {
   font-size: 23px;
 }
 
-/* line 61, scss/partials/_pricing.scss */
+/* line 63, scss/partials/_pricing.scss */
 .tableft, .tabright {
   background: url("../images/main-sprite.png") no-repeat -56px -634px;
   height: 38px;
@@ -2379,35 +2403,35 @@ div.zone1:first-child .slider-wrapper {
   bottom: 0px;
 }
 
-/* line 68, scss/partials/_pricing.scss */
+/* line 70, scss/partials/_pricing.scss */
 .tableft {
   left: -9px;
 }
 
-/* line 71, scss/partials/_pricing.scss */
+/* line 73, scss/partials/_pricing.scss */
 .selected .tableft {
   background-position: -74px -634px;
 }
 
-/* line 74, scss/partials/_pricing.scss */
+/* line 76, scss/partials/_pricing.scss */
 .tabright {
   right: -9px;
   background-position: -65px -634px;
 }
 
-/* line 78, scss/partials/_pricing.scss */
+/* line 80, scss/partials/_pricing.scss */
 .selected .tabright {
   background-position: -83px -634px;
 }
 
-/* line 81, scss/partials/_pricing.scss */
+/* line 83, scss/partials/_pricing.scss */
 .xboxwrap {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-/* line 89, scss/partials/_pricing.scss */
+/* line 91, scss/partials/_pricing.scss */
 .calcbox {
   .height: 300px;
   background: white;
@@ -2416,25 +2440,25 @@ div.zone1:first-child .slider-wrapper {
   width: 100%;
 }
 
-/* line 96, scss/partials/_pricing.scss */
+/* line 98, scss/partials/_pricing.scss */
 .selected.calcbox {
   display: block;
 }
 
-/* line 99, scss/partials/_pricing.scss */
+/* line 101, scss/partials/_pricing.scss */
 .progress {
   height: 70px;
   position: relative;
 }
 
-/* line 103, scss/partials/_pricing.scss */
+/* line 105, scss/partials/_pricing.scss */
 .progressbar {
   position: absolute;
   top: 25px;
   left: 30px;
 }
 
-/* line 108, scss/partials/_pricing.scss */
+/* line 110, scss/partials/_pricing.scss */
 .progress1 {
   position: absolute;
   top: 25px;
@@ -2444,12 +2468,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/1off.png");
 }
 
-/* line 116, scss/partials/_pricing.scss */
+/* line 118, scss/partials/_pricing.scss */
 .progress1.on {
   background: url("../images/1on.png");
 }
 
-/* line 119, scss/partials/_pricing.scss */
+/* line 121, scss/partials/_pricing.scss */
 .progress2 {
   position: absolute;
   top: 25px;
@@ -2459,12 +2483,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/2off.png");
 }
 
-/* line 127, scss/partials/_pricing.scss */
+/* line 129, scss/partials/_pricing.scss */
 .progress2.on {
   background: url("../images/2on.png");
 }
 
-/* line 130, scss/partials/_pricing.scss */
+/* line 132, scss/partials/_pricing.scss */
 .progress3 {
   position: absolute;
   top: 25px;
@@ -2474,12 +2498,12 @@ div.zone1:first-child .slider-wrapper {
   background: url("../images/3off.png");
 }
 
-/* line 138, scss/partials/_pricing.scss */
+/* line 140, scss/partials/_pricing.scss */
 .progress3.on {
   background: url("../images/3on.png");
 }
 
-/* line 141, scss/partials/_pricing.scss */
+/* line 143, scss/partials/_pricing.scss */
 .calcboxleft {
   height: 270px;
   margin: 0 0 10px;
@@ -2488,79 +2512,79 @@ div.zone1:first-child .slider-wrapper {
   float: left;
   position: relative;
 }
-/* line 149, scss/partials/_pricing.scss */
+/* line 151, scss/partials/_pricing.scss */
 .calcboxleft h4 {
   padding: 20px 20px 5px;
 }
-/* line 153, scss/partials/_pricing.scss */
+/* line 155, scss/partials/_pricing.scss */
 .calcboxleft select {
   width: 86%;
   margin: 0 7%;
   font-size: 15px;
 }
 
-/* line 159, scss/partials/_pricing.scss */
+/* line 161, scss/partials/_pricing.scss */
 .calcboxright {
   width: 64%;
   float: left;
 }
-/* line 163, scss/partials/_pricing.scss */
+/* line 165, scss/partials/_pricing.scss */
 .calcboxright h4 {
   padding: 20px 20px 5px;
 }
-/* line 167, scss/partials/_pricing.scss */
+/* line 169, scss/partials/_pricing.scss */
 .calcboxright h4.disabled {
   opacity: .5;
 }
-/* line 171, scss/partials/_pricing.scss */
+/* line 173, scss/partials/_pricing.scss */
 .calcboxright select {
   width: 86%;
   margin: 0 20px;
   font-size: 15px;
 }
-/* line 177, scss/partials/_pricing.scss */
+/* line 179, scss/partials/_pricing.scss */
 .calcboxright label {
   float: left;
   margin-left: 20px;
   margin-top: 8px;
 }
-/* line 183, scss/partials/_pricing.scss */
+/* line 185, scss/partials/_pricing.scss */
 .calcboxright label.disabled {
   opacity: .5;
 }
-/* line 187, scss/partials/_pricing.scss */
+/* line 189, scss/partials/_pricing.scss */
 .calcboxright select.half {
   width: 10%;
   float: left;
   margin: 0 5px;
 }
-/* line 193, scss/partials/_pricing.scss */
+/* line 195, scss/partials/_pricing.scss */
 .calcboxright select.threequart {
   width: 25%;
   float: left;
   margin: 0 20px;
 }
-/* line 199, scss/partials/_pricing.scss */
+/* line 201, scss/partials/_pricing.scss */
 .calcboxright input {
   width: 14%;
   margin-left: 20px;
 }
 
-/* line 204, scss/partials/_pricing.scss */
+/* line 206, scss/partials/_pricing.scss */
 .calculate {
   background: #C6C7BD;
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 210, scss/partials/_pricing.scss */
+/* line 212, scss/partials/_pricing.scss */
 .calculate section {
   margin: 0 20px 40px;
   clear: both;
   font-size: .925em;
 }
 
-/* line 217, scss/partials/_pricing.scss */
+/* line 219, scss/partials/_pricing.scss */
 .calculate-button {
   background-image: url("../images/calculate-off.png");
   width: 172px;
@@ -2572,12 +2596,12 @@ div.zone1:first-child .slider-wrapper {
   float: right;
   margin: 40px 20px 20px;
 }
-/* line 228, scss/partials/_pricing.scss */
+/* line 230, scss/partials/_pricing.scss */
 .calculate-button.on {
   background-image: url("../images/calculate-on.png");
   cursor: pointer;
 }
-/* line 232, scss/partials/_pricing.scss */
+/* line 234, scss/partials/_pricing.scss */
 .calculate-button.send {
   background-image: url("../images/calculate-send.png");
   cursor: pointer;
@@ -2585,7 +2609,7 @@ div.zone1:first-child .slider-wrapper {
   margin: 40px 20px 20px;
   position: relative;
 }
-/* line 239, scss/partials/_pricing.scss */
+/* line 241, scss/partials/_pricing.scss */
 .calculate-button.back {
   background-image: url("../images/calculate-back.png");
   cursor: pointer;
@@ -2594,12 +2618,12 @@ div.zone1:first-child .slider-wrapper {
   position: absolute;
 }
 
-/* line 247, scss/partials/_pricing.scss */
+/* line 249, scss/partials/_pricing.scss */
 .calcboxright .h4.total, .calcboxright .h4.peritem {
   float: none;
 }
 
-/* line 252, scss/partials/_pricing.scss */
+/* line 254, scss/partials/_pricing.scss */
 .get-started h3 {
   font-size: 18px;
   margin-left: 20px;
@@ -2607,7 +2631,7 @@ div.zone1:first-child .slider-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 259, scss/partials/_pricing.scss */
+/* line 261, scss/partials/_pricing.scss */
 .h4, .calcboxright .h4 {
   padding: 8px 20px 8px;
   float: left;
@@ -2619,12 +2643,12 @@ div.zone1:first-child .slider-wrapper {
   text-transform: uppercase;
 }
 
-/* line 269, scss/partials/_pricing.scss */
+/* line 271, scss/partials/_pricing.scss */
 .p-right .h4 {
   float: none;
 }
 
-/* line 273, scss/partials/_pricing.scss */
+/* line 275, scss/partials/_pricing.scss */
 .calcboxleft p, .calcboxright p {
   float: left;
   margin-left: 20px;
@@ -2634,14 +2658,14 @@ div.zone1:first-child .slider-wrapper {
   clear: both;
 }
 
-/* line 281, scss/partials/_pricing.scss */
+/* line 283, scss/partials/_pricing.scss */
 .calcboxleft .xxl {
   position: absolute;
   margin-bottom: 0;
   bottom: 0;
 }
 
-/* line 286, scss/partials/_pricing.scss */
+/* line 288, scss/partials/_pricing.scss */
 .calcboxleft .p-right, .calcboxright .p-right {
   text-align: right;
   float: right;
@@ -2649,23 +2673,23 @@ div.zone1:first-child .slider-wrapper {
   width: 200px;
 }
 
-/* line 292, scss/partials/_pricing.scss */
+/* line 294, scss/partials/_pricing.scss */
 .calcboxleft .p-right span, .calcboxright .p-right span {
   padding: 0;
 }
 
-/* line 295, scss/partials/_pricing.scss */
+/* line 297, scss/partials/_pricing.scss */
 input[type="text"], input[type="email"] {
   width: 303px;
   margin: 1px 1px 5px;
 }
 
-/* line 299, scss/partials/_pricing.scss */
+/* line 301, scss/partials/_pricing.scss */
 input[type="date"] {
   width: 131px;
 }
 
-/* line 302, scss/partials/_pricing.scss */
+/* line 304, scss/partials/_pricing.scss */
 textarea {
   width: 365px;
   height: 96px;
@@ -2673,7 +2697,7 @@ textarea {
   margin-right: 0px;
 }
 
-/* line 308, scss/partials/_pricing.scss */
+/* line 310, scss/partials/_pricing.scss */
 .calculate p {
   width: 70%;
   margin: 20px;
@@ -2681,18 +2705,18 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 314, scss/partials/_pricing.scss */
+/* line 316, scss/partials/_pricing.scss */
 .content.pricing-success {
   text-align: center;
   margin: 50px auto 80px;
 }
 
-/* line 318, scss/partials/_pricing.scss */
+/* line 320, scss/partials/_pricing.scss */
 .content.pricing-success h2 {
   margin: 30px 0;
 }
 
-/* line 321, scss/partials/_pricing.scss */
+/* line 323, scss/partials/_pricing.scss */
 .pricing-link {
   display: block;
   padding: 20px;
@@ -2706,7 +2730,7 @@ textarea {
   letter-spacing: .08em;
 }
 
-/* line 333, scss/partials/_pricing.scss */
+/* line 335, scss/partials/_pricing.scss */
 .pricing-link:hover {
   color: #5F6062;
 }
