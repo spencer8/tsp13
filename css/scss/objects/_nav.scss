@@ -2,26 +2,3 @@
     $NAVIGATION
 \*------------------------------------*/
 
-.subnavwrap {
-	background: #4E917A;
-}
-.subnav {
-	width: 964px;
-	text-align: center;
-	margin: 0 auto;
-	color: white;
-	h2 {
-		font-size: 24px;
-		padding: .5em $padpx;
-		text-align: left;
-	}
-	a {
-		color: white;
-		text-transform: uppercase;
-		display: inline-block;
-		padding: 10px;
-	}
-}
-.home .subnavwrap {
-	background-color: #76AE99;
-}

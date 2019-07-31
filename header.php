@@ -27,8 +27,8 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=1" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script type="text/javascript" src="//use.typekit.net/zyv2sti.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="https://use.typekit.net/thb4dzu.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>

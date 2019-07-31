@@ -11,7 +11,7 @@
 			$minilogo = $j('.minilogo'),
 			$anim = $j('.pricing');
             		// ANIMATE HEADER
-			templateDir = "http://team-eight.com/dev/tsp/wp-content/themes/tsp13";
+			templateDir = "http://triplestamppress.com/wp-content/themes/tsp13";
 			
 		$anim.spriteAnimation({
 			src: templateDir +"/images/pricing-sprite.png",

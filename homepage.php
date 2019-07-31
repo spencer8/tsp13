@@ -69,7 +69,7 @@ get_header(); ?>
 			<?php } ?>
 			<?php 
 			$args = array(
-				'post__in'		=> array( 83, 91, 382 ),
+				'post__in'		=> array( 83 ), // 91, 382
 				'order'			=>	'ASC'
 			);
 			$flatstock_posts = new WP_Query( $args );

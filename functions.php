@@ -10,6 +10,10 @@
  *
  * @return void
  */
+
+require_once get_template_directory(). '/functions/shortcodes.php';
+
+
 function tsp13_setup() {
 	
 	add_theme_support( 'post-thumbnails' );
@@ -29,7 +33,7 @@ add_action( 'after_setup_theme', 'tsp13_setup' );
  */
 function tsp13_scripts_styles() {
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'tsp13-style', get_template_directory_uri() . '/css/style.css?v=1.1', array(), '2015-07-25' );
+	wp_enqueue_style( 'tsp13-style', get_template_directory_uri() . '/css/style.css?v=1.1', array(), '2015-08-05' );
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/cycle.js', array('jquery'));
@@ -106,10 +110,10 @@ function change_post_object_label() {
 }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
-add_action('wp_ajax_tsp_calc_type', 'tsp_calc_type');
 add_action('wp_ajax_nopriv_tsp_calc_type', 'tsp_calc_type');
-add_action('wp_ajax_tsp_stat_qty', 'tsp_stat_qty');
+add_action('wp_ajax_tsp_calc_type', 'tsp_calc_type');
 add_action('wp_ajax_nopriv_tsp_stat_qty', 'tsp_stat_qty');
+add_action('wp_ajax_tsp_stat_qty', 'tsp_stat_qty');
 
 add_post_type_support( 'post', 'page-attributes' ); //add menu order to posts
 

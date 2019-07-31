@@ -69,8 +69,8 @@ get_header(); ?>
 		}
 
 		if(!isset($hasError)) {
-			$emailTo = 'info@triplestamppress.com';
-			$subject = 'TSP Project Info';
+			$emailTo = 'pricing@triplestamppress.com';
+			$subject = 'Pricing Calculator: Project request from '. $formname;
 
 			$body = "Name: $formname \n\nEmail Address: $email \n\nDue Date: $duedate \n\nProject Type: $style \n\nQty: $qty \n\nFront colors: $front \n\nBack colors: $back \n\nTotal: $total \n\nPrice per item: $peritem \n\nMessage: $message";
 			$headers = 'From: TSP Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
@@ -97,6 +97,15 @@ get_header(); ?>
 	
 ?>
 	<div class="calculator open">
+		<?php //Temporarily Down Notice
+/* echo '<div style="max-width:680px;width:100%;margin:40px auto;text-align:center;background: #555;padding:3em;box-sizing:border-box;"><h2 style="
+    margin-bottom: 20px;
+    color: #DD604C;
+">NOTICE: Our Online Pricing Calculator is temporarily down.</h2><p style="
+    color: #C6C7BD;
+    font-size: 1.125em;
+">We are working to get it up and running again pronto. In the meantime, please contact info@triplestamppress.com for custom pricing. Thanks for your patience.</p></div>'; */ ?>
+		<div
 		<?php
 		$graphic_options = get_option( 'tsp_calc_graphic_options' );
 		$apparel_options = get_option( 'tsp_calc_apparel_options' );

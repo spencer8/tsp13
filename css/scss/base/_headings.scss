@@ -10,24 +10,13 @@ h6 {
     font-weight: normal;
 }
 h1, h2, h3 {
-    font-family: $font-secondary;
+    font-family: politicalight, sans-serif;
     text-transform: uppercase;
     letter-spacing: .08em;
     line-height: 1.15;
-    
-    @media only screen 
-    and (min-width : 768px) {
-        text-rendering: optimizeLegibility;
-    }
 }
 h2 {
-    font-size: 36px;
+    font-size: 44px;
     letter-spacing: .08em;
     line-height: 1.15;
-}
-h4 {
-	color: #4E917A;
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
 }

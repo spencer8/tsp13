@@ -7,13 +7,6 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 
-.content img.alignleft {
-	float:left;
-}
-.content img.alignright {
-	float:right;
-}
-
 /* The slide Slider styles */
 .gallery, .slider-wrapper, .gallery img {
 	border: none;
@@ -119,55 +112,4 @@ img {
     color:$white;
 }
 
-/* --- Soliloquy ---- */
 
-#main .soliloquy-container {
-
-	.soliloquy-item {
-	    text-align:center;
-	}
-
-	.soliloquy-caption {
-
-		&.soliloquy-caption-bottom {
-			height: 0;
-			width: 100%;
-			position: relative;
-			max-width: 500px;
-			margin: 0 auto;
-			text-align: center;
-		}
-
-		.soliloquy-caption-inside {
-			background: rgba(240,240,240,0.93);
-			padding:$padpx $padpx-double;
-
-			color:$black;
-			text-shadow:none;
-
-			position: absolute;
-		    bottom: $padpx;
-		    width: 100%;
-
-		    @media only screen 
-			and (min-width : 768px) {
-				bottom: 110px;
-			}
-
-		}
-
-		h2 {
-			font-size: 32px;
-			text-transform:uppercase;
-			color:$red-lt;
-			margin-bottom:.625em;
-			letter-spacing: 2px;
-		}
-
-	}
-
-	.soliloquy-item>a {
-		cursor:pointer;
-	}
-
-}

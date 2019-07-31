@@ -12,29 +12,30 @@
 ?>
 	</div><!-- #main .wrapper -->
 		<div id="footwrap">
-			<div id="footer">
-				<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
-					<div id="foot1" class="footcol">
-						<?php dynamic_sidebar( 'footer_1' ); ?>
-					</div><!-- #primary-sidebar -->
-				<?php else : ?>
-					<div id="foot1" class="footcol">
-					<h2>Get in touch</h2>
-					<p>
-					Triple Stamp Press<br />
-					200 Everett St<br />
-					Richmond, VA 23224<br />
-					<a href="mailto:info@triplestamppress.com">info@triplestamppress.com</a><br />
-					(804) 233-1502</p>
-					</div>
-				<?php endif; ?>
+			<div id="footer" class="cf t8-cols-wrap">
+			<div class="t8-cols-wrap">
+				<div id="foot1" class="t8-col cols-5">
+					<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
+							<?php dynamic_sidebar( 'footer_1' ); ?>
+					<?php else : ?>
+						<h2>Get in touch</h2>
+						<p>
+						Triple Stamp Press<br />
+						200 Everett St<br />
+						Richmond, VA 23224<br />
+						<a href="mailto:info@triplestamppress.com">info@triplestamppress.com</a><br />
+						(804) 233-1502</p>
+					<?php endif; ?>
+				</div><!-- #primary-sidebar -->
 
+				<div id="foot3" class="t8-col cols-2">
+					<a class="pricebadge" href="<?php bloginfo('url'); ?>/pricing">Instant Price Calculator</a>
+				</div>
+
+				<div id="foot2" class="t8-col cols-5">
 				<?php if ( is_active_sidebar( 'footer_2' ) ) : ?>
-					<div id="foot2" class="footcol">
 						<?php dynamic_sidebar( 'footer_2' ); ?>
-					</div><!-- #primary-sidebar -->
 				<?php else : ?>
-					<div id="foot2" class="footcol">
 					<h2>Follow Us</h2>
 					<ul class="nav-social clear">
 						<li><a href="https://instagram.com/triplestamppress/" class="instagram"><span class="genericon genericon-instagram"></span></a></li>
@@ -43,13 +44,10 @@
 						<li><a href="https://www.facebook.com/triplestamp" class="facebook"><span class="genericon genericon-facebook"></span></a></li>
 						<li><a href="https://twitter.com/triplestamp" class="twitter"><span class="genericon genericon-twitter"></span></a></li>
 					</ul>
-					</div>
 				<?php endif; ?>
+				</div><!-- #primary-sidebar -->
 
-				<div id="foot3" class="footcol">
-					<a class="pricebadge" href="<?php bloginfo('url'); ?>/pricing">Instant Price Calculator</a>
-				</div>
-				<p>&copy; TRIPLE STAMP PRESS <?php echo date("Y"); ?><br>site by <a href="http://team-eight.com" title="Get to Work!" >Team Eight</a></p>
+			</div>
 			</div><!-- #footer -->
 		</div><!-- #footwrap -->
 </div><!-- #page -->
@@ -308,7 +306,12 @@
 					$results['materials'] = +$matby_swipe + +$matby_screen;
 					$results['equipment'] = ($results['materials'] + $results['labor']) * ($appOpts.equipment) / 100;
 					
-					$results['more_color'] = (( $appOpts.clr_curve / $qty ) + .25) * ($colors - 1) * $qty;
+					var $offset = .25;
+					if($qty < 150){
+						$offset += ((150 - $qty)/150)*.475;
+					}
+
+					$results['more_color'] = (( $appOpts.clr_curve / $qty ) + $offset) * ($colors - 1) * $qty;
 					//console.log($results);
 					$results['total'] = +$results['more_color'] + +$results['materials'] + +$results['labor'] + +$results['substrate'] + ( $add_loc_price * $qty ) + ( (+$results['materials'] + +$results['labor']) * ( +$appOpts.payment_processing + +$appOpts.equipment ) / 100 );
 					$results['total'] = $results['total'].toFixed(2);
@@ -329,7 +332,7 @@
 					$results['unit'] = $results['total']/$qty;
 					$results['unit'] = $results['unit'].toFixed(2);
 					
-					console.log($results);
+					// console.log($results);
 				} else if($parent.hasClass('packaging')) {
 					$qty = parseInt($parent.find('select.qty option:selected').attr('name'));
 					//console.log('qty is ' + $qty);
@@ -361,7 +364,7 @@
 					$results['unit'] = $results['total']/$qty;
 					$results['unit'] = $results['unit'].toFixed(2);
 					$results['net'] = $results['total'] - $results['materials'] - $results['equipment'];
-					console.log($results);
+					// console.log($results);
 				}
 				if($qty < 24) {
 					$j('.h4.total:visible').html('24 MIN QTY');
